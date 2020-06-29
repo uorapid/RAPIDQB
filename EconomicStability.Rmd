@@ -10,6 +10,10 @@ knitr::opts_chunk$set(echo = TRUE)
 library(readxl)
 library(knitr)
 library(tidyr)
+library(kableExtra)
+library(stringr)
+library(dplyr)
+options(knitr.table.format = "html", knitr.kable.NA = '') 
 ```
 
 ```{r read data, echo=FALSE}
