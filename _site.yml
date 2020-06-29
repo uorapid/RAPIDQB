@@ -1,0 +1,61 @@
+name: "R3 Question Bank Dashboard"
+navbar:
+  title: "R3 Question Bank Dashboard"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Questions by Week"
+      menu:
+      - text: "Week 1"
+        href: demographics.html
+      - text: "Week 2"
+        href: tbd.html
+      - text: "Week 3"
+        href: tbd.html
+      - text: "Week 4"
+        href: tbd.html
+      - text: "Week 5"
+        href: tbd.html
+      - text: "Week 6"
+        href: tbd.html
+      - text: "Week 7"
+        href: tbd.html
+      - text: "Week 8"
+        href: tbd.html
+      - text: "Week 9"
+        href: tbd.html
+      - text: "Week 10"
+        href: tbd.html
+      - text: "Week 11"
+        href: tbd.html
+      - text: "Week 12"
+        href: tbd.html
+    - text: "Domains"
+      menu:
+      - text: "Ensure Economic Stability"
+        href: tbd.html
+      - text: "Support Family Physical Health"
+        href: tbd.html
+      - text: "Support Strong Parent Mental Health"
+        href: tbd.html
+      - text: "Support Strong Child Socio-Emotional Health"
+        href: tbd.html
+      - text: "Sustain Child Care and Early Learning"
+        href: tbd.html  
+      - text: "Meet Basic Needs for Health and Well-Being"
+        href: tbd.html     
+      - text: "Demographics"
+        href: tbd.html  
+    - text: "Special Topics"
+      menu:
+      - text: "Family Conflict"
+        href: tbd.html
+      - text: "Open Ended Questions"
+        href: tbd.html
+      - text: "COVID"
+        href: tbd.html     
+  right:
+    - icon: fa-github
+      href: https://github.com/akunerth/R3_QuestionBank.git
+    - icon: fa-flask
+      href: https://www.uorapidresponse.com/
