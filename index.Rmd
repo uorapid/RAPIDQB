@@ -4,7 +4,7 @@ author: "Built by: Allison Kunerth"
 date: "Last Updated: 6/28/2020"
 output: 
   html_document:
-    theme: flatly
+    theme: cosmo
     toc: TRUE
     toc_float: TRUE
 ---

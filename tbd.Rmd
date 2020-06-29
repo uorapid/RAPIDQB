@@ -1,10 +1,10 @@
 ---
 title: "Coming Soon"
 author:
-date: "Last Updated: 6/20/2020"
+date: "Last Updated: 6/28/2020"
 output: 
   html_document:
-    theme: flatly
+    theme: cosmo
     toc: TRUE
     toc_float: TRUE
 ---
