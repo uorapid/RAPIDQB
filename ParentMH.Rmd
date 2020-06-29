@@ -1,0 +1,34 @@
+---
+title: "Support Strong Parent Mental Health"
+date: "Last Updated: 6/28/2020"
+output: 
+ html_document:
+    theme: cosmo
+    toc: TRUE
+    toc_float: TRUE
+---
+
+```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+library(knitr)
+library(tidyr)
+library(kableExtra)
+library(stringr)
+library(dplyr)
+options(knitr.table.format = "html", knitr.kable.NA = '') 
+```
+
+```{r read data, echo=FALSE}
+data.raw <- read_excel("ParentMH.xlsx")
+
+```
+
+Occurence indicates whether the question is currently included in either the baseline or the follow-up survey.
+
+```{r display data, echo=FALSE}
+
+data.raw %>%
+  kable() %>%
+  kable_styling(bootstrap_options = "striped", "hover","condensed", "responsive", full_width = F, position = "center", fixed_thead = T)
+```
