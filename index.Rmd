@@ -15,7 +15,9 @@ knitr::opts_chunk$set(
   message = FALSE)
 ```
 
-## Homepage
-
 This is the homepage for the RAPID-EC Question Bank.
+
+
+
+Questions are listed out as they are used weekly, as well as across the different domains and special topics. 
 
