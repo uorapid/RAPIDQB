@@ -1,0 +1,24 @@
+---
+title: "Ensure Economic Stability"
+author: "Allison Kunerth"
+date: "6/28/2020"
+output: html_document
+---
+
+```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+library(knitr)
+library(tidyr)
+```
+
+```{r read data, echo=FALSE}
+data.raw <- read_excel("EnsureEconomicStability.xlsx")
+```
+
+## Test
+
+```{r display data, echo=FALSE}
+kable(data.raw) 
+
+```
