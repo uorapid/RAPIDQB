@@ -16,6 +16,7 @@ library(tidyr)
 library(kableExtra)
 library(stringr)
 library(dplyr)
+library(tippy)
 options(knitr.table.format = "html", knitr.kable.NA = '') 
 ```
 
@@ -30,5 +31,7 @@ Occurence indicates whether the question is currently included in either the bas
 
 data.raw %>%
   kable() %>%
-  kable_styling(bootstrap_options = "striped", "hover","condensed", "responsive", full_width = F, position = "center", fixed_thead = T)
+  kable_styling(full_width = T, position = "center", bootstrap_options = "striped", "hover","condensed", "responsive")
 ```
+
+
