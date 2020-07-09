@@ -4,32 +4,12 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Questions by Week"
+    - text: "Overall Survey"
       menu:
-      - text: "Week 1"
+      - text: "Baseline"
         href: demographics.html
-      - text: "Week 2"
-        href: tbd.html
-      - text: "Week 3"
-        href: tbd.html
-      - text: "Week 4"
-        href: tbd.html
-      - text: "Week 5"
-        href: tbd.html
-      - text: "Week 6"
-        href: tbd.html
-      - text: "Week 7"
-        href: tbd.html
-      - text: "Week 8"
-        href: tbd.html
-      - text: "Week 9"
-        href: tbd.html
-      - text: "Week 10"
-        href: tbd.html
-      - text: "Week 11"
-        href: tbd.html
-      - text: "Week 12"
-        href: tbd.html
+      - text: "Follow-Up"
+        href: FollowUp.html
     - text: "Domains"
       menu:
       - text: "Ensure Economic Stability"
@@ -52,8 +32,8 @@ navbar:
         href: FamConf.html
       - text: "Open Ended Questions"
         href: OpenEnded.html
-      - text: "COVID"
-        href: tbd.html     
+      - text: "Social Support"
+        href: SocialSupport.html     
   right:
     - icon: fa-github
       href: https://github.com/akunerth/R3_QuestionBank.git

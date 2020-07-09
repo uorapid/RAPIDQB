@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Baseline Survey</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">R3 Question Bank Dashboard</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Overall Survey
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="demographics.html">Baseline</a>
+    </li>
+    <li>
+      <a href="FollowUp.html">Follow-Up</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Domains
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="EconomicStability.html">Ensure Economic Stability</a>
+    </li>
+    <li>
+      <a href="FamHealth.html">Support Family Physical Health</a>
+    </li>
+    <li>
+      <a href="ParentMH.html">Support Strong Parent Mental Health</a>
+    </li>
+    <li>
+      <a href="ChildSEHealth.html">Support Strong Child Socio-Emotional Health</a>
+    </li>
+    <li>
+      <a href="ChildCareEC.html">Sustain Child Care and Early Learning</a>
+    </li>
+    <li>
+      <a href="HealthWB.html">Meet Basic Needs for Health and Well-Being</a>
+    </li>
+    <li>
+      <a href="Demographics.html">Demographics</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Special Topics
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="FamConf.html">Family Conflict</a>
+    </li>
+    <li>
+      <a href="OpenEnded.html">Open Ended Questions</a>
+    </li>
+    <li>
+      <a href="SocialSupport.html">Social Support</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/akunerth/R3_QuestionBank.git">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.uorapidresponse.com/">
+    <span class="fa fa-flask"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Baseline Survey</h1>
+<h4 class="date">Last Updated: 7/9/2020</h4>
+
+</div>
+
+
+<p>Occurence indicates whether the question is currently included in either the baseline or the follow-up survey.</p>
+<table class="table table-striped" style="font-size: condensedpx; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Question:
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Answers:
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Domain:
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Source:
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+To the best of your knowledge, which option best describes your gross (before taxes) household income from all sources, in 2019 (prior to the coronavirus (COVID-19) Pandemic)?
+</td>
+<td style="text-align:left;">
+• Weekly [text entry] • Monthly – [text entry] • Yearly – [text entry]
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+How many people are being supported by your total household income?
+</td>
+<td style="text-align:left;">
+0-20
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Who earns more money in your household?
+</td>
+<td style="text-align:left;">
+• Myself<br />
+• My partner or spouse • About equal with my partner or spouse<br />
+• Other
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Has this changed since the coronavirus COVID-19 pandemic? (Ex. Did you make more money than your partner prior to the pandemic, but now you make less?)
+</td>
+<td style="text-align:left;">
+• Yes<br />
+• No • Unsure • Other
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Which of the following best describes your current employment status?
+</td>
+<td style="text-align:left;">
+• Working<br />
+• Unemployed or laid off • Temporarily out of work or furloughed<br />
+• Other
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Has your level of employment decreased due to the coronavirus (COVID-19) pandemic?
+</td>
+<td style="text-align:left;">
+• Yes • No • Not applicable
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Does your place of employment offer you paid sick leave?
+</td>
+<td style="text-align:left;">
+• Yes • No • Unsure
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+How likely is it that you would lose your job if you were required to take at least 2 weeks of sick leave?
+</td>
+<td style="text-align:left;">
+• Very likely<br />
+• Likely • Neutral/unsure • Unlikely • Very Unlikely • Not applicable
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Are you receiving any sort of public or employment benefits? ex. Federal cash assistance programs such as the Temporary Assistance for Needy Families (TANF), Social Security Income (SSI). OR, Federal-in kind benefit programs such as Medicaid, Food Stamps and Housing.
+</td>
+<td style="text-align:left;">
+<p>• Yes</p>
+<p>• No</p>
+<p>• Didn’t Qualify</p>
+• Intend to apply
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What types of benefits are you receiving?
+</td>
+<td style="text-align:left;">
+• Health or Medical Services (ex. Vaccine programs, counseling, STD testing etc.) • Child Care Subsidy • Housing • Income (not including federal stimulus checks) • Disability (not military) • Military Benefits (ex. Disability, pension, veterans medical care) • Food • Transportation • Training • Clothing • Other, please describe:
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Have you received a federal stimulus check this year? (Also known as an economic impact payment)
+</td>
+<td style="text-align:left;">
+• Yes, I have received a federal stimulus check<br />
+• No, but I expect to receive a federal stimulus check in the near future<br />
+• No, and I DO NOT expect to receive a federal stimulus check<br />
+• Unsure if I will receive a federal stimulus check<br />
+• Other
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Which of the following best described what has happened to your family income during the coronavirus (COVID-19) pandemic?
+</td>
+<td style="text-align:left;">
+• Has increased very much • Has increased somewhat • Has stayed the same • Has decreased somewhat • Has decreased very much
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Which of the following best describes your family financially at this time:
+</td>
+<td style="text-align:left;">
+• No problems • Minor Problems<br />
+• Major Problems<br />
+• Extreme Problems
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Are you covered by any kind of health insurance or some other kind of health care plan?
+</td>
+<td style="text-align:left;">
+• Yes<br />
+• No • I don’t know
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What type of health insurance or health care coverage do you have?
+</td>
+<td style="text-align:left;">
+• Insurance through a current or former employer or union (by you or another family member)<br />
+• Insurance purchased from an insurance company (by you or another family member)<br />
+• Medicare, for people 65 and older, or people with certain disabilities<br />
+• Medicaid, Medical Assistance, or any kind of government-assistance plan for those with low incomes or a disability<br />
+• TRICARE or other military healthcare<br />
+• VA (enrolled for VA healthcare)<br />
+• Indian Health Service<br />
+• Any other type of health insurance or health coverage plan (Please Describe): [text entry] • I don’t know
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Is your child(ren) that are between 0 and 5 years of age covered by any kind of health insurance or some other kind of health care plan?
+</td>
+<td style="text-align:left;">
+• Yes • No • I don’t know
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What type of health insurance or health care coverage does your child have?
+</td>
+<td style="text-align:left;">
+• Insurance through a current or former employer or union (by you or another family member)<br />
+• Insurance purchased directly from an insurance company (by this person or another family member)<br />
+• Medicare, for people 65 and older, or people with certain disabilities<br />
+• Medicaid, Medical Assistance or any kind of government-assistance plan for those with low incomes or a disability, to include CHIP<br />
+• TRICARE or other military health care<br />
+• VA (enrolled for VA health care)<br />
+• Indian Health Service<br />
+• Any other type of health insurance or health coverage plan (Please describe)<br />
+• I don’t know<br />
+• Not applicable
+</td>
+<td style="text-align:left;">
+Ensure Economic Stability
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Since the coronavirus (COVID-19) pandemic, have you delayed getting medical care (including physical or mental health visits) for any of the following reasons? Indicate how many times each of these barriers has delayed you getting medical care (including physical or mental health visits), leave blank or select 0 if a listed barrier has not delayed you.
+</td>
+<td style="text-align:left;">
+• Cost [Scale 0-10]<br />
+• Unable to get time away from work [Scale 0-10]<br />
+• Inability to find childcare [Scale 0-10]<br />
+• Concern over exposure to coronavirus (COVID-19) [Scale 0-10]<br />
+• Caring for family members [Scale 0-10]<br />
+• Other, please describe: [Scale 0-10]
+</td>
+<td style="text-align:left;">
+Support Family Physical Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Have you missed a well-baby/well-child checkup since the coronavirus (COVID-19) pandemic began?
+</td>
+<td style="text-align:left;">
+• Yes • No • Not applicable
+</td>
+<td style="text-align:left;">
+Support Family Physical Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[If yes missed] [asked for up to five children] In regards to your oldest child in the 0-5 age range that missed a well-baby/well-child checkup: Which well-baby/well-child visit did they miss?
+</td>
+<td style="text-align:left;">
+• First visit [3-5 days old] • 1 month old • 2 months old • 4 months old • 6 months old • 9 months old • 1 year old (12 months) • 15 months old • 18 months old • 2 years old (24 months) • 2.5 years old (30 months) • 3 years old • 4 years old • 5 years old
+</td>
+<td style="text-align:left;">
+Support Family Physical Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[If yes missed] [asked for up to five children] Did they miss a scheduled vaccine at this visit?
+</td>
+<td style="text-align:left;">
+• Yes • No
+</td>
+<td style="text-align:left;">
+Support Family Physical Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What prevented you from going to a well-baby checkup? Select all that apply
+</td>
+<td style="text-align:left;">
+• Cost • Unable to get time away from work • Inability to find childcare • Concern over exposure to coronavirus (COVID-19) • Caring for family members • Vaccine hesitancy • Other, please describe:
+</td>
+<td style="text-align:left;">
+Support Family Physical Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Have you been suspected or diagnosed with coronavirus (COVID-19)?
+</td>
+<td style="text-align:left;">
+• Yes, suspected • Yes, diagnosed with a positive test result • Yes, diagnosed by a healthcare professional or public health official without a test • No
+</td>
+<td style="text-align:left;">
+Support Family Physical Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Prior to the coronavirus (COVID-19) pandemic, during an average week, how often were you bothered by the following problems?</p>
+<p>• Feeling nervous, anxious, or on edge?</p>
+• Not being able to stop or control worrying?
+</td>
+<td style="text-align:left;">
+• Not at all • Several days • More than half of the days • Nearly every day
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>In the past week, how often have you been bothered by the following problems?</p>
+<p>• Feeling nervous, anxious, or on edge</p>
+• Not being able to stop or control worrying
+</td>
+<td style="text-align:left;">
+<p>• Not at all</p>
+<p>• Several days</p>
+<p>• More than half of the days</p>
+• Nearly every day
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Prior to the coronavirus (COVID-19) pandemic, during an average week, how often were you bothered by the following problems?</p>
+<p>• Little interest or pleasure in doing things</p>
+• Feeling down, depressed, or hopeless
+</td>
+<td style="text-align:left;">
+<p>• Not at all</p>
+<p>• Several days</p>
+<p>• More than half of the days</p>
+• Nearly every day
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>In the past week, how often have you been bothered by the following problems? • Little interest or pleasure in doing things</p>
+• Feeling down, depressed, or hopeless
+</td>
+<td style="text-align:left;">
+<p>• Not at all</p>
+<p>• Several days</p>
+<p>• More than half of the days</p>
+• Nearly every day
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stress means a situation in which a person feels tense, restless, nervous or anxious or is unable to sleep at night because his/her mind is troubled all the time. Did you feel this kind of stress before the coronavirus (COVID-19) pandemic began?
+</td>
+<td style="text-align:left;">
+• 1- Not at all<br />
+• 2 • 3 • 4 • 5 - Very much
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Have you felt this kind of stress in the past week?
+</td>
+<td style="text-align:left;">
+<p>• 1- Not at all</p>
+<p>• 2</p>
+<p>• 3</p>
+<p>• 4</p>
+• 5 - Very much
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Answer the following question in regards to how you feel about parenting</p>
+Prior to the coronavirus (COVID-19) pandemic • I often felt like I could not handle things very well
+</td>
+<td style="text-align:left;">
+<p>• Strongly agree (SA)</p>
+<p>• Agree (A)</p>
+<p>• Not sure (NS)</p>
+<p>• Disagree (D)</p>
+• Strongly Disagree (SD)
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• being a parent is manageable, and any problems are easily solved
+</td>
+<td style="text-align:left;">
+<p>• Strongly agree (SA)</p>
+<p>• Agree (A)</p>
+<p>• Not sure (NS)</p>
+<p>• Disagree (D)</p>
+• Strongly Disagree (SD)
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• when you felt overwhelmed or stressed as a parent, did you get the support you needed?
+</td>
+<td style="text-align:left;">
+• 1 – No I did not feel supported • 2 • 3 • 4 • 5 – Yes, I felt very supported
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Since the coronavirus (COVID-19) pandemic began • I often have the feeling I cannot handle things very well
+</td>
+<td style="text-align:left;">
+<p>• Strongly agree (SA)</p>
+<p>• Agree (A)</p>
+<p>• Not sure (NS)</p>
+<p>• Disagree (D)</p>
+• Strongly Disagree (SD)
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• being a parent is manageable, and any problems are easily solved
+</td>
+<td style="text-align:left;">
+<p>• Strongly agree (SA)</p>
+<p>• Agree (A)</p>
+<p>• Not sure (NS)</p>
+<p>• Disagree (D)</p>
+• Strongly Disagree (SD)
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• In the last week, when you felt overwhelmed or stressed as a parent, did you get the support you needed?
+</td>
+<td style="text-align:left;">
+<p>• 1 – No I did not feel supported</p>
+<p>• 2</p>
+<p>• 3</p>
+<p>• 4</p>
+• 5 – Yes, I felt very supported
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Do you feel you could benefit from additional resources and supports on parenting and how best to support your child’s development?
+</td>
+<td style="text-align:left;">
+<p>• Strongly agree (SA)</p>
+<p>• Agree (A)</p>
+<p>• Not sure (NS)</p>
+<p>• Disagree (D)</p>
+• Strongly Disagree (SD)
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Prior to the coronavirus (COVID-19) pandemic, please describe how often… I felt lonely
+</td>
+<td style="text-align:left;">
+• Never • Rarely • Sometimes • Usually<br />
+• Always
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Since the coronavirus (COVID-19) pandemic began, please describe how often… I felt lonely
+</td>
+<td style="text-align:left;">
+• Never • Rarely • Sometimes • Usually<br />
+• Always
+</td>
+<td style="text-align:left;">
+Support Strong Parent Mental Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[repeated for each child they have in 0-5 age range] fill out this form to reflect your view of the child’s (within the 0-5 age range) behavior even if other people might not agree. Below is a list of items that describe children. Please select the answer which best fits your child’s behavior before the coronavirus (COVID-19) pandemic
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Support Strong Child Socio-Emotional Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• fussy or defiant
+</td>
+<td style="text-align:left;">
+• Not True<br />
+• Somewhat / Sometimes True • Often True / Very True
+</td>
+<td style="text-align:left;">
+Support Strong Child Socio-Emotional Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• too fearful or anxious
+</td>
+<td style="text-align:left;">
+• Not True<br />
+• Somewhat / Sometimes True • Often True / Very True
+</td>
+<td style="text-align:left;">
+Support Strong Child Socio-Emotional Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• How old is this child?
+</td>
+<td style="text-align:left;">
+List from 0 months to less than 6 years (71 months)
+</td>
+<td style="text-align:left;">
+Support Strong Child Socio-Emotional Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[repeated for each child they have in 0-5 age range] Please fill out this form to reflect your view of the child’s (within the 0-5 age range) behavior even if other people might not agree. Below is a list of items that describe children. Please select the answer which best fits your child’s behavior in the last week.
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Support Strong Child Socio-Emotional Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• fussy or defiant
+</td>
+<td style="text-align:left;">
+• Not True<br />
+• Somewhat / Sometimes True • Often True / Very True
+</td>
+<td style="text-align:left;">
+Support Strong Child Socio-Emotional Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• too fearful or anxious
+</td>
+<td style="text-align:left;">
+• Not True<br />
+• Somewhat / Sometimes True • Often True / Very True
+</td>
+<td style="text-align:left;">
+Support Strong Child Socio-Emotional Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• How old is this child?
+</td>
+<td style="text-align:left;">
+List from 0 months to less than 6 years (71 months)
+</td>
+<td style="text-align:left;">
+Support Strong Child Socio-Emotional Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[repeated for each child they have in 0-5 age range] These questions are about your child’s (within the 0-5 age range) development and behavior. Think about what you would expect of other children the same age, and tell us how much each statement applies to your child.
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Support Strong Child Socio-Emotional Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• Do you have any concerns about your child’s learning or development?
+</td>
+<td style="text-align:left;">
+• Not at all<br />
+• Somewhat<br />
+• Very Much
+</td>
+<td style="text-align:left;">
+Support Strong Child Socio-Emotional Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• How old is this child?
+</td>
+<td style="text-align:left;">
+• List from 0 months to less than 6 years (71 months)
+</td>
+<td style="text-align:left;">
+Support Strong Child Socio-Emotional Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• Do you have any concerns about your child’s behavior?
+</td>
+<td style="text-align:left;">
+• Not at all<br />
+• Somewhat<br />
+• Very Much
+</td>
+<td style="text-align:left;">
+Support Strong Child Socio-Emotional Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+• How old is this child?
+</td>
+<td style="text-align:left;">
+• List from 0 months to less than 6 years (71 months)
+</td>
+<td style="text-align:left;">
+Support Strong Child Socio-Emotional Health
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Prior to the coronavirus (COVID-19) Pandemic, did you use any non-parental care for your child(ren) under the age of 5?
+</td>
+<td style="text-align:left;">
+• Yes • No • Unsure
+</td>
+<td style="text-align:left;">
+Sustain Child Care and Early Learning
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+This week, have you used any non-parental care for your child(ren) under the age of 5?
+</td>
+<td style="text-align:left;">
+• Yes • No • Unsure
+</td>
+<td style="text-align:left;">
+Sustain Child Care and Early Learning
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Do you expect your need for non-parental care for your child under the age of 5 to change in the next month?
+</td>
+<td style="text-align:left;">
+• Yes, I will need more non-parental care • Yes, I will need less non-parental care<br />
+• Maybe I will need more non-parental care<br />
+• Maybe I will need less non-parental care<br />
+• No, I expect to have the same need for non-parental care • Not Applicable
+</td>
+<td style="text-align:left;">
+Sustain Child Care and Early Learning
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+In a typical week, before the coronavirus (COVID-19) pandemic, which of the following types of childcare did you use for your child(ren) in the age range 0-5? Select all that apply.
+</td>
+<td style="text-align:left;">
+• Any type of paid or unpaid center-based care, such as a pre-school, day care center, public pre-kindergarten, Head Start, or faith-based nursery school. Please do not include kindergarten. • At least five hours of unpaid care by a relative, friend or neighbor for any child age 5 or under • At least five hours of paid care by a relative, friend or neighbor for any child age 5 or under • At least 5 hours of paid care from a home-based child care provider. Please include home-based care where the provider is paid to care for your child even if you are not making the payment.
+</td>
+<td style="text-align:left;">
+Sustain Child Care and Early Learning
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Prior to the coronavirus (COVID-19) Pandemic, how many hours on average per week was your child care for by…[based on answers above]
+</td>
+<td style="text-align:left;">
+Answer choices 1 to “more than 100 hours”
+</td>
+<td style="text-align:left;">
+Sustain Child Care and Early Learning
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[If cared for by a relative, friend or neighbor] What is the relationship of the relative, friend, or neighbor providing care to your child(ren) in the age range 0-5? Select all that apply.
+</td>
+<td style="text-align:left;">
+• Other parent/step parent • Sibling 15 years or older • Grandparent • Other relative • Friend of parent • Neighbor
+</td>
+<td style="text-align:left;">
+Sustain Child Care and Early Learning
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Currently, which of the following types of childcare do you use for your child in the age range 0-5?
+</td>
+<td style="text-align:left;">
+• Any type of paid or unpaid center-based care, such as a pre-school, day care center, public pre-kindergarten, Head Start, or faith-based nursery school. Please do not include kindergarten. • At least five hours of unpaid care by a relative, friend or neighbor for any child age 5 or under • At least five hours of paid care by a relative, friend or neighbor for any child age 5 or under • At least 5 hours of paid care from a home-based child care provider. Please include home-based care where the provider is paid to care for your child even if you are not making the payment.
+</td>
+<td style="text-align:left;">
+Sustain Child Care and Early Learning
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+How many hours this week was your child cared for by… [based on answers above]
+</td>
+<td style="text-align:left;">
+Answer choices 1 to “more than 100 hours”
+</td>
+<td style="text-align:left;">
+Sustain Child Care and Early Learning
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[If cared for by a relative, friend or neighbor] What is the relationship of the relative, friend, or neighbor currently providing care to your child(ren) in the age range 0-5? Select all that apply.
+</td>
+<td style="text-align:left;">
+• Other parent/step parent • Sibling 15 years or older • Grandparent • Other relative • Friend of parent • Neighbor
+</td>
+<td style="text-align:left;">
+Sustain Child Care and Early Learning
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+In the next month, what are you plans for your child(rens)’s (in the age range 0-5) childcare? Select all that apply.
+</td>
+<td style="text-align:left;">
+• In the next month, I plan to use the same arrangement I am using now for childcare • In the next month, I plan to use a different arrangement for childcare • In the next month, I plan to use the childcare arrangement I used prior to COVID • In the next month, I do not know what I am going to do for childcare
+</td>
+<td style="text-align:left;">
+Sustain Child Care and Early Learning
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Do you currently have access to free food for your household? Examples of free food include food pantries and programs, SNAP etc.
+</td>
+<td style="text-align:left;">
+• Yes I have access to free food resources • No, but I know where/how I can access free food resources<br />
+• No, I am not eligible for free food resources<br />
+• Unsure
+</td>
+<td style="text-align:left;">
+Meet Basic Needs for Health and Well-Being
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Prior to coronavirus (COVID-19), did you get free or reduced lunches for your child(ren)?
+</td>
+<td style="text-align:left;">
+• Yes, my child(ren) received free or reduced lunches<br />
+• No, my child did not receive free or reduced lunches, but they were available • No, free or reduced lunches were not available for my children<br />
+• No, but I had planned on getting free or reduced lunches for my children soon<br />
+• No, I didn’t know how to access this resource • Not applicable
+</td>
+<td style="text-align:left;">
+Meet Basic Needs for Health and Well-Being
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Do you currently get free or reduced lunches for your child(ren)?
+</td>
+<td style="text-align:left;">
+• Yes, my child(ren) receive(s) free or reduced lunches<br />
+• No, my child does not receive free or reduced lunches, but they were available • No, free or reduced lunches are not available for my children<br />
+• No, but I plan on getting free or reduced lunches for my children soon<br />
+• No, I don’t know how to access this resource • Not applicable
+</td>
+<td style="text-align:left;">
+Meet Basic Needs for Health and Well-Being
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+In the past month, how hard has it been for you to pay for the very basics like food, housing, medical care, and heating?
+</td>
+<td style="text-align:left;">
+• Very hard • Hard • Somewhat hard<br />
+• Not very hard
+</td>
+<td style="text-align:left;">
+Meet Basic Needs for Health and Well-Being
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Which of these needs have been hard to pay for in the past month? Select all that apply.
+</td>
+<td style="text-align:left;">
+• Food • Housing • Utilities (electric, water, trash) • Healthcare • Social • Emotional • Childcare • Other (please specify) [text entry] • None of the above
+</td>
+<td style="text-align:left;">
+Meet Basic Needs for Health and Well-Being
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What are the biggest challenges and concerns for you and your family right now?
+</td>
+<td style="text-align:left;">
+Open answer
+</td>
+<td style="text-align:left;">
+Open Ended Questions
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What is helping you and your family the most right now?
+</td>
+<td style="text-align:left;">
+Open answer
+</td>
+<td style="text-align:left;">
+Open Ended Questions
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What is on your mind the most when you think about your community re-opening?
+</td>
+<td style="text-align:left;">
+Open answer
+</td>
+<td style="text-align:left;">
+Open Ended Questions
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What concerns do you have about your place of employment and/or your child’s child care setting re-opening?
+</td>
+<td style="text-align:left;">
+Open answer
+</td>
+<td style="text-align:left;">
+Open Ended Questions
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Is there anything else you would like to tell us about you and your family’s experiences during the COVID-19 pandemic?
+</td>
+<td style="text-align:left;">
+Open answer
+</td>
+<td style="text-align:left;">
+Open Ended Questions
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What is the zip code for your current residence?
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Demographics
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What state do you live in?
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What are the living arrangements for children in your household under the age of 5?     Parents are not limited to biological parents, but include stepparents and those who adopt their children. Foster parents are considered nonrelatives.
+</td>
+<td style="text-align:left;">
+• Two parents<br />
+• Mother, no father<br />
+• Father, no mother<br />
+• Neither parent in household<br />
+• Other relatives<br />
+• Non-relatives
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+How many total children do you have?
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+How many children do you have in each age group? Select all that apply.
+</td>
+<td style="text-align:left;">
+• 0-3 • 4-5 • 6 -8<br />
+• 9 - 11 • 12 - 18 • 19 - 25 • 26 - 55 • 56 - 64 • 65+
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+How many people currently live in your home?
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What gender do you identify with?
+</td>
+<td style="text-align:left;">
+• Male • Female • Other [text entry] • Do not wish to disclose
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Where were you born?
+</td>
+<td style="text-align:left;">
+• Inside the United States • Outside the United States
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What generation do you identify with?
+</td>
+<td style="text-align:left;">
+• First Generation - You were born outside the United States • Second Generation - You were born in the United States to immigrant parents<br />
+• Third Generation - You were born in the United States to U.S. born parents<br />
+• Fourth Generation or Greater - Parents and grandparents were born in the U.S.<br />
+• Unknown or unsure
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Are you of Hispanic, Latinx, or Spanish origin?
+</td>
+<td style="text-align:left;">
+• No, not of Hispanic, Latinx, or Spanish origin<br />
+• Yes, Mexican, Mexican American, or Central American (Guatemalan, Salvadoran)<br />
+• Yes, Puerto Rican, Cuban, Colombian, Ecuadorian, other Hispanic or Latinx
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What is your race? Select all that apply If you don’t identify with any of the races listed below, and/or are unsure of what your race is, please select ‘Some other race’. For example: Hispanic, Samoan, Guamanian etc.
+</td>
+<td style="text-align:left;">
+• American Indian/ Alaska Native<br />
+• Asian • Black / African American<br />
+• Native Hawaiian/ Pacific Islander<br />
+• White/ Caucasian<br />
+• Some other race [text entry]
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What is your ethnicity?
+</td>
+<td style="text-align:left;">
+• Hispanic/ Latinx<br />
+• not Hispanic/ Latinx
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+What language is primarily spoken in your home?
+</td>
+<td style="text-align:left;">
+• English • Arabic • Chinese • French • German • Italian • Japanese • Korean • Russian • Spanish • Vietnamese • Other
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Which other language is spoken in your home?
+</td>
+<td style="text-align:left;">
+[text entry]
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Are you currently pregnant?
+</td>
+<td style="text-align:left;">
+• Yes • No • Unsure • Not applicable
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Does your child have any of the following disabilities?
+</td>
+<td style="text-align:left;">
+• Blind or serious difficulty seeing even when wearing glasses • Serious difficulty walking or climbing stairs • Due to a physical, mental, or emotional problem, difficulty • remembering, concentrating, or making decisions • Other disabilities • No disabilities • Do not wish to disclose
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
