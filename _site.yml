@@ -12,7 +12,7 @@ navbar:
         href: FollowUp.html
     - text: "Domains"
       menu:
-      - text: "Ensure Economic Stability"
+      - text: "Income & Employment"
         href: EconomicStability.html
       - text: "Support Family Physical Health"
         href: FamHealth.html
