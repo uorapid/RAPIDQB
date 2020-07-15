@@ -17,6 +17,7 @@ library(kableExtra)
 library(stringr)
 library(dplyr)
 library(tippy)
+library(DT)
 options(knitr.table.format = "html", knitr.kable.NA = '') 
 ```
 

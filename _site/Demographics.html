@@ -14,7 +14,7 @@
 
 <title>Demographics</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -26,7 +26,14 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.14/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -440,243 +447,8 @@ div.tocify {
 
 
 <p>Occurence indicates whether the question is currently included in either the baseline or the follow-up survey.</p>
-<table class="table table-striped" style="font-size: condensedpx; width: auto !important; margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
-Question
-</th>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
-Source
-</th>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
-Occurrence
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-What is the zip code for your current residence?
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-What state do you live in?
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-What are the living arrangements for children in your household under the age of 5? Parents are not limited to biological parents, but include stepparents and those who adopt their children. Foster parents are considered nonrelatives. • Two parents<br />
-• Mother, no father<br />
-• Father, no mother<br />
-• Neither parent in household<br />
-• Other relatives<br />
-• Non-relatives
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-What best describes your relationship status? • Engaged • Married • Separated • Divorced • Widowed • Living together/cohabitating • Romantically involved, but living apart<br />
-• Not in any kind of relationship (Single)<br />
-• Other
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Past
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-How would you describe your household structure?<br />
-• Single parent • Two parent household • Extended family household
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Past
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-How many total children do you have?
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-How many children do you have in each age group? Select all that apply. • 0-3 • 4-5 • 6 -8<br />
-• 9 - 11 • 12 - 18 • 19 - 25 • 26 - 55 • 56 - 64 • 65+
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-How many people currently live in your home?
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-What gender do you identify with? • Male • Female • Transgender Female • Transgender Male • Gender variant/Non-Conforming • Prefer not to answer<br />
-• Other [text entry]
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Past
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-What gender do you identify with? • Male • Female • Other [text entry] • Do not wish to disclose
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Where were you born? • Inside the United States • Outside the United States
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-What generation do you identify with? • First Generation - You were born outside the United States • Second Generation - You were born in the United States to immigrant parents<br />
-• Third Generation - You were born in the United States to U.S. born parents<br />
-• Fourth Generation or Greater - Parents and grandparents were born in the U.S.<br />
-• Unknown or unsure
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Are you of Hispanic, Latinx, or Spanish origin? • No, not of Hispanic, Latinx, or Spanish origin<br />
-• Yes, Mexican, Mexican American, or Central American (Guatemalan, Salvadoran)<br />
-• Yes, Puerto Rican, Cuban, Colombian, Ecuadorian, other Hispanic or Latinx
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-What is your race? Select all that apply • American Indian/ Alaska Native<br />
-• Asian • Black / African American<br />
-• Native Hawaiian/ Pacific Islander<br />
-• White/ Caucasian<br />
-• Other [text entry]
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-What is your ethnicity? • Hispanic/ Latinx<br />
-• not Hispanic/ Latinx
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-What language is primarily spoken in your home? • English • Arabic • Chinese • French • German • Italian • Japanese • Korean • Russian • Spanish • Vietnamese • Other
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Which other language is spoken in your home? • [text entry]
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Are you currently pregnant? • Yes • No • Unsure • Not applicable
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Approximately how many weeks along are you? • 0 • 10 • 20 • 30 • 40 • 50
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Past
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Does your child have any of the following disabilities? • Blind or serious difficulty seeing even when wearing glasses • Serious difficulty walking or climbing stairs • Due to a physical, mental, or emotional problem, difficulty remembering, concentrating, or making decisions • Other disabilities • No disabilities • Do not wish to disclose
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-Current
-</td>
-</tr>
-</tbody>
-</table>
+<p><div id="htmlwidget-200b91d70faffca669aa" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-200b91d70faffca669aa">{"x":{"filter":"none","data":[["What is the zip code for your current residence? ","What state do you live in? ","What are the living arrangements for children in your household under the age of 5?     Parents are not limited to biological parents, but include stepparents and those who adopt their children. Foster parents are considered nonrelatives. \r\n• Two parents    \r\n• Mother, no father   \r\n• Father, no mother    \r\n• Neither parent in household   \r\n• Other relatives   \r\n• Non-relatives","What best describes your relationship status? \r\n• Engaged \r\n• Married \r\n• Separated \r\n• Divorced \r\n• Widowed \r\n• Living together/cohabitating \r\n• Romantically involved, but living apart  \r\n• Not in any kind of relationship (Single)  \r\n• Other","How would you describe your household structure?  \r\n• Single parent \r\n• Two parent household \r\n• Extended family household","How many total children do you have? ","How many children do you have in each age group? Select all that apply. \r\n• 0-3 \r\n• 4-5 \r\n• 6 -8  \r\n• 9 - 11 \r\n• 12 - 18 \r\n• 19 - 25 \r\n• 26 - 55 \r\n• 56 - 64 \r\n• 65+","How many people currently live in your home? ","What gender do you identify with? \r\n• Male \r\n• Female \r\n• Transgender Female \r\n• Transgender Male \r\n• Gender variant/Non-Conforming \r\n• Prefer not to answer  \r\n• Other [text entry]","What gender do you identify with? \r\n• Male \r\n• Female \r\n• Other [text entry] \r\n• Do not wish to disclose","Where were you born? \r\n• Inside the United States \r\n• Outside the United States","What generation do you identify with? \r\n• First Generation - You were born outside the United States \r\n• Second Generation - You were born in the United States to immigrant parents    \r\n• Third Generation - You were born in the United States to U.S. born parents   \r\n• Fourth Generation or Greater - Parents and grandparents were born in the U.S.   \r\n• Unknown or unsure","Are you of Hispanic, Latinx, or Spanish origin? \r\n• No, not of Hispanic, Latinx, or Spanish origin  \r\n• Yes, Mexican, Mexican American, or Central American (Guatemalan, Salvadoran)   \r\n• Yes, Puerto Rican, Cuban, Colombian, Ecuadorian, other Hispanic or Latinx","What is your race? Select all that apply \r\n• American Indian/ Alaska Native  \r\n• Asian \r\n• Black / African American  \r\n• Native Hawaiian/ Pacific Islander  \r\n• White/ Caucasian  \r\n• Other [text entry]","What is your ethnicity? \r\n• Hispanic/ Latinx  \r\n• not Hispanic/ Latinx","What language is primarily spoken in your home? \r\n• English \r\n• Arabic \r\n• Chinese \r\n• French \r\n• German \r\n• Italian \r\n• Japanese \r\n• Korean \r\n• Russian \r\n• Spanish \r\n• Vietnamese \r\n• Other","Which other language is spoken in your home? \r\n• [text entry]","Are you currently pregnant? \r\n• Yes \r\n• No \r\n• Unsure \r\n• Not applicable","Approximately how many weeks along are you? \r\n• 0 \r\n• 10 \r\n• 20 \r\n• 30 \r\n• 40 \r\n• 50","Does your child have any of the following disabilities? \r\n• Blind or serious difficulty seeing even when wearing glasses \r\n• Serious difficulty walking or climbing stairs \r\n• Due to a physical, mental, or emotional problem, difficulty remembering, concentrating, or making decisions \r\n• Other disabilities \r\n• No disabilities \r\n• Do not wish to disclose \r\n\r\n"],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["Current","Current","Current","Past","Past","Current","Current","Current","Past","Current","Current","Current","Current","Current","Current","Current","Current","Current","Past","Current"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Question<\/th>\n      <th>Source<\/th>\n      <th>Occurrence<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script> ```</p>
 
 
 
