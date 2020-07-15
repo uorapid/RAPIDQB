@@ -1,6 +1,6 @@
 ---
 title: "Baseline Survey"
-date: "Last Updated: 7/9/2020"
+date: "Last Updated: 7/15/2020"
 output: 
  html_document:
     theme: cosmo
@@ -28,7 +28,11 @@ Occurence indicates whether the question is currently included in either the bas
 
 ```{r display data, echo=FALSE}
 
-data.raw %>%
-  kable() %>%
-  kable_styling(bootstrap_options = "striped", "hover","condensed", "responsive", full_width = F, position = "center", fixed_thead = T)
+DT::datatable(data.raw, class = 'cell-border stripe', rownames = F, filter = 'top', editable = TRUE, extensions = 'Buttons', options = list(
+  dom = 'BFrtip',
+  buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+))
+
 ```
+
+
