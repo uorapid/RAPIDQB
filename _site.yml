@@ -10,11 +10,11 @@ navbar:
         href: Baseline.html
       - text: "Follow-Up"
         href: FollowUp.html
-    - text: "Domains"
+    - text: "Topic Areas"
       menu:
       - text: "Income & Employment"
         href: EconomicStability.html
-      - text: "Support Family Physical Health"
+      - text: "Health & Access to Care"
         href: FamHealth.html
       - text: "Support Strong Parent Mental Health"
         href: ParentMH.html
