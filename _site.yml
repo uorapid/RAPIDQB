@@ -22,7 +22,7 @@ navbar:
         href: ChildSEHealth.html
       - text: "Child Care and Early Learning"
         href: ChildCareEC.html  
-      - text: "Meet Basic Needs for Health and Well-Being"
+      - text: "Basic Needs"
         href: HealthWB.html     
       - text: "Demographics"
         href: Demographics.html  
