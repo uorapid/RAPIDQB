@@ -1,0 +1,33 @@
+---
+title: "Mental Health"
+date: "Last Updated: 7/15/2020"
+output: 
+ html_document:
+    theme: cosmo
+    toc: TRUE
+    toc_float: TRUE
+---
+
+```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+library(knitr)
+library(tidyr)
+library(kableExtra)
+library(stringr)
+library(dplyr)
+library(DT)
+options(knitr.table.format = "html", knitr.kable.NA = '') 
+```
+
+```{r read data, echo=FALSE}
+data.raw <- read_excel("Data/OverallMH.xlsx")
+
+```
+
+Occurence indicates whether the question is currently included in either the baseline or the follow-up survey.
+
+```{r display data, echo=FALSE}
+
+datatable(data.raw, rownames = FALSE)
+```

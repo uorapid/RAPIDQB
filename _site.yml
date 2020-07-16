@@ -16,10 +16,8 @@ navbar:
         href: EconomicStability.html
       - text: "Health & Access to Care"
         href: FamHealth.html
-      - text: "Support Strong Parent Mental Health"
-        href: ParentMH.html
-      - text: "Support Strong Child Socio-Emotional Health"
-        href: ChildSEHealth.html
+      - text: "Mental Health"
+        href: OverallMH.html
       - text: "Child Care and Early Learning"
         href: ChildCareEC.html  
       - text: "Basic Needs"
