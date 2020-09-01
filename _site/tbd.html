@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="" />
 
 
 <title>Coming Soon</title>
 
+<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -238,6 +237,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -266,6 +266,12 @@ $(document).ready(function () {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -360,32 +366,8 @@ div.tocify {
     <li>
       <a href="FollowUp.html">Follow-Up</a>
     </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Topic Areas
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="EconomicStability.html">Income &amp; Employment</a>
-    </li>
-    <li>
-      <a href="FamHealth.html">Health &amp; Access to Care</a>
-    </li>
-    <li>
-      <a href="OverallMH.html">Mental Health</a>
-    </li>
-    <li>
-      <a href="ChildCareEC.html">Child Care and Early Learning</a>
-    </li>
-    <li>
-      <a href="HealthWB.html">Basic Needs</a>
-    </li>
-    <li>
-      <a href="Demographics.html">Demographics</a>
+      <a href="Historical.html">All Questions</a>
     </li>
   </ul>
 </li>
@@ -404,6 +386,18 @@ div.tocify {
     </li>
     <li>
       <a href="SocialSupport.html">Social Support</a>
+    </li>
+    <li>
+      <a href="tbd.html">Social Support 2.0</a>
+    </li>
+    <li>
+      <a href="tbd.html">Material Hardship</a>
+    </li>
+    <li>
+      <a href="tbd.html">RISER</a>
+    </li>
+    <li>
+      <a href="tbd.html">Childcare &amp; School Reopening</a>
     </li>
   </ul>
 </li>
@@ -431,7 +425,8 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Coming Soon</h1>
-<h4 class="date">Last Updated: 6/28/2020</h4>
+<h4 class="author"></h4>
+<h4 class="date">Last Updated: 8/31/2020</h4>
 
 </div>
 
@@ -488,7 +483,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
