@@ -1,5 +1,5 @@
 ---
-title: "School Reopening"
+title: "Childcare & School Reopening"
 date: "8/31/2020"
 output: 
  html_document:
@@ -22,8 +22,6 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 data.raw <- read_excel("Data/ChildCareReopening.xlsx")
 
 ```
-
-Occurence indicates whether the question is currently included in either the baseline or the follow-up survey.
 
 ```{r display data, echo=FALSE}
 
