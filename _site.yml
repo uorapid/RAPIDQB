@@ -10,20 +10,8 @@ navbar:
         href: Baseline.html
       - text: "Follow-Up"
         href: FollowUp.html
-    - text: "Topic Areas"
-      menu:
-      - text: "Income & Employment"
-        href: EconomicStability.html
-      - text: "Health & Access to Care"
-        href: FamHealth.html
-      - text: "Mental Health"
-        href: OverallMH.html
-      - text: "Child Care and Early Learning"
-        href: ChildCareEC.html  
-      - text: "Basic Needs"
-        href: HealthWB.html     
-      - text: "Demographics"
-        href: Demographics.html  
+      - text: "All Questions"
+        href: Historical.html
     - text: "Special Topics"
       menu:
       - text: "Family Conflict"
@@ -31,7 +19,15 @@ navbar:
       - text: "Open Ended Questions"
         href: OpenEnded.html
       - text: "Social Support"
-        href: SocialSupport.html     
+        href: SocialSupport.html  
+      - text: "Social Support 2.0"
+        href: tbd.html 
+      - text: "Material Hardship"
+        href: tbd.html  
+      - text: "RISER"
+        href: tbd.html 
+      - text: "Childcare & School Reopening"
+        href: tbd.html
   right:
     - icon: fa-github
       href: https://github.com/akunerth/R3_QuestionBank.git
