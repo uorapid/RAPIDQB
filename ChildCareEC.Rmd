@@ -1,6 +1,6 @@
 ---
 title: "Child Care and Early Learning"
-date: "Last Updated: 7/15/2020"
+date: "Last Updated: 8/31/2020"
 output: 
  html_document:
     theme: cosmo
@@ -16,7 +16,6 @@ library(tidyr)
 library(kableExtra)
 library(stringr)
 library(dplyr)
-library(DT)
 options(knitr.table.format = "html", knitr.kable.NA = '') 
 ```
 
@@ -28,6 +27,12 @@ data.raw <- read_excel("Data/ChildCareEC.xlsx")
 Occurence indicates whether the question is currently included in either the baseline or the follow-up survey.
 
 ```{r display data, echo=FALSE}
-datatable(data.raw, rownames = FALSE)
+
+DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F, filter = 'top', editable = TRUE, extensions = 'Buttons',  options = list(
+  dom = 'BFrtip',
+  buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+))
+
 ```
-```
+
+
