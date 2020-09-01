@@ -24,7 +24,6 @@ data.raw <- read_excel("Data/RISER.xlsx")
 
 ```
 
-Occurence indicates whether the question is currently included in either the baseline or the follow-up survey.
 
 ```{r display data, echo=FALSE}
 

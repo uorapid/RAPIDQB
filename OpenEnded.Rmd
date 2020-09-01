@@ -24,8 +24,6 @@ data.raw <- read_excel("Data/OpenEnded.xlsx")
 
 ```
 
-Occurence indicates whether the question is currently included in either the baseline or the follow-up survey.
-
 ```{r display data, echo=FALSE}
 
 DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F, filter = 'top', editable = TRUE, extensions = 'Buttons',  options = list(
