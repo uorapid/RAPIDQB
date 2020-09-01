@@ -1,6 +1,5 @@
 ---
 title: "Material Hardship"
-author: "Allison Kunerth"
 date: "8/31/2020"
 output: 
  html_document:
@@ -8,13 +7,29 @@ output:
     toc: TRUE
     toc_float: TRUE
 ---
-
-```{r setup, include = FALSE, cache = FALSE}
-knitr::opts_chunk$set(
-  comment = NA,
-  warning = FALSE,
-  message = FALSE)
+```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+library(knitr)
+library(tidyr)
+library(kableExtra)
+library(stringr)
+library(dplyr)
+options(knitr.table.format = "html", knitr.kable.NA = '') 
 ```
 
+```{r read data, echo=FALSE}
+data.raw <- read_excel("Data/Material_Hardship.xlsx")
 
-Content still being developed
+```
+
+Occurence indicates whether the question is currently included in either the baseline or the follow-up survey.
+
+```{r display data, echo=FALSE}
+
+DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F, filter = 'top', editable = TRUE, extensions = 'Buttons',  options = list(
+  dom = 'BFrtip',
+  buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+))
+
+```
