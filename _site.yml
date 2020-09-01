@@ -20,8 +20,10 @@ navbar:
         href: OpenEnded.html
       - text: "Social Support"
         href: SocialSupport.html  
-      - text: "Social Support 2.0"
-        href: tbd.html 
+      - text: "Childcare"
+        href: ChildCareEC.html 
+      - text: "School Reopening"
+        href: ChildCareReopening.html 
       - text: "Material Hardship"
         href: tbd.html  
       - text: "RISER"
