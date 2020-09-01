@@ -15,7 +15,7 @@
 <title>RISER</title>
 
 <script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -27,6 +27,27 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.14/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="site_libs/jszip-1.10.20/jszip.min.js"></script>
+<script src="site_libs/pdfmake-1.10.20/pdfmake.js"></script>
+<script src="site_libs/pdfmake-1.10.20/vfs_fonts.js"></script>
+<link href="site_libs/dt-ext-buttons-1.10.20/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="site_libs/dt-ext-buttons-1.10.20/js/dataTables.buttons.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.flash.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.html5.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.colVis.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.print.min.js"></script>
+<link href="site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="site_libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -389,13 +410,16 @@ div.tocify {
       <a href="SocialSupport.html">Social Support</a>
     </li>
     <li>
-      <a href="tbd.html">Social Support 2.0</a>
+      <a href="ChildCareReopening.html">School Reopening</a>
     </li>
     <li>
       <a href="tbd.html">Material Hardship</a>
     </li>
     <li>
       <a href="tbd.html">RISER</a>
+    </li>
+    <li>
+      <a href="ChildCareEC.html">Childcare and Early Learning</a>
     </li>
     <li>
       <a href="tbd.html">Childcare &amp; School Reopening</a>
@@ -432,25 +456,9 @@ div.tocify {
 </div>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
-</div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="RISER_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
-</div>
+<p>Occurence indicates whether the question is currently included in either the baseline or the follow-up survey.</p>
+<div id="htmlwidget-6cf7fecb9c5df98ea31d" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6cf7fecb9c5df98ea31d">{"x":{"filter":"top","filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"editable":{"target":"cell","disable":{"columns":null}},"data":[["Instructions: In these next set of questions, we would like to know…","Prior to the coronavirus (COVID-19) pandemic, for the following questions, please indicate how often you were concerned about the following regarding your child(ren) between the ages of 0-5.\r\n• Getting poor care and education\r\n• Being mistreated by adults\r\n• Getting stopped in a white neighborhood\r\n• Being punished more harshly than others\r\n• Being discouraged from trying new things\r\n• Being considered less attractive\r\n• Having fewer choices in life\r\n• Being excluded from events or groups\r\n• Being treated unfairly by other children","Since the coronavirus (COVID-19) pandemic, for the following questions, please indicate how often you were concerned about the following regarding your child(ren) between the ages of 0-5.\r\n• Getting poor care and education\r\n• Being mistreated by adults\r\n• Getting stopped in a white neighborhood\r\n• Being punished more harshly than others\r\n• Being discouraged from trying new things\r\n• Being considered less attractive\r\n• Having fewer choices in life\r\n• Being excluded from events or groups\r\n• Being treated unfairly by other children","Please indicate whether you have experienced any of the following prior to the coronavirus (COVID-19) pandemic\r\n• Did you ever receive service from someone such as a plumber or car mechanic that was worse than what other people get because of your race or ethnicity?\r\n• Were you ever denied service because of your race or ethnicity\r\n• Were you ever unfairly stopped, searched, questioned, physically threatened, or abused by the police because of your race or ethnicity?\r\n• Were you ever unfairly fired because of your race or ethnicity?\r\n• For unfair reasons, were you ever not hired for a job because of your race or ethnicity?\r\n• Were you ever unfairly denied a promotion because of your race or ethnicity?\r\n• Were you ever unfairly discouraged by a teacher or advisor from continuing your education because of your race or ethnicity?\r\n• Were you ever unfairly prevented from moving into a neighborhood because the landlord or relator refused to sell or rent you a house or apartment because of your race or ethnicity?\r\n• DId you ever move into a neighborhood where neighbors made life difficult for you or your family because of your race or ethnicity?\r\n•  Were you ever unfairly denied a bank loan because of your race or ethnicity?\r\n•  Were you ever denied medical service because of your race or ethnicity?\r\n•  Were you ever called an insulting and derogatory term because of your race or ethnicity?","Please indicate whether you have experienced any of the following since the coronavirus (COVID-19) pandemic\r\n• Did you ever receive service from someone such as a plumber or car mechanic that was worse than what other people get because of your race or ethnicity?\r\n• Were you ever denied service because of your race or ethnicity\r\n• Were you ever unfairly stopped, searched, questioned, physically threatened, or abused by the police because of your race or ethnicity?\r\n• Were you ever unfairly fired because of your race or ethnicity?\r\n• For unfair reasons, were you ever not hired for a job because of your race or ethnicity?\r\n• Were you ever unfairly denied a promotion because of your race or ethnicity?\r\n• Were you ever unfairly discouraged by a teacher or advisor from continuing your education because of your race or ethnicity?\r\n• Were you ever unfairly prevented from moving into a neighborhood because the landlord or relator refused to sell or rent you a house or apartment because of your race or ethnicity?\r\n• DId you ever move into a neighborhood where neighbors made life difficult for you or your family because of your race or ethnicity?\r\n•  Were you ever unfairly denied a bank loan because of your race or ethnicity?\r\n•  Were you ever denied medical service because of your race or ethnicity?\r\n•  Were you ever called an insulting and derogatory term because of your race or ethnicity?","Prior to the coronavirus (COVID-19) pandemic,\r\nDid you talk to your children about challenges they may face because of their race or ethnicity?","Prior to the coronavirus (COVID-19) pandemic,\r\nDid you talk to your children about advantages they may face because of their race or ethnicity?","Since the coronavirus (COVID-19) pandemic,\r\nDid you talk to your children about challenges they may face because of their race or ethnicity?","Since the coronavirus (COVID-19) pandemic,\r\nDid you talk to your children about advantages they may face because of their race or ethnicity?"],[null,"• Never \r\n• Rarely \r\n• Some of the time\r\n• Most of the time","• Never \r\n• Rarely \r\n• Some of the time\r\n• Most of the time","•  Yes\r\n•  No","•  Yes\r\n•  No","•  Yes\r\n•  No","•  Yes\r\n•  No","•  Yes\r\n•  No","•  Yes\r\n•  No"],[null,"Modified by RAPID Team and RISER Team \r\nDevelopment and reliability of a telephone-administered perceived racism scale (TPRS): A tool for epidemiological use. Ethnicity &amp; Disease, 11, 251–262.","Modified by RAPID Team and RISER Team \r\nDevelopment and reliability of a telephone-administered perceived racism scale (TPRS): A tool for epidemiological use. Ethnicity &amp; Disease, 11, 251–262.","Modified by RAPID Team and RISER Team \r\nPerceived Discrimination, Race and Health in South Africa: Findings from the South Africa Stress and Health Study. Social Science and Medicine, 2008; 67: 441-452.","Modified by RAPID Team and RISER Team \r\nPerceived Discrimination, Race and Health in South Africa: Findings from the South Africa Stress and Health Study. Social Science and Medicine, 2008; 67: 441-452.","Modified by RAPID Team and RISER Team \r\nRace in America 2019: Public has negative views of the country’s racial progress; more than half say Trump has made race relations worse. Washington, DC: Pew Research Center.","Modified by RAPID Team and RISER Team \r\nRace in America 2019: Public has negative views of the country’s racial progress; more than half say Trump has made race relations worse. Washington, DC: Pew Research Center.","Modified by RAPID Team and RISER Team \r\nRace in America 2019: Public has negative views of the country’s racial progress; more than half say Trump has made race relations worse. Washington, DC: Pew Research Center.","Modified by RAPID Team and RISER Team \r\nRace in America 2019: Public has negative views of the country’s racial progress; more than half say Trump has made race relations worse. Washington, DC: Pew Research Center."],["Current\r\n21","Current\r\n21","Current\r\n21","Current\r\n21","Current\r\n21","Current\r\n21","Current\r\n21","Current\r\n21","Current\r\n21"]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Question<\/th>\n      <th>Answers<\/th>\n      <th>Source<\/th>\n      <th>Occurrence<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"BFrtip","buttons":["copy","csv","excel","pdf","print"],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
 
 
 
