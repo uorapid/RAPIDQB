@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -14,6 +13,7 @@
 
 <title>Income &amp; Employment</title>
 
+<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -32,8 +32,8 @@
 <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
-<script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -245,6 +245,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -273,6 +274,12 @@ $(document).ready(function () {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -367,32 +374,8 @@ div.tocify {
     <li>
       <a href="FollowUp.html">Follow-Up</a>
     </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Topic Areas
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="EconomicStability.html">Income &amp; Employment</a>
-    </li>
-    <li>
-      <a href="FamHealth.html">Health &amp; Access to Care</a>
-    </li>
-    <li>
-      <a href="OverallMH.html">Mental Health</a>
-    </li>
-    <li>
-      <a href="ChildCareEC.html">Child Care and Early Learning</a>
-    </li>
-    <li>
-      <a href="HealthWB.html">Basic Needs</a>
-    </li>
-    <li>
-      <a href="Demographics.html">Demographics</a>
+      <a href="Historical.html">All Questions</a>
     </li>
   </ul>
 </li>
@@ -411,6 +394,21 @@ div.tocify {
     </li>
     <li>
       <a href="SocialSupport.html">Social Support</a>
+    </li>
+    <li>
+      <a href="ChildcareSchoolReopen.html">School Reopening</a>
+    </li>
+    <li>
+      <a href="tbd.html">Material Hardship</a>
+    </li>
+    <li>
+      <a href="RISER.html">RISER</a>
+    </li>
+    <li>
+      <a href="ChildCareEC.html">Childcare and Early Learning</a>
+    </li>
+    <li>
+      <a href="SchoolOpen.html">School Reopening</a>
     </li>
   </ul>
 </li>
@@ -497,7 +495,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
