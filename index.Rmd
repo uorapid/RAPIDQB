@@ -16,7 +16,9 @@ knitr::opts_chunk$set(
 
 This site hosts a list of questions asked as a part of the RAPID-EC project. Unless specified, the content is **not to be shared**.All efforts were taken to ensure the accuracy of the question sources.
 
-Below is a list of when special topics were introducted to the survey.
+Below is a list of when special topics were introduced to the survey.
+
+If there are any questions or concerns, please do not hesitate to reach out to the RAPID-EC team. 
 
 ```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
