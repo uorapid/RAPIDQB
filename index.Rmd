@@ -14,7 +14,30 @@ knitr::opts_chunk$set(
   message = FALSE)
 ```
 
-This site hosts a list of questions asked as a part of the RAPID-EC project. Unless specified, the content is not to be shared.
+This site hosts a list of questions asked as a part of the RAPID-EC project. Unless specified, the content is **not to be shared**.All efforts were taken to ensure the accuracy of the question sources.
 
-All efforts are taken to ensure the accuracy of the question sources.
+Below is a list of when special topics were introducted to the survey.
 
+```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+library(knitr)
+library(tidyr)
+library(kableExtra)
+library(stringr)
+library(dplyr)
+options(knitr.table.format = "html", knitr.kable.NA = '') 
+```
+
+```{r read data, echo=FALSE}
+data.raw <- read_excel("Data/SurveyTrackingCalendar.xlsx")
+
+```
+
+```{r display data, echo=FALSE}
+
+DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F,  options = list(
+  pageLength = 25, autoWidth = TRUE
+))
+
+```
