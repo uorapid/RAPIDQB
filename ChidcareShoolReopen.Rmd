@@ -19,7 +19,7 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 ```
 
 ```{r read data, echo=FALSE}
-data.raw <- read_excel("Data/ChildCareReopening.xlsx")
+data.raw <- read_excel("Data/SchoolReopening.xlsx")
 
 ```
 

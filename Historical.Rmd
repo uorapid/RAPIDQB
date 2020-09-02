@@ -17,3 +17,26 @@ knitr::opts_chunk$set(
 The intent of this list is to include all questions that have been asked to date. The majority of questions are currently included, with efforts in early September to ensure this list is fully comprehensive.
 
 If you feel something is missing, or you have questions--please don't hesitate to reach to to the RAPID-EC team. 
+
+```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+library(knitr)
+library(tidyr)
+library(kableExtra)
+library(stringr)
+library(dplyr)
+options(knitr.table.format = "html", knitr.kable.NA = '') 
+```
+
+```{r read data, echo=FALSE}
+data.raw <- read_excel("Data/Historical.xlsx")
+
+```
+
+```{r display data, echo=FALSE}
+
+DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F, filter = 'top', editable = TRUE, extensions = 'Buttons',  options = list(
+  dom = 'BFrtip',
+  buttons = c('copy', 'csv', 'excel', 'pdf', 'print'), pageLength = 25))
+```
