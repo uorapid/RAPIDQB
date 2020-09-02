@@ -1,11 +1,9 @@
 ---
 title: "RISER"
-date: "8/31/2020"
+date: "9/01/2020"
 output: 
  html_document:
     theme: cosmo
-    toc: TRUE
-    toc_float: TRUE
 ---
 
 ```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}

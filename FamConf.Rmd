@@ -1,11 +1,9 @@
 ---
 title: "Family Conflict"
-date: "Last Updated: 08/31/2020"
+date: "Last Updated: 09/01/2020"
 output: 
  html_document:
     theme: cosmo
-    toc: TRUE
-    toc_float: TRUE
 ---
 
 ```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}

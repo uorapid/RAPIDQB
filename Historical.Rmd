@@ -1,11 +1,9 @@
 ---
 title: "Historical Questions"
-date: "Last Updated: 8/31/2020"
+date: "Last Updated: 9/01/2020"
 output: 
  html_document:
     theme: cosmo
-    toc: TRUE
-    toc_float: TRUE
 ---
 
 ```{r setup, include = FALSE, cache = FALSE}
@@ -38,5 +36,5 @@ data.raw <- read_excel("Data/Historical.xlsx")
 
 DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F, filter = 'top', editable = TRUE, extensions = 'Buttons',  options = list(
   dom = 'BFrtip',
-  buttons = c('copy', 'csv', 'excel', 'pdf', 'print'), pageLength = 25))
+  buttons = c('copy', 'csv', 'excel', 'pdf', 'print'), pageLength = 25, autoWidth = TRUE))
 ```

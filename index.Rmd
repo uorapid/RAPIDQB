@@ -4,8 +4,6 @@ date: "Last Updated: 8/31/2020"
 output: 
   html_document:
     theme: cosmo
-    toc: TRUE
-    toc_float: TRUE
 ---
 ```{r setup, include = FALSE, cache = FALSE}
 knitr::opts_chunk$set(
