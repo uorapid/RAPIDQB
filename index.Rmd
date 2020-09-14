@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
   message = FALSE)
 ```
 
-This site hosts a list of questions asked as a part of the RAPID-EC project. Unless specified, the content is **not to be shared**.All efforts were taken to ensure the accuracy of the question sources.
+This site hosts a list of questions asked as a part of the RAPID-EC project. All efforts were taken to ensure the accuracy of the question sources.
 
 Below is a list of when special topics were introduced to the survey.
 
