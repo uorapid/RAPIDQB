@@ -1,6 +1,6 @@
 ---
 title: "R3 Question Bank Dashboard"
-date: "Last Updated: 9/22/2020"
+date: "Last Updated: 10/26/2020"
 output: 
   html_document:
     theme: cosmo
@@ -37,7 +37,7 @@ data.raw <- read_excel("Data/SurveyTrackingCalendar.xlsx")
 ```{r display data, echo=FALSE}
 
 DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F,  options = list(
-  pageLength = 25, autoWidth = TRUE
+  pageLength = 30, autoWidth = TRUE
 ))
 
 ```
