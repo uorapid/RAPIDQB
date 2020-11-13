@@ -37,7 +37,7 @@ data.raw <- read_excel("Data/SurveyTrackingCalendar.xlsx")
 ```{r display data, echo=FALSE}
 
 DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F,  options = list(
-  pageLength = 30, autoWidth = TRUE
+  pageLength = 35, autoWidth = TRUE
 ))
 
 ```
