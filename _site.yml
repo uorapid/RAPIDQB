@@ -32,6 +32,6 @@ navbar:
         href: RemoteWork.html
   right:
     - icon: fa-github
-      href: https://github.com/akunerth/R3_QuestionBank.git
+      href: https://github.com/uorapid/RAPIDQB.git
     - icon: fa-flask
       href: https://www.uorapidresponse.com/
