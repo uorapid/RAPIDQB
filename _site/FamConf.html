@@ -13,8 +13,8 @@
 
 <title>Family Conflict</title>
 
-<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
-<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -23,9 +23,9 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="site_libs/datatables-binding-0.14/datatables.js"></script>
+<script src="site_libs/datatables-binding-0.17/datatables.js"></script>
 <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
@@ -42,10 +42,19 @@
 <script src="site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
 <link href="site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
 <script src="site_libs/selectize-0.12.0/selectize.min.js"></script>
-<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="site_libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -91,6 +100,7 @@ h6 {
   text-align: left;
 }
 </style>
+
 
 
 
@@ -318,7 +328,7 @@ $(document).ready(function () {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Special Topics
+    Modules
      
     <span class="caret"></span>
   </a>
@@ -344,19 +354,22 @@ $(document).ready(function () {
     <li>
       <a href="SchoolOpen.html">School Reopening</a>
     </li>
+    <li>
+      <a href="RemoteWork.html">Remote Work</a>
+    </li>
   </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/akunerth/R3_QuestionBank.git">
-    <span class="fa fa-github"></span>
+    <span class="fas fa-github"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.uorapidresponse.com/">
-    <span class="fa fa-flask"></span>
+    <span class="fas fa-flask"></span>
      
   </a>
 </li>
@@ -375,8 +388,8 @@ $(document).ready(function () {
 </div>
 
 
-<div id="htmlwidget-200b91d70faffca669aa" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-200b91d70faffca669aa">{"x":{"filter":"top","filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"editable":{"target":"cell","disable":{"columns":null}},"data":[["Families have many different ways of trying to settle their differences. This is a list of things that might happen when your family has differences. Please mark how many times each of these things happened in the last week. Please also think about a typical week in your family’s life prior to the coronavirus (COVID-19) pandemic, and mark how many times each of these things happened. If one of these things did not occur, then select “This has not happened\" for that question. If a question does not apply to your family, then select “NA”.   \r\n\r\nIn a typical week prior to the COVID-19 Pandemic.\r\n• I insulted or swore or shouted or yelled at my partner  \r\n• I shouted, yelled, or screamed at my child  \r\n• I criticized or said mean things to my child \r\n• I felt like throwing things or slamming doors \r\n• My partner insulted or swore or shouted or yelled at me \r\n• My partner shouted, yelled, or screamed at my child \r\n• My partner criticized my child  \r\n• My child had a temper tantrum  \r\n• My child argued with me  \r\n• My child argued with my partner","Families have many different ways of trying to settle their differences. This is a list of things that might happen when your family has differences. Please mark how many times each of these things happened in the last week. Please also think about a typical week in your family’s life prior to the coronavirus (COVID-19) pandemic, and mark how many times each of these things happened. If one of these things did not occur, then select “This has not happened\" for that question. If a question does not apply to your family, then select “NA”.  \r\n\r\nIn the last week…\r\n• I insulted or swore or shouted or yelled at my partner  \r\n• I shouted, yelled, or screamed at my child  \r\n• I criticized or said mean things to my child \r\n• I felt like throwing things or slamming doors \r\n• My partner insulted or swore or shouted or yelled at me \r\n• My partner shouted, yelled, or screamed at my child \r\n• My partner criticized my child  \r\n• My child had a temper tantrum  \r\n• My child argued with me  \r\n• My child argued with my partner","When you and your child have spent time together, how often did you do the following? If one of these things did not occur, then select “This has not happened\" for that question. If a question does not apply to your family, then select “NA”. \r\n\r\nIn a typical week prior to the COVID-19 Pandemic...\r\n• I let my child know I really care about them \r\n• I was loving and affectionate toward my child \r\n• I was supportive and understanding toward my child \r\n• I told my child I love them \r\n","When you and your child have spent time together, how often did you do the following? If one of these things did not occur, then select “This has not happened\" for that question. If a question does not apply to your family, then select “NA”. \r\n\r\nIn the last week…\r\n• I let my child know I really care about them \r\n• I was loving and affectionate toward my child \r\n• I was supportive and understanding toward my child \r\n• I told my child I love them","Think about the sources of conflict for your family. Which of the following would help decrease conflict the most right now?","What's the most important thing you have done for your children?","Currently, is there anything that is helping you reduce conflict with your spouse/partner?","Currently, is there anything that is helping you reduce conflict with your child/children?"],["• Once per week\r\n• Twice per week\r\n• 3-5 times per week\r\n• 6-10 times per week\r\n• More than 10 times per week\r\n• This has not happened\r\n• N/A","• Once per week\r\n• Twice per week\r\n• 3-5 times per week\r\n• 6-10 times per week\r\n• More than 10 times per week\r\n• This has not happened\r\n• N/A","• Once per week\r\n• Twice per week\r\n• 3-5 times per week\r\n• 6-10 times per week\r\n• More than 10 times per week\r\n• This has not happened\r\n• N/A","• Once per week\r\n• Twice per week\r\n• 3-5 times per week\r\n• 6-10 times per week\r\n• More than 10 times per week\r\n• This has not happened\r\n• Not applicable","• being confident that my family has health insurance \r\n• not being so socially isolated \r\n• having lower levels of worry and stress \r\n• knowing we can pay for food  \r\n• knowing we can pay my rent/mortgage/housing expenses \r\n• knowing my/our job is secure \r\n• being able to meet my child’s social and emotional needs \r\n• knowing we have access to childcare","Open Response","Open Response","Open Response"],["Developed by RAPID Team\r\n\r\n- Interpersonal Conflict: Conflict Tactics Scale, Revised, Short form CTS25\r\n- Harsh Parenting: Conflict Tactics Scale Parent-Child and Iowa Family Interaction Rating Scales (WH)\r\n- Child Behavior: Early Childhood Behavior Questionnaire","Developed by RAPID Team\r\n\r\n- Interpersonal Conflict: Conflict Tactics Scale, Revised, Short form CTS25\r\n- Harsh Parenting: Conflict Tactics Scale Parent-Child and Iowa Family Interaction Rating Scales (WH)\r\n- Child Behavior: Early Childhood Behavior Questionnaire","RAPID Team Modified\r\n\r\nIowa Family Interaction Rating Scales (WH)","RAPID Team Modified\r\n\r\nIowa Family Interaction Rating Scales (WH)","Developed by RAPID-EC Team","Developed by RAPID-EC Team","Developed by RAPID-EC Team","Developed by RAPID-EC Team"],["Current\r\n9, 11, 16, 29","Current\r\n9, 11, 16, 29","Current\r\n9, 11, 16, 29","Current\r\n9, 11, 16, 29","Current\r\n9, 11, 16, 29","Current, 29","Current, 29","Current, 29"]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Question<\/th>\n      <th>Answers<\/th>\n      <th>Source<\/th>\n      <th>Occurrence<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"BFrtip","buttons":["copy","csv","excel","pdf","print"],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a0773eb8bd40f843c3be" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a0773eb8bd40f843c3be">{"x":{"filter":"top","filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"editable":{"target":"cell","disable":{"columns":null}},"data":[["Instructions: The following set of questions will ask about how people in your household are getting along. Some of the questions ask about families’ conflict, which is normal and common. None of the questions in this survey meet the threshold for reporting maltreatment. Our goal is to understand how coronavirus (COVID-19) pandemic is impacting family functioning, across all of the families who take this survey.","Families have many different ways of trying to settle their differences. This is a list of things that might happen when your family has differences. Please mark how many times each of these things happened in the last week. Please also think about a typical week in your family’s life prior to the coronavirus (COVID-19) pandemic, and mark how many times each of these things happened. If one of these things did not occur, then select “This has not happened\" for that question. If a question does not apply to your family, then select “NA”.   \r\n\r\nIn a typical week prior to the COVID-19 Pandemic.\r\n• I insulted or swore or shouted or yelled at my partner  \r\n• I shouted, yelled, or screamed at my child  \r\n• I criticized or said mean things to my child \r\n• I felt like throwing things or slamming doors \r\n• My partner insulted or swore or shouted or yelled at me \r\n• My partner shouted, yelled, or screamed at my child \r\n• My partner criticized my child  \r\n• My child had a temper tantrum  \r\n• My child argued with me  \r\n• My child argued with my partner","Families have many different ways of trying to settle their differences. This is a list of things that might happen when your family has differences. Please mark how many times each of these things happened in the last week. Please also think about a typical week in your family’s life prior to the coronavirus (COVID-19) pandemic, and mark how many times each of these things happened. If one of these things did not occur, then select “This has not happened\" for that question. If a question does not apply to your family, then select “NA”.  \r\n\r\nIn the last week…\r\n• I insulted or swore or shouted or yelled at my partner  \r\n• I shouted, yelled, or screamed at my child  \r\n• I criticized or said mean things to my child \r\n• I felt like throwing things or slamming doors \r\n• My partner insulted or swore or shouted or yelled at me \r\n• My partner shouted, yelled, or screamed at my child \r\n• My partner criticized my child  \r\n• My child had a temper tantrum  \r\n• My child argued with me  \r\n• My child argued with my partner","When you and your child have spent time together, how often did you do the following? If one of these things did not occur, then select “This has not happened\" for that question. If a question does not apply to your family, then select “NA”. \r\n\r\nIn a typical week prior to the COVID-19 Pandemic...\r\n• I let my child know I really care about them \r\n• I was loving and affectionate toward my child \r\n• I was supportive and understanding toward my child \r\n• I told my child I love them \r\n","When you and your child have spent time together, how often did you do the following? If one of these things did not occur, then select “This has not happened\" for that question. If a question does not apply to your family, then select “NA”. \r\n\r\nIn the last week…\r\n• I let my child know I really care about them \r\n• I was loving and affectionate toward my child \r\n• I was supportive and understanding toward my child \r\n• I told my child I love them","Think about the sources of conflict for your family. Which of the following would help decrease conflict the most right now?","What's the most important thing you have done for your children?","Currently, is there anything that is helping you reduce conflict with your spouse/partner?","Currently, is there anything that is helping you reduce conflict with your child/children?"],[null,"• Once per week\r\n• Twice per week\r\n• 3-5 times per week\r\n• 6-10 times per week\r\n• More than 10 times per week\r\n• This has not happened\r\n• N/A","• Once per week\r\n• Twice per week\r\n• 3-5 times per week\r\n• 6-10 times per week\r\n• More than 10 times per week\r\n• This has not happened\r\n• N/A","• Once per week\r\n• Twice per week\r\n• 3-5 times per week\r\n• 6-10 times per week\r\n• More than 10 times per week\r\n• This has not happened\r\n• N/A","• Once per week\r\n• Twice per week\r\n• 3-5 times per week\r\n• 6-10 times per week\r\n• More than 10 times per week\r\n• This has not happened\r\n• Not applicable","• being confident that my family has health insurance \r\n• not being so socially isolated \r\n• having lower levels of worry and stress \r\n• knowing we can pay for food  \r\n• knowing we can pay my rent/mortgage/housing expenses \r\n• knowing my/our job is secure \r\n• being able to meet my child’s social and emotional needs \r\n• knowing we have access to childcare","Open Response","Open Response","Open Response"],[null,"Developed by RAPID Team\r\n\r\n- Interpersonal Conflict: Conflict Tactics Scale, Revised, Short form CTS25\r\n- Harsh Parenting: Conflict Tactics Scale Parent-Child and Iowa Family Interaction Rating Scales (WH)\r\n- Child Behavior: Early Childhood Behavior Questionnaire","Developed by RAPID Team\r\n\r\n- Interpersonal Conflict: Conflict Tactics Scale, Revised, Short form CTS25\r\n- Harsh Parenting: Conflict Tactics Scale Parent-Child and Iowa Family Interaction Rating Scales (WH)\r\n- Child Behavior: Early Childhood Behavior Questionnaire","RAPID Team Modified\r\n\r\nIowa Family Interaction Rating Scales (WH)","RAPID Team Modified\r\n\r\nIowa Family Interaction Rating Scales (WH)","Developed by RAPID-EC Team","Developed by RAPID-EC Team","Developed by RAPID-EC Team","Developed by RAPID-EC Team"],[null,"Current\r\n9, 11, 16, 29","Current\r\n9, 11, 16, 29","Current\r\n9, 11, 16, 29","Current\r\n9, 11, 16, 29","Current\r\n9, 11, 16, 29","Current, 29","Current, 29","Current, 29"],[null,null,null,null,null,null,null,null,null]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Question<\/th>\n      <th>Answers<\/th>\n      <th>Source<\/th>\n      <th>Occurrence<\/th>\n      <th>Frequency<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"BFrtip","buttons":["copy","csv","excel","pdf","print"],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
 
 
 
@@ -387,7 +400,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

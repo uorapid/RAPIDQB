@@ -19,6 +19,8 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 
 ```{r read data, echo=FALSE}
 data.raw <- read_excel("Data/Baseline.xlsx")
+data.raw$Answers <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Answers)
+data.raw$Question <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Question)
 
 ```
 
@@ -27,7 +29,7 @@ data.raw <- read_excel("Data/Baseline.xlsx")
 DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F, filter = 'top', editable = TRUE, extensions = 'Buttons',  options = list(
   dom = 'BFrtip',
   buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
-))
+), escape = FALSE)
 
 ```
 

@@ -13,8 +13,8 @@
 
 <title>Open Ended</title>
 
-<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
-<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -23,9 +23,9 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="site_libs/datatables-binding-0.14/datatables.js"></script>
+<script src="site_libs/datatables-binding-0.17/datatables.js"></script>
 <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
@@ -42,10 +42,19 @@
 <script src="site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
 <link href="site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
 <script src="site_libs/selectize-0.12.0/selectize.min.js"></script>
-<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="site_libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -91,6 +100,7 @@ h6 {
   text-align: left;
 }
 </style>
+
 
 
 
@@ -318,7 +328,7 @@ $(document).ready(function () {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Special Topics
+    Modules
      
     <span class="caret"></span>
   </a>
@@ -344,19 +354,22 @@ $(document).ready(function () {
     <li>
       <a href="SchoolOpen.html">School Reopening</a>
     </li>
+    <li>
+      <a href="RemoteWork.html">Remote Work</a>
+    </li>
   </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/akunerth/R3_QuestionBank.git">
-    <span class="fa fa-github"></span>
+    <span class="fas fa-github"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.uorapidresponse.com/">
-    <span class="fa fa-flask"></span>
+    <span class="fas fa-flask"></span>
      
   </a>
 </li>
@@ -375,8 +388,8 @@ $(document).ready(function () {
 </div>
 
 
-<div id="htmlwidget-1c1fc91c00b784d7462b" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1c1fc91c00b784d7462b">{"x":{"filter":"top","filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"editable":{"target":"cell","disable":{"columns":null}},"data":[["What are the biggest challenges and concerns for you and your family right now? ","What is helping you and your family the most right now? ","What is on your mind the most when you think about your community re-opening? ","What concerns do you have about your place of employment and/or your child’s child care setting re-opening?","Is there anything else you would like to tell us about you and your family’s experiences during the COVID-19 pandemic?","Is it okay to share your comments in our research communications? We will not use your name or any other identifiable information","Now that the school year has started, we would like you to think about what resources would make things easier for you to support them. This could be technology, better internet access, more time, support etc. If you have older children who are of school age, what are the resources that you wish you had (or need) in order to support your child’s education?","Many parents are also primarily responsible for their younger children’s early learning. If this is true of you, what additional resources would be helpful to make your child’s educational experience successful?  \r\nThis could be toys, books, adult attention etc.","What would you like your elected officials or other policymakers (for example, U.S. Congress, state and local leaders) to know about how your family is doing or what you need during this time ?"],["Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Policy Working Group"]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Question<\/th>\n      <th>Source<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"BFrtip","buttons":["copy","csv","excel","pdf","print"],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fcb3181ab80695846dd0" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fcb3181ab80695846dd0">{"x":{"filter":"top","filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"editable":{"target":"cell","disable":{"columns":null}},"data":[["What are the biggest challenges and concerns for you and your family right now? ","What is helping you and your family the most right now? ","What is on your mind the most when you think about your community re-opening? ","What concerns do you have about your place of employment and/or your child’s child care setting re-opening?","Is there anything else you would like to tell us about you and your family’s experiences during the COVID-19 pandemic?","Is it okay to share your comments in our research communications? We will not use your name or any other identifiable information","Now that the school year has started, we would like you to think about what resources would make things easier for you to support them. This could be technology, better internet access, more time, support etc. If you have older children who are of school age, what are the resources that you wish you had (or need) in order to support your child’s education?","Many parents are also primarily responsible for their younger children’s early learning. If this is true of you, what additional resources would be helpful to make your child’s educational experience successful?  \r\nThis could be toys, books, adult attention etc.","What would you like your elected officials or other policymakers (for example, U.S. Congress, state and local leaders) to know about how your family is doing or what you need during this time ?"],["Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Policy Working Group"]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Question<\/th>\n      <th>Source<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"BFrtip","buttons":["copy","csv","excel","pdf","print"],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
 
 
 
@@ -387,7 +400,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
