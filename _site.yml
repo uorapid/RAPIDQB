@@ -37,7 +37,7 @@ navbar:
       - text: "RISER"
         href: RISER.html 
       - text: "School Reopening"
-        href: ChildcareSchoolReopen.html
+        href: SchoolReopeningModule.html
       - text: "School Mobility"
         href: SchoolMobilityModule.html
       - text: "Diapers"

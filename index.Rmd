@@ -33,7 +33,8 @@ data.raw <- read_excel("Data/SurveyTrackingCalendar.xlsx")
 data.raw$'Modules / Special Topic Implemented' <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$'Modules / Special Topic Implemented')
 
 data.raw2 <- read_excel("Data/ModuleKey.xlsx")
-data.raw2$'Jump to Module' <- paste0("<a href='",data.raw$'Jump to Module',"'>", data.raw2$'Jump to Module',"</a>")
+data.raw2$'Go to Module' <- paste0("<a href='",data.raw2$'Go to Module',"'>", data.raw2$'Go to Module',"</a>")
+
 ```
 
 ## Survey Calendar and Module Key {.tabset}
@@ -50,7 +51,7 @@ DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F,  opti
 ```
 ### Module Key
 <p style="font-size:14pt; font-weight:bold">Module Key</p>
-<p style="font-size:14pt">We began using a module system to our follow-up surveys starting week 33. Below is a key that provides a brief summary of each module as well as a link to the questions for that module on the site. You can also use the navigation bar to switch between modules.</p>
+<p style="font-size:14pt">We began using a module system to our follow-up surveys starting week 33. Before week 33, some of the modules were special topics. Below is a key that provides a brief summary of each module as well as a link to the questions for that module on the site. You can also use the navigation bar to switch between modules.</p>
 ```{r display data 2, echo=FALSE}
 
 DT::datatable(data.raw2, class = 'cell-border stripe hover',  rownames = F,  options = list(
