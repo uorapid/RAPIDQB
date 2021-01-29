@@ -1,9 +1,9 @@
 ---
 title: "RISER"
-date: "11/13/2020"
+date: "01/27/2021"
 output: 
  html_document:
-    theme: cosmo
+    css: "custom2.css"
 ---
 
 ```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
@@ -19,16 +19,22 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 
 ```{r read data, echo=FALSE}
 data.raw <- read_excel("Data/RISER.xlsx")
-
+data.raw$Answers <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Answers)
+data.raw$Question <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Question)
+data.raw$Source <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Source)
+data.raw$'Source Link' <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$'Source Link')
+data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.raw$'Source Link',"</a>")
 ```
 
+The questions below were provided by the RISER Network. 
+Occurrence indicates what weeks the questions in this module were asked. 
 
 ```{r display data, echo=FALSE}
 
-DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F, filter = 'top', editable = TRUE, extensions = 'Buttons',  options = list(
-  dom = 'BFrtip',
+DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F, extensions = 'Buttons',  options = list(
+  dom = 'Bfrtip',
   buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
-))
+), escape = FALSE)
 
 ```
 

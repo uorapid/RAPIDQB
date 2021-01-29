@@ -1,0 +1,40 @@
+---
+title: "Family Routines Module"
+date: "01/27/2021"
+output: 
+ html_document:
+    css: "custom2.css"
+---
+```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+library(knitr)
+library(tidyr)
+library(kableExtra)
+library(stringr)
+library(dplyr)
+options(knitr.table.format = "html", knitr.kable.NA = '') 
+```
+
+```{r read data, echo=FALSE}
+data.raw <- read_excel("Data/FamilyRoutinesModule.xlsx")
+data.raw$Answers <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Answers)
+data.raw$Question <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Question)
+data.raw$Source <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Source)
+data.raw$'Source Link' <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$'Source Link')
+data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.raw$'Source Link',"</a>")
+
+```
+
+Occurrence indicates what weeks the questions in this module were asked. 
+
+Instructions: In this set of questions we would like to know about your family routine. Please read all statements and answer accordingly.
+
+```{r display data, echo=FALSE}
+
+DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F, extensions = 'Buttons',  options = list(
+  dom = 'Bfrtip',
+  buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+), escape = FALSE)
+
+```

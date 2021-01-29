@@ -3,7 +3,7 @@ title: "Historical Questions"
 date: "Last Updated: 11/13/2020"
 output: 
  html_document:
-    theme: cosmo
+    css: "custom2.css"
 ---
 
 ```{r setup, include = FALSE, cache = FALSE}

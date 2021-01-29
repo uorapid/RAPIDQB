@@ -1,0 +1,7 @@
+.navbar{color: #f1d310; background-color: #f1d310 !important; }
+.dropdown-item:active{
+ color: #f1d310;
+ background-color: #f1d310}
+.nav.navbar-nav.navbar-right li a {
+    color: #f1d310;
+}

@@ -20,9 +20,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -285,69 +282,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -355,16 +289,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -377,7 +301,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">R3 Question Bank Dashboard</a>
+      <a class="navbar-brand" href="index.html">RAPID Question Bank Dashboard</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -392,13 +316,13 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="Historical.html">All Questions</a>
+    </li>
+    <li>
       <a href="Baseline.html">Baseline</a>
     </li>
     <li>
       <a href="FollowUp.html">Follow-Up</a>
-    </li>
-    <li>
-      <a href="Historical.html">All Questions</a>
     </li>
   </ul>
 </li>
@@ -413,9 +337,6 @@ div.tocify {
       <a href="FamConf.html">Family Conflict</a>
     </li>
     <li>
-      <a href="OpenEnded.html">Open Ended Questions</a>
-    </li>
-    <li>
       <a href="SocialSupport.html">Social Support</a>
     </li>
     <li>
@@ -425,13 +346,13 @@ div.tocify {
       <a href="RISER.html">RISER</a>
     </li>
     <li>
-      <a href="ChildCareEC.html">Childcare and Early Learning</a>
-    </li>
-    <li>
-      <a href="SchoolOpen.html">School Reopening</a>
+      <a href="ChildcareSchoolReopen.html">School Reopening</a>
     </li>
     <li>
       <a href="RemoteWork.html">Remote Work</a>
+    </li>
+    <li>
+      <a href="DiapersModule.html">Diapers</a>
     </li>
   </ul>
 </li>
@@ -459,19 +380,18 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">School Reopening</h1>
-<h4 class="date">1/13/2020</h4>
+<h4 class="date">1/27/2021</h4>
 
 </div>
 
 
-<p>Occurence indicates whether the question is currently included in either the baseline or the follow-up survey.</p>
+<p>Instructions: In this set of questions we would like to know what the school reopening plans for all your school-aged children.</p>
+<p>Occurrence indicates what weeks the questions in this module were asked.</p>
 <div id="htmlwidget-0771c3200b91d70faffc" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0771c3200b91d70faffc">{"x":{"filter":"top","filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"editable":{"target":"cell","disable":{"columns":null}},"data":[["Instructions: In this set of questions we would like to know what the school reopening plans for all your school-aged children.","Are there children in your household who are in Kindergarten through 12th grade?","[If yes to children in K-12]\r\nWhat has the school/school district your child(ren) plans to attend/currently attending decided regarding the school-year?","[If yes to children in K-12]\r\nFor the time your child will be learning remotely, who will be assisting with your child's online learning? Select all that apply.","[If yes to children in K-12]\r\nIf  your child has already begun the 2020-2021 school year, how are they reacting to online learning?","[If yes to children in K-12]\r\nIncluding hours spent during weekdays and weekends, about how many hours did you spend on teaching activities with your school-aged child(ren) in this household during the last 7 days? Enter the total number of hours. If none, enter 0.","[If yes to children in K-12]\r\nWill you use a child care provider to help you when your child(ren) is not in school?","If you have a child that was due to be entering kindergarten this fall, have you decided to wait until next fall (2021) instead because of the pandemic?","If yes, why? Select all that apply.","[If \"Will you use a child care provider to help you when your child(ren) is not in school?\" = Yes or Maybe]Does this affect the child care arrangements you have for your child(ren) age 5 and under?","Instructions: The following questions are about your child(ren)'s 0-5 learning.","For your child(ren) between the age of 0-5, which of the following are you doing to support their learning? Select all that apply.","Who will be assisting with your child(s) 0-5 learning? Select all that apply.","Including hours spent during weekdays and weekends, about how many hours did you spend on face-to-face activities with your children 0-5 in this household during the last 7 days? Enter the total number of hours. If none, enter 0.","Including hours spent during weekdays and weekends, about how many hours did you spend working during the last 7 days? Enter the total number of hours. If none, enter 0 or NA if not working currently.","Thinking about your school-aged children, check all that apply:"],[null,"• Yes\r\n• No","• Open completely\r\n• Move to online only\r\n• A combination of in-person or some days and online on other days\r\n• Ability for parent to choose between online or in-person instruction\r\n• Other\r\n• Not applicable (e.g., homeschooled)\r\n• Don't know yet","• You/other parent/step-parent\r\n• Sibling 15 years or older\r\n• Grandparent\r\n• Other relative\r\n• Friend of parent \r\n• Other neighbor\r\n• Adult responsible for a group (e.g., pod, bubble)\r\n• Babysitter/nanny/au pair\r\n• Other\r\n• No one is able to do this\r\n• Not applicable","•\tVery well\r\n•\tSomewhat well\r\n•\tWell\r\n•\tNot well \r\n•\tVery poorly","Open Response","• Yes\r\n• No\r\n• Maybe","•\tYes\r\n•\tNo \r\n•\tNot applicable","•\tSafety\r\n•\tUncertain about the plan for school (in person/online)\r\n•\tNot able to manage online instruction for my child along with my other responsibilities (work, etc.)","• Yes\r\n• No\r\n• Maybe\r\n• Not applicable",null,"• Using in-person games and activities at your home\r\n• Attending in-person learning outside of your home (daycare, childcare, etc.)\r\n• Using online resources (e.g., educational apps, educational TV shows, etc.)\r\n• Attending online classes/activities (facilitated by someone outside of your home, e.g., remote preschool, only story time, etc.)\r\n• Other\r\n• None of the above","• You/other parent/step-parent\r\n• Sibling 15 years or older\r\n• Grandparent\r\n• Other relative\r\n• Friend of parent \r\n• Other neighbor\r\n• Adult responsible for a group (e.g., pod, bubble)\r\n• Babysitter/nanny/au pair\r\n• Other\r\n• No one is able to do this\r\n• Not applicable","Open Response","Open Response","•\tMy child attends the same school this fall as they did in the spring\r\n•My child is attending a new school in the same district because they aged into the school (e.g., middle school to high school)  \r\n•\tMy child is attending a new school because our family moved our residence  \r\n•My child is attending a new school for another reason  \r\n•Not applicable (child(ren) not school-aged)"],["Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","RAPID Modified \r\nU.S. Census Bureau Household Pulse Survey","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team",null,"Developed by RAPID Team","Developed by RAPID Team","RAPID Modified \r\nU.S. Census Bureau Household Pulse Survey","RAPID Modified \r\nU.S. Census Bureau Household Pulse Survey","Suggestion from Linda Jacobson"],["Past\r\n21, 23","Past\r\n21, 23","Past\r\n21, 23","Past\r\n21, 23","Past 23","Past 23","Past\r\n21, 23","Past 23","Past 23","Past\r\n21, 23","Past\r\n21, 23","Past\r\n21, 23","Past\r\n21, 23","Past 23","Past 23","Current, 27"],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Question<\/th>\n      <th>Answers<\/th>\n      <th>Source<\/th>\n      <th>Occurrence<\/th>\n      <th>Frequency<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"BFrtip","buttons":["copy","csv","excel","pdf","print"],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-0771c3200b91d70faffc">{"x":{"filter":"top","filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"editable":{"target":"cell","disable":{"columns":null}},"data":[["Are there children in your household who are in Kindergarten through 12th grade?","[If yes to children in K-12]\r<br/>\r<br/>What has the school/school district your child(ren) plans to attend/currently attending decided regarding the school-year?","[If yes to children in K-12]\r<br/>\r<br/>For the time your child will be learning remotely, who will be assisting with your child's online learning? Select all that apply.","[If yes to children in K-12]\r<br/>\r<br/>If  your child has already begun the 2020-2021 school year, how are they reacting to online learning?","[If yes to children in K-12]\r<br/>\r<br/>Including hours spent during weekdays and weekends, about how many hours did you spend on teaching activities with your school-aged child(ren) in this household during the last 7 days? Enter the total number of hours. If none, enter 0.","[If yes to children in K-12]\r<br/>\r<br/>Will you use a child care provider to help you when your child(ren) is not in school?","If you have a child that was due to be entering kindergarten this fall, have you decided to wait until next fall (2021) instead because of the pandemic?","If yes, why? Select all that apply.","[If \"Will you use a child care provider to help you when your child(ren) is not in school?\" = Yes or Maybe]\r<br/>\r<br/>Does this affect the child care arrangements you have for your child(ren) age 5 and under?","For your child(ren) between the age of 0-5, which of the following are you doing to support their learning? Select all that apply.","Who will be assisting with your child(s) 0-5 learning? Select all that apply.","Including hours spent during weekdays and weekends, about how many hours did you spend on face-to-face activities with your children 0-5 in this household during the last 7 days? \r<br/>\r<br/>Enter the total number of hours. If none, enter 0.","Including hours spent during weekdays and weekends, about how many hours did you spend working during the last 7 days? \r<br/>\r<br/>Enter the total number of hours. If none, enter 0 or NA if not working currently."],["• Yes\r<br/>• No","• Open completely\r<br/>• Move to online only\r<br/>• A combination of in-person or some days and online on other days\r<br/>• Ability for parent to choose between online or in-person instruction\r<br/>• Other\r<br/>• Not applicable (e.g., homeschooled)\r<br/>• Don't know yet","• You/other parent/step-parent\r<br/>• Sibling 15 years or older\r<br/>• Grandparent\r<br/>• Other relative\r<br/>• Friend of parent \r<br/>• Other neighbor\r<br/>• Adult responsible for a group (e.g., pod, bubble)\r<br/>• Babysitter/nanny/au pair\r<br/>• Other\r<br/>• No one is able to do this\r<br/>• Not applicable","•\tVery well\r<br/>•\tSomewhat well\r<br/>•\tWell\r<br/>•\tNot well \r<br/>•\tVery poorly","Open Response","• Yes\r<br/>• No\r<br/>• Maybe","•\tYes\r<br/>•\tNo \r<br/>•\tNot applicable","•\tSafety\r<br/>•\tUncertain about the plan for school (in person/online)\r<br/>•\tNot able to manage online instruction for my child along with my other responsibilities (work, etc.)","• Yes\r<br/>• No\r<br/>• Maybe\r<br/>• Not applicable","• Using in-person games and activities at your home\r<br/>• Attending in-person learning outside of your home (daycare, childcare, etc.)\r<br/>• Using online resources (e.g., educational apps, educational TV shows, etc.)\r<br/>• Attending online classes/activities (facilitated by someone outside of your home, e.g., remote preschool, only story time, etc.)\r<br/>• Other\r<br/>• None of the above","• You/other parent/step-parent\r<br/>• Sibling 15 years or older\r<br/>• Grandparent\r<br/>• Other relative\r<br/>• Friend of parent \r<br/>• Other neighbor\r<br/>• Adult responsible for a group (e.g., pod, bubble)\r<br/>• Babysitter/nanny/au pair\r<br/>• Other\r<br/>• No one is able to do this\r<br/>• Not applicable","Open Response","Open Response"],["Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","RAPID Team Modified \r\nU.S. Census Bureau Household Pulse Survey","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","RAPID Team Modified \r\nU.S. Census Bureau Household Pulse Survey","RAPID Team Modified \r\nU.S. Census Bureau Household Pulse Survey"],["<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='https://www.census.gov/data/experimental-data-products/household-pulse-survey.html'>https://www.census.gov/data/experimental-data-products/household-pulse-survey.html<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='https://www.census.gov/data/experimental-data-products/household-pulse-survey.html'>https://www.census.gov/data/experimental-data-products/household-pulse-survey.html<\/a>","<a href='https://www.census.gov/data/experimental-data-products/household-pulse-survey.html'>https://www.census.gov/data/experimental-data-products/household-pulse-survey.html<\/a>"],["21, 23","21, 23","21, 23","23","23","21, 23","23","23","21, 23","21, 23","21, 23","23","23"]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Question<\/th>\n      <th>Answers<\/th>\n      <th>Source<\/th>\n      <th>Source Link<\/th>\n      <th>Occurrence<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"BFrtip","buttons":["copy","csv","excel","pdf","print"],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -504,32 +424,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

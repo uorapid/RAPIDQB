@@ -1,35 +1,51 @@
-name: "R3 Question Bank Dashboard 2"
+name: "RAPID Question Bank Dashboard 2"
 navbar:
-  title: "R3 Question Bank Dashboard"
+  title: "RAPID Question Bank Dashboard"
   left:
     - text: "Home"
       href: index.html
     - text: "Overall Survey"
       menu:
+      - text: "All Questions"
+        href: Historical.html
       - text: "Baseline"
         href: Baseline.html
       - text: "Follow-Up"
         href: FollowUp.html
-      - text: "All Questions"
-        href: Historical.html
     - text: "Modules"
       menu:
       - text: "Family Conflict"
         href: FamConf.html
-      - text: "Open Ended Questions"
-        href: OpenEnded.html
       - text: "Social Support"
-        href: SocialSupport.html  
-      - text: "Material Hardship"
-        href: MaterialHardship.html  
-      - text: "RISER"
-        href: RISER.html 
-      - text: "Childcare and Early Learning"
-        href: ChildCareEC.html 
-      - text: "School Reopening"
-        href: SchoolOpen.html
+        href: SocialSupport.html
+      - text: "Food Insecurity"
+        href: FoodInsecurityModule.html
+      - text: "Other Hardship"
+        href: MaterialHardship.html
+      - text: "Employment/Income"
+        href: EmploymentModule.html
+      - text: "Unemployment"
+        href: UnemploymentModule.html 
+      - text: "Workforce Module"
+        href: WorkforceModule.html
       - text: "Remote Work"
         href: RemoteWork.html
+      - text: "Healthcare Module"
+        href: HealthcareModule.html
+      - text: "Vaccines Module"
+        href: VaccinesModule.html 
+      - text: "RISER"
+        href: RISER.html 
+      - text: "School Reopening"
+        href: ChildcareSchoolReopen.html
+      - text: "School Mobility"
+        href: SchoolMobilityModule.html
+      - text: "Diapers"
+        href: DiapersModule.html
+      - text: "Family Routines"
+        href: FamilyRoutinesModule.html
+      - text: "Holiday Plans"
+        href: HolidayPlansModule.html
   right:
     - icon: fa-github
       href: https://github.com/uorapid/RAPIDQB.git
