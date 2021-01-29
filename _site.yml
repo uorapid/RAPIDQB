@@ -18,6 +18,8 @@ navbar:
         href: FamConf.html
       - text: "Social Support"
         href: SocialSupport.html
+      - text: "Grandparents"
+        href: GrandparentsModule.html        
       - text: "Food Insecurity"
         href: FoodInsecurityModule.html
       - text: "Other Hardship"

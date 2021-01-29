@@ -1,5 +1,5 @@
 ---
-title: "Historical Questions"
+title: "All Questions"
 date: "Last Updated: 11/13/2020"
 output: 
  html_document:
@@ -34,7 +34,8 @@ data.raw <- read_excel("Data/Historical.xlsx")
 
 ```{r display data, echo=FALSE}
 
-DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F, filter = 'top', editable = TRUE, extensions = 'Buttons',  options = list(
-  dom = 'BFrtip',
-  buttons = c('copy', 'csv', 'excel', 'pdf', 'print'), pageLength = 25, autoWidth = TRUE))
+DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F, extensions = 'Buttons',  options = list(
+  dom = 'Bfrtip',
+  buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+), escape = FALSE)
 ```
