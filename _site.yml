@@ -24,6 +24,8 @@ navbar:
         href: FoodInsecurityModule.html
       - text: "Other Hardship"
         href: MaterialHardship.html
+      - text: "Stimulus"
+        href: StimulusModule.html
       - text: "Employment/Income"
         href: EmploymentModule.html
       - text: "Unemployment"
