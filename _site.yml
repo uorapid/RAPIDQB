@@ -4,7 +4,7 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Overall Survey"
+    - text: "Overall Household (EC) Survey"
       menu:
       - text: "All Questions"
         href: Historical.html
@@ -12,44 +12,62 @@ navbar:
         href: Baseline.html
       - text: "Follow-Up"
         href: FollowUp.html
-    - text: "Modules"
+    - text: "Household (EC) Modules"
       menu:
-      - text: "Family Conflict"
-        href: FamConf.html
-      - text: "Social Support"
-        href: SocialSupport.html
-      - text: "Grandparents"
-        href: GrandparentsModule.html        
-      - text: "Food Insecurity"
-        href: FoodInsecurityModule.html
-      - text: "Other Hardship"
-        href: MaterialHardship.html
-      - text: "Stimulus"
-        href: StimulusModule.html
-      - text: "Employment/Income"
-        href: EmploymentModule.html
-      - text: "Unemployment"
-        href: UnemploymentModule.html 
-      - text: "Workforce Module"
-        href: WorkforceModule.html
-      - text: "Remote Work"
-        href: RemoteWork.html
-      - text: "Healthcare Module"
-        href: HealthcareModule.html
-      - text: "Vaccines Module"
-        href: VaccinesModule.html 
-      - text: "RISER"
-        href: RISER.html 
-      - text: "School Reopening"
-        href: SchoolReopeningModule.html
-      - text: "School Mobility"
-        href: SchoolMobilityModule.html
+      - text: "Child Social Interactions Module"
+        href: ChildSocialInteractions.html
+      - text: "Child Tax Credit Module"
+        href: ChildTaxCredit.html
+      - text: "Debt and Overdue Bills"
+        href: DebtandOverdueBills.html
       - text: "Diapers"
         href: DiapersModule.html
+      - text: "Economic Stability"
+        href: EconomicStability.html
+      - text: "Employment"
+        href: EmploymentModule.html
+      - text: "Family Conflict"
+        href: FamConf.html
       - text: "Family Routines"
         href: FamilyRoutinesModule.html
+      - text: "Food Insecurity"
+        href: FoodInsecurityModule.html
+      - text: "Grandparents"
+        href: GrandparentsModule.html
+      - text: "Healthcare"
+        href: HealthcareModule.html
       - text: "Holiday Plans"
         href: HolidayPlansModule.html
+      - text: "Other Hardships"
+        href: MaterialHardship.html
+      - text: "Pregnancy and Postpartum"
+        href: PregnancyandPost.html
+      - text: "Remote Learning"
+        href: RemoteLearning.html
+      - text: "Remote Work"
+        href: RemoteWork.html
+      - text: "RISER"
+        href: RISER.html
+      - text: "School Mobility"
+        href: SchoolMobilityModule.html
+      - text: "School Reopening Fall 2020"
+        href: SchoolReopeningModule.html
+      - text: "School Reopening Spring 2021"
+        href: SchoolReopeningSpring2021.html
+      - text: "Social Support"
+        href: SocialSupport.html
+      - text: "Stimulus"
+        href: StimulusModule.html
+      - text: "Unemployment"
+        href: UnemploymentModule.html 
+      - text: "Vaccines"
+        href: VaccinesModule.html 
+      - text: "Workforce"
+        href: WorkforceModule.html
+    - text: "Overall Childcare (CC) Survey"
+      menu:
+      - text: "Baseline"
+        href: BaselineCC.html
   right:
     - icon: fa-github
       href: https://github.com/uorapid/RAPIDQB.git

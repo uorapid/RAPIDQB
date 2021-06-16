@@ -1,6 +1,6 @@
 ---
-title: "Family Conflict"
-date: "Last Updated: 01/27/2021"
+title: "Family Conflict Module"
+date: "Last Updated: 06/14/2021"
 output: 
  html_document:
     css: "custom2.css"
@@ -14,7 +14,9 @@ library(tidyr)
 library(kableExtra)
 library(stringr)
 library(dplyr)
-options(knitr.table.format = "html", knitr.kable.NA = '') 
+library(htmltools)
+library(DT)
+options(knitr.table.format = "html", knitr.kable.NA = '')
 ```
 Instructions: The following set of questions will ask about how people in your household are getting along. Some of the questions ask about families’ conflict, which is normal and common. None of the questions in this survey meet the threshold for reporting maltreatment. Our goal is to understand how coronavirus (COVID-19) pandemic is impacting family functioning, across all of the families who take this survey.
 
@@ -29,9 +31,24 @@ data.raw$'Source Link' <- gsub(pattern = "\n", replacement = "<br/>", x = data.r
 ```
 
 ```{r display data, echo=FALSE}
+header.style <- "th { font-family: 'Arial'; font-weight: bold; color: black; background-color: #f1d310;}"
+header.names <- c(" ", colnames(data.raw))
+# The container parameter allows us to design the header of the table
+# using CSS
+my.container <-  withTags(table(
+    style(type = "text/css", header.style),
+    thead(
+        tr(
+                lapply(header.names, th, style = "text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white")
+        )
+    )
+))
 
-DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F, extensions = 'Buttons',  options = list(
+my.table = DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = T, 
+  width = '100%', height = '100%', extensions = 'Buttons', container = my.container,  options = list(
   dom = 'Bfrtip',
   buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
 ), escape = FALSE)
+
+my.table
 ```
