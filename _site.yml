@@ -68,6 +68,11 @@ navbar:
       menu:
       - text: "Baseline"
         href: BaselineCC.html
+    - text: "Childcare (CC) Modules"
+      menu:
+      - text: "Other Hardships"
+        href: MaterialHardshipCC.html
+        
   right:
     - icon: fa-github
       href: https://github.com/uorapid/RAPIDQB.git
