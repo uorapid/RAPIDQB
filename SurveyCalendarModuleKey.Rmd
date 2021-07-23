@@ -1,0 +1,58 @@
+---
+title: "Childcare Survey Calendar and Module Key"
+date: "Last Updated: 07/22/2021"
+output: 
+  html_document:
+    css: "custom2.css"
+---
+
+```{r setup, include = FALSE, cache = FALSE}
+knitr::opts_chunk$set(
+  comment = NA,
+  warning = FALSE,
+  message = FALSE)
+```
+
+
+```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+library(knitr)
+library(tidyr)
+library(kableExtra)
+library(stringr)
+library(dplyr)
+options(knitr.table.format = "html", knitr.kable.NA = '') 
+```
+
+```{r read data, echo=FALSE}
+data.raw <- read_excel("Data/SurveyTrackingCalendarCC.xlsx")
+data.raw$'Modules Implemented' <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$'Modules Implemented')
+
+data.raw2 <- read_excel("Data/ModuleKeyCC.xlsx")
+data.raw2$'Go to Module' <- paste0("<a href='",data.raw2$'Go to Module',"'>", data.raw2$'Go to Module',"</a>")
+
+```
+
+## Survey Calendar and Module Key {.tabset}
+
+### Survey Calendar
+
+<p style="font-size:14pt">Baseline Survey = Survey that participants take when first participating</p>
+<p style="font-size:14pt">Follow-Up Survey = Participants are invited to a follow-up survey that contains some core items from baseline and additional module items</p>
+```{r display data, echo=FALSE}
+
+DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F,  options = list(
+  pageLength = 10, autoWidth = TRUE
+), escape = FALSE)
+```
+### Module Key
+<p style="font-size:14pt; font-weight:bold">Module Key</p>
+<p style="font-size:14pt">Below is a key that provides a brief summary of each module as well as a link to the questions for that module on the site. You can also use the navigation bar to switch between modules.</p>
+```{r display data 2, echo=FALSE}
+
+DT::datatable(data.raw2, class = 'cell-border stripe hover',  rownames = F,  options = list(
+  pageLength = 20, autoWidth = TRUE
+), escape = FALSE)
+```
+## {-}

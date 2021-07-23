@@ -1,77 +1,83 @@
-name: "RAPID Question Bank Dashboard 2"
+name: "RAPID Question Bank"
 navbar:
-  title: "RAPID Question Bank Dashboard"
+  title: "RAPID-EC Question Bank"
   left:
-    - text: "Home"
+    - text: "Menu"
       href: index.html
-    - text: "Overall Household (EC) Survey"
       menu:
-      - text: "All Questions"
-        href: Historical.html
-      - text: "Baseline"
-        href: Baseline.html
-      - text: "Follow-Up"
-        href: FollowUp.html
-    - text: "Household (EC) Modules"
-      menu:
-      - text: "Child Social Interactions Module"
-        href: ChildSocialInteractions.html
-      - text: "Child Tax Credit Module"
-        href: ChildTaxCredit.html
-      - text: "Debt and Overdue Bills"
-        href: DebtandOverdueBills.html
-      - text: "Diapers"
-        href: DiapersModule.html
-      - text: "Economic Stability"
-        href: EconomicStability.html
-      - text: "Employment"
-        href: EmploymentModule.html
-      - text: "Family Conflict"
-        href: FamConf.html
-      - text: "Family Routines"
-        href: FamilyRoutinesModule.html
-      - text: "Food Insecurity"
-        href: FoodInsecurityModule.html
-      - text: "Grandparents"
-        href: GrandparentsModule.html
-      - text: "Healthcare"
-        href: HealthcareModule.html
-      - text: "Holiday Plans"
-        href: HolidayPlansModule.html
-      - text: "Other Hardships"
-        href: MaterialHardship.html
-      - text: "Pregnancy and Postpartum"
-        href: PregnancyandPost.html
-      - text: "Remote Learning"
-        href: RemoteLearning.html
-      - text: "Remote Work"
-        href: RemoteWork.html
-      - text: "RISER"
-        href: RISER.html
-      - text: "School Mobility"
-        href: SchoolMobilityModule.html
-      - text: "School Reopening Fall 2020"
-        href: SchoolReopeningModule.html
-      - text: "School Reopening Spring 2021"
-        href: SchoolReopeningSpring2021.html
-      - text: "Social Support"
-        href: SocialSupport.html
-      - text: "Stimulus"
-        href: StimulusModule.html
-      - text: "Unemployment"
-        href: UnemploymentModule.html 
-      - text: "Vaccines"
-        href: VaccinesModule.html 
-      - text: "Workforce"
-        href: WorkforceModule.html
-    - text: "Overall Childcare (CC) Survey"
-      menu:
-      - text: "Baseline"
-        href: BaselineCC.html
-    - text: "Childcare (CC) Modules"
-      menu:
-      - text: "Other Hardships"
-        href: MaterialHardshipCC.html
+      - text: "Household (EC) Survey"
+        menu:
+        - text: "Survey Calendar and Module Key"
+          href: SurveyCalendarModuleKeyl.html
+        - text: "All Questions"
+          href: Historical.html
+        - text: "Baseline"
+          href: Baseline.html
+        - text: "Follow-Up"
+          href: FollowUp.html
+      - text: "Household (EC) Modules"
+        menu:
+        - text: "Child Social Interactions Module"
+          href: ChildSocialInteractions.html
+        - text: "Child Tax Credit Module"
+          href: ChildTaxCredit.html
+        - text: "Debt and Overdue Bills"
+          href: DebtandOverdueBills.html
+        - text: "Diapers"
+          href: DiapersModule.html
+        - text: "Economic Stability"
+          href: EconomicStability.html
+        - text: "Employment"
+          href: EmploymentModule.html
+        - text: "Family Conflict"
+          href: FamConf.html
+        - text: "Family Routines"
+          href: FamilyRoutinesModule.html
+        - text: "Food Insecurity"
+          href: FoodInsecurityModule.html
+        - text: "Grandparents"
+          href: GrandparentsModule.html
+        - text: "Healthcare"
+          href: HealthcareModule.html
+        - text: "Holiday Plans"
+          href: HolidayPlansModule.html
+        - text: "Other Hardships"
+          href: MaterialHardship.html
+        - text: "Pregnancy and Postpartum"
+          href: PregnancyandPost.html
+        - text: "Remote Learning"
+          href: RemoteLearning.html
+        - text: "Remote Work"
+          href: RemoteWork.html
+        - text: "RISER"
+          href: RISER.html
+        - text: "School Mobility"
+          href: SchoolMobilityModule.html
+        - text: "School Reopening Fall 2020"
+          href: SchoolReopeningModule.html
+        - text: "School Reopening Spring 2021"
+          href: SchoolReopeningSpring2021.html
+        - text: "Social Support"
+          href: SocialSupport.html
+        - text: "Stimulus"
+          href: StimulusModule.html
+        - text: "Unemployment"
+          href: UnemploymentModule.html 
+        - text: "Vaccines"
+          href: VaccinesModule.html 
+        - text: "Workforce"
+          href: WorkforceModule.html
+      - text: "Childcare (CC) Survey"
+        menu:
+        - text: "Baseline"
+          href: BaselineCC.html
+      - text: "Childcare (CC) Modules"
+        menu:
+        - text: "Economic Stability"
+          href: EconomicStabilityCCModule.html
+        - text: "Other Hardships"
+          href: MaterialHardshipCC.html
+
         
   right:
     - icon: fa-github

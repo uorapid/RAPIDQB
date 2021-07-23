@@ -1,7 +1,25 @@
+@import url(//db.onlinewebfonts.com/c/7677eabdeeb66da8e37a878624cc320c?family=Mako-Bold);
+
 .navbar{color: #f1d310; background-color: #f1d310 !important; }
 .dropdown-item:active{
  color: #f1d310;
  background-color: #f1d310}
 .nav.navbar-nav.navbar-right li a {
     color: #f1d310;
+}
+.navbar{
+    height:64px;
+}
+.navbar-nav a{
+  color: black !important;
+  font-family: Mako-Bold;
+  font-size: 18px;
+}
+.dropdown-menu a{
+  color: black !important;
+}
+.navbar-header a{
+   color: black !important;
+   font-family: Mako-Bold;
+   font-size: 25px;
 }

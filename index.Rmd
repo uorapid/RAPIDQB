@@ -1,6 +1,5 @@
 ---
-title: "RAPID Question Bank Dashboard"
-date: "Last Updated: 05/24/2021"
+title: "RAPID-EC Question Bank"
 output: 
   html_document:
     css: "custom2.css"
@@ -13,51 +12,29 @@ knitr::opts_chunk$set(
   message = FALSE)
 ```
 
+![RAPID-EC Project](~/Dropbox (University of Oregon)/RAPID-EC/Data Management R3/EE_R3 Question Bank/Data/QBPIC.png)
+
 <p style="font-size:14pt">This site hosts a list of questions asked as a part of the RAPID-EC project. All efforts were taken to ensure the accuracy of the question sources.</p>
+
+<p style="font-size:14pt">Use the menu above to navigate between our household (EC) survey questions and our childcare provider (CC) survey questions.</p>
 
 <p style="font-size:14pt">If there are any questions or concerns, please do not hesitate to reach out to the RAPID-EC team.</p>
 
+
 ```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(readxl)
-library(knitr)
-library(tidyr)
-library(kableExtra)
-library(stringr)
-library(dplyr)
-options(knitr.table.format = "html", knitr.kable.NA = '') 
+
 ```
 
 ```{r read data, echo=FALSE}
-data.raw <- read_excel("Data/SurveyTrackingCalendar.xlsx")
-data.raw$'Modules / Special Topic Implemented' <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$'Modules / Special Topic Implemented')
 
-data.raw2 <- read_excel("Data/ModuleKey.xlsx")
-data.raw2$'Go to Module' <- paste0("<a href='",data.raw2$'Go to Module',"'>", data.raw2$'Go to Module',"</a>")
 
 ```
 
-## Survey Calendar and Module Key {.tabset}
 
-### Survey Calendar
-
-<p style="font-size:14pt">Baseline Survey = Survey that participants take when first participating</p>
-<p style="font-size:14pt">Follow-Up Survey = Participants are invited to a follow-up survey that contains some core items from baseline and additonal module items</p>
-```{r display data, echo=FALSE}
-
-DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F,  options = list(
-  pageLength = 10, autoWidth = TRUE
-), escape = FALSE)
-```
-### Module Key
-<p style="font-size:14pt; font-weight:bold">Module Key</p>
-<p style="font-size:14pt">We began using a module system to our follow-up surveys starting week 33. Before week 33, some of the modules were special topics. Below is a key that provides a brief summary of each module as well as a link to the questions for that module on the site. You can also use the navigation bar to switch between modules.</p>
 ```{r display data 2, echo=FALSE}
 
-DT::datatable(data.raw2, class = 'cell-border stripe hover',  rownames = F,  options = list(
-  pageLength = 20, autoWidth = TRUE
-), escape = FALSE)
+
 ```
-## {-}
+
 
 
