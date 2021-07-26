@@ -27,7 +27,7 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 
 ```{r read data, echo=FALSE}
 data.raw <- read_excel("Data/SurveyTrackingCalendar.xlsx")
-data.raw$'Modules Implemented' <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$'Modules Implemented')
+data.raw$'Modules / Special Topic Implemented' <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$'Modules / Special Topic Implemented')
 
 data.raw2 <- read_excel("Data/ModuleKey.xlsx")
 data.raw2$'Go to Module' <- paste0("<a href='",data.raw2$'Go to Module',"'>", data.raw2$'Go to Module',"</a>")

@@ -14,13 +14,21 @@
 
 <title>Grandparents Module</title>
 
-<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -54,11 +62,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -71,32 +74,6 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
 <link rel="stylesheet" href="custom2.css" type="text/css" />
@@ -108,10 +85,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -128,40 +101,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -189,7 +135,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -201,7 +147,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -212,10 +158,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -227,7 +186,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -314,7 +272,7 @@ $(document).ready(function () {
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Household (EC) Survey</a>
       <ul class="dropdown-menu" role="menu">
         <li>
-          <a href="SurveyCalendarModuleKeyl.html">Survey Calendar and Module Key</a>
+          <a href="SurveyCalendarModuleKey.html">Survey Calendar and Module Key</a>
         </li>
         <li>
           <a href="Historical.html">All Questions</a>
@@ -323,7 +281,7 @@ $(document).ready(function () {
           <a href="Baseline.html">Baseline</a>
         </li>
         <li>
-          <a href="FollowUp.html">Follow-Up</a>
+          <a href="FollowUp.html">Follow-Up Core</a>
         </li>
       </ul>
     </li>
@@ -411,7 +369,13 @@ $(document).ready(function () {
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Childcare (CC) Survey</a>
       <ul class="dropdown-menu" role="menu">
         <li>
+          <a href="SurveyCalendarModuleKeyCC.html">Survey Calendar and Module Key</a>
+        </li>
+        <li>
           <a href="BaselineCC.html">Baseline</a>
+        </li>
+        <li>
+          <a href="FollowUpCC.html">Follow-Up Core</a>
         </li>
       </ul>
     </li>
@@ -419,10 +383,28 @@ $(document).ready(function () {
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Childcare (CC) Modules</a>
       <ul class="dropdown-menu" role="menu">
         <li>
+          <a href="ChildTaxCreditCC.html">Child Tax Credit</a>
+        </li>
+        <li>
+          <a href="DebtandOverdueBillsCC.html">Debt and Overdue Bills</a>
+        </li>
+        <li>
           <a href="EconomicStabilityCCModule.html">Economic Stability</a>
         </li>
         <li>
+          <a href="FoodInsecurityModuleCC.html">Food Insecurity</a>
+        </li>
+        <li>
+          <a href="RISERCC.html">RISER</a>
+        </li>
+        <li>
           <a href="MaterialHardshipCC.html">Other Hardships</a>
+        </li>
+        <li>
+          <a href="VaccinesModuleCC.html">Vaccines</a>
+        </li>
+        <li>
+          <a href="WorkScheduleModuleCC.html">Work Schedule</a>
         </li>
       </ul>
     </li>
@@ -432,13 +414,13 @@ $(document).ready(function () {
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/uorapid/RAPIDQB.git">
-    <span class="fas fa-github"></span>
+    <span class="fa fa-github"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.uorapidresponse.com/">
-    <span class="fas fa-flask"></span>
+    <span class="fa fa-flask"></span>
      
   </a>
 </li>
@@ -447,7 +429,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -459,8 +441,8 @@ $(document).ready(function () {
 
 <p>The following questions were developed in collaboration with Grandparents United. <a href="https://www.gu.org" class="uri">https://www.gu.org</a></p>
 <p>Occurrence indicates what weeks the questions in this module were asked.</p>
-<div id="htmlwidget-d4bd122de646c0087d0a" style="width:100%;height:100%;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d4bd122de646c0087d0a">{"x":{"filter":"none","class":"cell-border stripe hover","extensions":["Buttons"],"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"],["How are you related to the children you are raising?","Are any of your children’s grandparents currently living?","[Skip To: End of Block If Are any of your children’s grandparents currently living? = No]\r<br/>                                                                                                            Is there a grandparent living in the household?","[Display this question: If Is there a grandparent living in the household?  = Yes]\r<br/>                                                                                                                        Is the grandparent helping with the household?","Did you move in with a grandparent or has a grandparent moved in with you since the pandemic began?","[Display this question If Did you move in with a grandparent or has a grandparent moved in with you since the pandemic began?  = Yes, I moved in with a grandparent or Did you move in with a grandparent or has a grandparent moved in with you since the pandemic began?  = Yes, grandparent moved in with me]\r<br/>\r<br/>Why?","Does your child spend time with one or more grandparent? ","[Display this question If Does your child spend time with one or more grandparent?  = Yes]\r<br/>                                                                                               In what way does your child spend time with their grandparent(s)? Select all that apply.","Prior to the COVID-19 pandemic, did your child(ren)’s grandparents help with you and your child(ren)? Please select all the conditions that apply:","[Display this question If Prior to the COVID-19 pandemic, did your child(ren)’s grandparents help with you and your child(r... = My child(ren)’s grandparent(s) provided help for us remotely\r<br/>Or Prior to the COVID-19 pandemic, did your child(ren)’s grandparents help with you and your child(r... = My child(ren)’s grandparent(s) provided help for us in person]\r<br/>                                                                                                                      In what ways did your child(ren)’s grandparent(s) provide help for you and your child(ren)?","During COVID-19, do your child(ren)’s grandparents help with you and your child(ren)? Please select all the conditions that apply:","[Display this question If During COVID-19, do your child(ren)’s grandparents help with you and your child(ren)? Please sele... = My child(ren)’s grandparent(s) provide help for us remotely\r<br/>Or During COVID-19, do your child(ren)’s grandparents help with you and your child(ren)? Please sele... = My child(ren)’s grandparent(s) provide help for us in person]\r<br/>\r<br/>In what ways do your child(ren)’s grandparent(s) provide help for you and your child(ren)?","Whether or not your children’s grandparents live in your household, which of the following ways do they contribute to the care of your child since the start of the COVID-19 pandemic?\r<br/>\r<br/>•Financially, helped us pay for bills, rent/mortgage, food, or other                                                                    •Emotional support                                                        •Helped us with chores                                    •Played with the child(ren)                                                                   •Helped with child(ren)'s learning activities                                                                •Helped take care of my child(ren), ex. feeding, bathing etc.","How has the fear of catching contracting COVID-19 affected the amount of in person time the child’s grandparent(s) spend with them?","How has the fear of contracting COVID19 affected the amount of virtual time the child’s grandparent(s) spend with them?","In what other ways has your child's relationship with their grandparent(s) changed since COVID-19?"],["•Birth parent or adoptive parent\r<br/>•Grandparent\r<br/>•Other relative\r<br/>•Close family friend\r<br/>•Member of same tribe/clan\r<br/>•Foster parent\r<br/>•Other","•Yes\r<br/>•No","•Yes\r<br/>•No","•Yes\r<br/>•No","•Yes, I moved in with a grandparent\r<br/>•Yes, grandparent moved in with me\r<br/>•No","•To be together and avoid being isolated apart\r<br/>•To provide childcare\r<br/>•For support with household","•Yes\r<br/>•No","•In-person to provide necessary childcare coverage\r<br/>•In-person to play, bond, give parents a break\r<br/>•In-person when we are together as a family\r<br/>•Through video chat (e.g., Facetime, Zoom, Skype, etc.) or other screen time","•My child(ren)’s grandparent(s) provided help for us remotely\r<br/>•My child(ren)’s grandparent(s) provided help for us in person\r<br/>•My child(ren)’s grandparent(s) did not provide help for us","•Financially, helped us pay for bills, rent/mortgage, food, or other\r<br/>•Emotional support\r<br/>•Helped us with chores\r<br/>•Played with the child(ren)•Helped with child(ren)'s learning activities                                                               \r<br/>•Helped take care of my child(ren), ex. feeding, bathing etc.","•My child(ren)’s grandparent(s) provided help for us remotely\r<br/>•My child(ren)’s grandparent(s) provided help for us in person\r<br/>•My child(ren)’s grandparent(s) did not provide help for us","•Financially, helped us pay for bills, rent/mortgage, food, or other\r<br/>•Emotional support\r<br/>•Helped us with chores\r<br/>•Played with the child(ren)•Helped with child(ren)'s learning activities                                                          \r<br/>•Helped take care of my child(ren), ex. feeding, bathing etc.","•Decreased help\r<br/>•Stayed the same\r<br/>•Increased help\r<br/>•N/A","•Reduced a lot \r<br/>•Reduced a little\r<br/>•No change\r<br/>•Increased a little\r<br/>•Increased a lot","•Reduced a lot \r<br/>•Reduced a little\r<br/>•No change\r<br/>•Increased a little\r<br/>•Increased a lot","Open ended"],["Generations United provided","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Generations United provided","Generations United provided","Generations United provided","Generations United provided"],["<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>"],["27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","37","37","37","37"]],"container":"<table>\n  <style type=\"text/css\">th { font-family: 'Arial'; font-weight: bold; color: black; background-color: #f1d310;}<\/style>\n  <thead>\n    <tr>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\"> <\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Question<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Answers<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Source<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Source Link<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Occurrence<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["copy","csv","excel","pdf","print"],"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-27b3cb34027661075ae5" style="width:100%;height:100%;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-27b3cb34027661075ae5">{"x":{"filter":"none","class":"cell-border stripe hover","extensions":["Buttons"],"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"],["How are you related to the children you are raising?","Are any of your children’s grandparents currently living?","[Skip To: End of Block If Are any of your children’s grandparents currently living? = No]\r<br/>                                                                                                            Is there a grandparent living in the household?","[Display this question: If Is there a grandparent living in the household?  = Yes]\r<br/>                                                                                                                        Is the grandparent helping with the household?","Did you move in with a grandparent or has a grandparent moved in with you since the pandemic began?","[Display this question If Did you move in with a grandparent or has a grandparent moved in with you since the pandemic began?  = Yes, I moved in with a grandparent or Did you move in with a grandparent or has a grandparent moved in with you since the pandemic began?  = Yes, grandparent moved in with me]\r<br/>\r<br/>Why?","Does your child spend time with one or more grandparent? ","[Display this question If Does your child spend time with one or more grandparent?  = Yes]\r<br/>                                                                                               In what way does your child spend time with their grandparent(s)? Select all that apply.","Prior to the COVID-19 pandemic, did your child(ren)’s grandparents help with you and your child(ren)? Please select all the conditions that apply:","[Display this question If Prior to the COVID-19 pandemic, did your child(ren)’s grandparents help with you and your child(r... = My child(ren)’s grandparent(s) provided help for us remotely\r<br/>Or Prior to the COVID-19 pandemic, did your child(ren)’s grandparents help with you and your child(r... = My child(ren)’s grandparent(s) provided help for us in person]\r<br/>                                                                                                                      In what ways did your child(ren)’s grandparent(s) provide help for you and your child(ren)?","During COVID-19, do your child(ren)’s grandparents help with you and your child(ren)? Please select all the conditions that apply:","[Display this question If During COVID-19, do your child(ren)’s grandparents help with you and your child(ren)? Please sele... = My child(ren)’s grandparent(s) provide help for us remotely\r<br/>Or During COVID-19, do your child(ren)’s grandparents help with you and your child(ren)? Please sele... = My child(ren)’s grandparent(s) provide help for us in person]\r<br/>\r<br/>In what ways do your child(ren)’s grandparent(s) provide help for you and your child(ren)?","Whether or not your children’s grandparents live in your household, which of the following ways do they contribute to the care of your child since the start of the COVID-19 pandemic?\r<br/>\r<br/>•Financially, helped us pay for bills, rent/mortgage, food, or other                                                                    •Emotional support                                                        •Helped us with chores                                    •Played with the child(ren)                                                                   •Helped with child(ren)'s learning activities                                                                •Helped take care of my child(ren), ex. feeding, bathing etc.","How has the fear of catching contracting COVID-19 affected the amount of in person time the child’s grandparent(s) spend with them?","How has the fear of contracting COVID19 affected the amount of virtual time the child’s grandparent(s) spend with them?","In what other ways has your child's relationship with their grandparent(s) changed since COVID-19?"],["•Birth parent or adoptive parent\r<br/>•Grandparent\r<br/>•Other relative\r<br/>•Close family friend\r<br/>•Member of same tribe/clan\r<br/>•Foster parent\r<br/>•Other","•Yes\r<br/>•No","•Yes\r<br/>•No","•Yes\r<br/>•No","•Yes, I moved in with a grandparent\r<br/>•Yes, grandparent moved in with me\r<br/>•No","•To be together and avoid being isolated apart\r<br/>•To provide childcare\r<br/>•For support with household","•Yes\r<br/>•No","•In-person to provide necessary childcare coverage\r<br/>•In-person to play, bond, give parents a break\r<br/>•In-person when we are together as a family\r<br/>•Through video chat (e.g., Facetime, Zoom, Skype, etc.) or other screen time","•My child(ren)’s grandparent(s) provided help for us remotely\r<br/>•My child(ren)’s grandparent(s) provided help for us in person\r<br/>•My child(ren)’s grandparent(s) did not provide help for us","•Financially, helped us pay for bills, rent/mortgage, food, or other\r<br/>•Emotional support\r<br/>•Helped us with chores\r<br/>•Played with the child(ren)•Helped with child(ren)'s learning activities                                                               \r<br/>•Helped take care of my child(ren), ex. feeding, bathing etc.","•My child(ren)’s grandparent(s) provided help for us remotely\r<br/>•My child(ren)’s grandparent(s) provided help for us in person\r<br/>•My child(ren)’s grandparent(s) did not provide help for us","•Financially, helped us pay for bills, rent/mortgage, food, or other\r<br/>•Emotional support\r<br/>•Helped us with chores\r<br/>•Played with the child(ren)•Helped with child(ren)'s learning activities                                                          \r<br/>•Helped take care of my child(ren), ex. feeding, bathing etc.","•Decreased help\r<br/>•Stayed the same\r<br/>•Increased help\r<br/>•N/A","•Reduced a lot \r<br/>•Reduced a little\r<br/>•No change\r<br/>•Increased a little\r<br/>•Increased a lot","•Reduced a lot \r<br/>•Reduced a little\r<br/>•No change\r<br/>•Increased a little\r<br/>•Increased a lot","Open ended"],["Generations United provided","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Generations United provided","Generations United provided","Generations United provided","Generations United provided"],["<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>"],["27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","27, 37","37","37","37","37"]],"container":"<table>\n  <style type=\"text/css\">th { font-family: 'Arial'; font-weight: bold; color: black; background-color: #f1d310;}<\/style>\n  <thead>\n    <tr>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\"> <\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Question<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Answers<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Source<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Source Link<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Occurrence<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["copy","csv","excel","pdf","print"],"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
 
 
 
@@ -489,7 +471,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
