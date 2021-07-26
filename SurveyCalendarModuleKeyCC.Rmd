@@ -1,5 +1,5 @@
 ---
-title: "Household Survey Calendar and Module Key"
+title: "Childcare Survey Calendar and Module Key"
 date: "Last Updated: 07/22/2021"
 output: 
   html_document:
@@ -26,10 +26,10 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 ```
 
 ```{r read data, echo=FALSE}
-data.raw <- read_excel("Data/SurveyTrackingCalendar.xlsx")
+data.raw <- read_excel("Data/SurveyTrackingCalendarCC.xlsx")
 data.raw$'Modules Implemented' <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$'Modules Implemented')
 
-data.raw2 <- read_excel("Data/ModuleKey.xlsx")
+data.raw2 <- read_excel("Data/ModuleKeyCC.xlsx")
 data.raw2$'Go to Module' <- paste0("<a href='",data.raw2$'Go to Module',"'>", data.raw2$'Go to Module',"</a>")
 
 ```

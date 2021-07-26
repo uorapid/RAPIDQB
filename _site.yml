@@ -8,12 +8,12 @@ navbar:
       - text: "Household (EC) Survey"
         menu:
         - text: "Survey Calendar and Module Key"
-          href: SurveyCalendarModuleKeyl.html
+          href: SurveyCalendarModuleKey.html
         - text: "All Questions"
           href: Historical.html
         - text: "Baseline"
           href: Baseline.html
-        - text: "Follow-Up"
+        - text: "Follow-Up Core"
           href: FollowUp.html
       - text: "Household (EC) Modules"
         menu:
@@ -69,14 +69,30 @@ navbar:
           href: WorkforceModule.html
       - text: "Childcare (CC) Survey"
         menu:
+        - text: "Survey Calendar and Module Key"
+          href: SurveyCalendarModuleKeyCC.html
         - text: "Baseline"
           href: BaselineCC.html
+        - text: "Follow-Up Core"
+          href: FollowUpCC.html
       - text: "Childcare (CC) Modules"
         menu:
+        - text: "Child Tax Credit"
+          href: ChildTaxCreditCC.html
+        - text: "Debt and Overdue Bills"
+          href: DebtandOverdueBillsCC.html
         - text: "Economic Stability"
           href: EconomicStabilityCCModule.html
+        - text: "Food Insecurity"
+          href: FoodInsecurityModuleCC.html
+        - text: "RISER"
+          href: RISERCC.html
         - text: "Other Hardships"
           href: MaterialHardshipCC.html
+        - text: "Vaccines"
+          href: VaccinesModuleCC.html
+        - text: "Work Schedule"
+          href: WorkScheduleModuleCC.html
 
         
   right:
