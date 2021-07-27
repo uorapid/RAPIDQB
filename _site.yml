@@ -49,7 +49,7 @@ navbar:
           href: RemoteLearning.html
         - text: "Remote Work"
           href: RemoteWork.html
-        - text: "RISER"
+        - text: "Race and Discrimination"
           href: RISER.html
         - text: "School Mobility"
           href: SchoolMobilityModule.html
@@ -85,7 +85,7 @@ navbar:
           href: EconomicStabilityCCModule.html
         - text: "Food Insecurity"
           href: FoodInsecurityModuleCC.html
-        - text: "RISER"
+        - text: "Race and Discrimination"
           href: RISERCC.html
         - text: "Other Hardships"
           href: MaterialHardshipCC.html
