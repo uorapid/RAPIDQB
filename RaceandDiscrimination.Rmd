@@ -29,7 +29,7 @@ data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.r
 ```
 
 The questions below were provided by the RISER Network. https://www.bu-ceed.org/riser-network.html
-Occurrence indicates what weeks the questions in this module were asked. 
+<br/> Occurrence indicates what weeks the questions in this module were asked. 
 
 ```{r display data, echo=FALSE}
 

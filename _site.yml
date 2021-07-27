@@ -50,7 +50,7 @@ navbar:
         - text: "Remote Work"
           href: RemoteWork.html
         - text: "Race and Discrimination"
-          href: RISER.html
+          href: RaceandDiscrimination.html
         - text: "School Mobility"
           href: SchoolMobilityModule.html
         - text: "School Reopening Fall 2020"
@@ -86,7 +86,7 @@ navbar:
         - text: "Food Insecurity"
           href: FoodInsecurityModuleCC.html
         - text: "Race and Discrimination"
-          href: RISERCC.html
+          href: RaceandDiscriminationCC.html
         - text: "Other Hardships"
           href: MaterialHardshipCC.html
         - text: "Vaccines"
