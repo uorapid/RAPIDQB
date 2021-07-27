@@ -1,6 +1,6 @@
 ---
-title: "RISER Module"
-date: "07/23/2021"
+title: "Race and Discrimination Module"
+date: "07/27/2021"
 output: 
  html_document:
     css: "custom2.css"
