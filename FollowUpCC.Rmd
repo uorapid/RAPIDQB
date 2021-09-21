@@ -1,6 +1,6 @@
 ---
 title: "Follow Up Survey Core"
-date: "Last Updated: 07/23/2021"
+date: "Last Updated: 09/21/2021"
 output: 
  html_document:
     css: "custom2.css"
@@ -20,7 +20,7 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 ```
 
 ```{r read data, echo=FALSE}
-data.raw <- read_excel("Data/FollowUpCoreCC2.xlsx")
+data.raw <- read_excel("Data/FollowUpCoreCC.xlsx")
 data.raw$Answers <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Answers)
 data.raw$Question <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Question)
 data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.raw$'Source Link',"</a>")

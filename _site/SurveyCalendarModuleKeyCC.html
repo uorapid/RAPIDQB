@@ -13,13 +13,21 @@
 
 <title>Childcare Survey Calendar and Module Key</title>
 
-<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -44,11 +52,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -61,32 +64,6 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
 <link rel="stylesheet" href="custom2.css" type="text/css" />
@@ -98,10 +75,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -118,40 +91,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -179,7 +125,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -191,7 +137,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -202,10 +148,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -217,7 +176,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -372,6 +330,9 @@ $(document).ready(function () {
           <a href="RaceandDiscrimination.html">Race and Discrimination</a>
         </li>
         <li>
+          <a href="RISER.html">RISER</a>
+        </li>
+        <li>
           <a href="SchoolMobilityModule.html">School Mobility</a>
         </li>
         <li>
@@ -446,13 +407,13 @@ $(document).ready(function () {
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/uorapid/RAPIDQB.git">
-    <span class="fas fa-github"></span>
+    <span class="fa fa-github"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.uorapidresponse.com/">
-    <span class="fas fa-flask"></span>
+    <span class="fa fa-flask"></span>
      
   </a>
 </li>
@@ -461,7 +422,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -472,7 +433,7 @@ $(document).ready(function () {
 
 
 <div id="survey-calendar-and-module-key" class="section level2 tabset">
-<h2 class="tabset">Survey Calendar and Module Key</h2>
+<h2>Survey Calendar and Module Key</h2>
 <div id="survey-calendar" class="section level3">
 <h3>Survey Calendar</h3>
 <p style="font-size:14pt">
@@ -481,8 +442,8 @@ Baseline Survey = Survey that participants take when first participating
 <p style="font-size:14pt">
 Follow-Up Survey = Participants are invited to a follow-up survey that contains some core items from baseline and additional module items
 </p>
-<div id="htmlwidget-84d2438cd61623d87e23" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-84d2438cd61623d87e23">{"x":{"filter":"none","data":[["Survey 15","Survey 14","Survey 13","Survey 12","Survey 11","Survey 10","Survey 9","Survey 8","Survey 7","Survey 6","Survey 5","Survey 4","Survey 3","Survey 2","Survey 1"],["July 20 - July 23","July 12 - July 19","July 6 - July 9","June 28 - July 2","June 22 - June 25","June 14 - June 17","June 8 - June 11","June 2 - June 7","May 14 - June 1","May 2 - May 14","April 19 - April 29","April 5 - April 16","March 22 - April 2","March 8 - March 18","February 22 - February 28"],[null,"x",null,"x",null,"x",null,"x","x","x","x","x","x","x","x"],["x",null,"x",null,"x",null,"x",null,null,null,null,null,null,null,null],["Child Tax Credit\r<br/>RISER\r<br/>Vaccine",null,"Child Tax Credit\r<br/>Food Insecurity\r<br/>Other Hardships\r<br/>Work Schedule",null,"Economic Stability\r<br/>Debt and Unpaid Bills\r<br/>Child Tax Credit",null,"Food Insecurity\r<br/>Other Hardships",null,null,null,null,null,null,null,null]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Survey<\/th>\n      <th>Date Range<\/th>\n      <th>Baseline<\/th>\n      <th>Follow-Up<\/th>\n      <th>Modules Implemented<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"autoWidth":true,"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-aaf95faeaf33fa4dab70" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-aaf95faeaf33fa4dab70">{"x":{"filter":"none","data":[["Survey 15","Survey 14","Survey 13","Survey 12","Survey 11","Survey 10","Survey 9","Survey 8","Survey 7","Survey 6","Survey 5","Survey 4","Survey 3","Survey 2","Survey 1"],["July 20 - July 23","July 12 - July 19","July 6 - July 9","June 28 - July 2","June 22 - June 25","June 14 - June 17","June 8 - June 11","June 2 - June 7","May 14 - June 1","May 2 - May 14","April 19 - April 29","April 5 - April 16","March 22 - April 2","March 8 - March 18","February 22 - February 28"],[null,"x",null,"x",null,"x",null,"x","x","x","x","x","x","x","x"],["x",null,"x",null,"x",null,"x",null,null,null,null,null,null,null,null],["Child Tax Credit\r<br/>RISER\r<br/>Vaccine",null,"Child Tax Credit\r<br/>Food Insecurity\r<br/>Other Hardships\r<br/>Work Schedule",null,"Economic Stability\r<br/>Debt and Unpaid Bills\r<br/>Child Tax Credit",null,"Food Insecurity\r<br/>Other Hardships",null,null,null,null,null,null,null,null]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Survey<\/th>\n      <th>Date Range<\/th>\n      <th>Baseline<\/th>\n      <th>Follow-Up<\/th>\n      <th>Modules Implemented<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"autoWidth":true,"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="module-key" class="section level3">
 <h3>Module Key</h3>
@@ -492,12 +453,12 @@ Module Key
 <p style="font-size:14pt">
 Below is a key that provides a brief summary of each module as well as a link to the questions for that module on the site. You can also use the navigation bar to switch between modules.
 </p>
-<div id="htmlwidget-0e4f6c0cdbebe81dc67d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0e4f6c0cdbebe81dc67d">{"x":{"filter":"none","data":[["Child Tax Credit","Debt and Overdue Bills","Economic stability","Food Insecurity","Other Hardships","RISER","Vaccines","Work Schedule"],["Use of child tax credit","Sources of debt","Feelings regarding housing, employment, work schedule, and childcare","USDA questions, includes frequency of hunger, insufficient food for family","Difficulty paying for basic needs: food, housing, utlities, childcare, healthcare, emotional/social support. Concerns about and experiences with eviction and foreclosure.","Explores experiences of racism and discrimination; 2 sets of same questions, one on pre-pandemic experiences, one since the pandemic","Missed vaccine at well-check visit and why; asks if they will get a COVID-19 vaccine if offered","What does the work week look like for childcare providers?"],["<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>"],["11, 13, 15","11","11","9, 13","13","15","15","13"]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Module<\/th>\n      <th>About<\/th>\n      <th>Go to Module<\/th>\n      <th>Survey<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"autoWidth":true,"order":[],"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0a44fae5e313e5650867" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0a44fae5e313e5650867">{"x":{"filter":"none","data":[["Child Tax Credit","Debt and Overdue Bills","Economic stability","Food Insecurity","Other Hardships","RISER","Vaccines","Work Schedule"],["Use of child tax credit","Sources of debt","Feelings regarding housing, employment, work schedule, and childcare","USDA questions, includes frequency of hunger, insufficient food for family","Difficulty paying for basic needs: food, housing, utlities, childcare, healthcare, emotional/social support. Concerns about and experiences with eviction and foreclosure.","Explores experiences of racism and discrimination; 2 sets of same questions, one on pre-pandemic experiences, one since the pandemic","Missed vaccine at well-check visit and why; asks if they will get a COVID-19 vaccine if offered","What does the work week look like for childcare providers?"],["<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>"],["11, 13, 15","11","11","9, 13","13","15","15","13"]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Module<\/th>\n      <th>About<\/th>\n      <th>Go to Module<\/th>\n      <th>Survey<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"autoWidth":true,"order":[],"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="section" class="section level2 unnumbered">
-<h2 class="unnumbered"></h2>
+<h2></h2>
 </div>
 
 
@@ -527,7 +488,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

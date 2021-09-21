@@ -10,17 +10,25 @@
 
 
 
-<meta name="date" content="2021-01-27" />
+<meta name="date" content="2021-09-21" />
 
 <title>Workforce Module</title>
 
-<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -54,11 +62,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -71,32 +74,6 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
 <link rel="stylesheet" href="custom2.css" type="text/css" />
@@ -108,10 +85,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -128,40 +101,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -189,7 +135,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -201,7 +147,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -212,10 +158,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -227,7 +186,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -382,6 +340,9 @@ $(document).ready(function () {
           <a href="RaceandDiscrimination.html">Race and Discrimination</a>
         </li>
         <li>
+          <a href="RISER.html">RISER</a>
+        </li>
+        <li>
           <a href="SchoolMobilityModule.html">School Mobility</a>
         </li>
         <li>
@@ -456,13 +417,13 @@ $(document).ready(function () {
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/uorapid/RAPIDQB.git">
-    <span class="fas fa-github"></span>
+    <span class="fa fa-github"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.uorapidresponse.com/">
-    <span class="fas fa-flask"></span>
+    <span class="fa fa-flask"></span>
      
   </a>
 </li>
@@ -471,19 +432,19 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
 <h1 class="title toc-ignore">Workforce Module</h1>
-<h4 class="date">01/27/2021</h4>
+<h4 class="date">09/21/2021</h4>
 
 </div>
 
 
 <p>Occurrence indicates what weeks the questions in this module were asked.</p>
-<div id="htmlwidget-88cc3a1b790991f47943" style="width:100%;height:100%;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-88cc3a1b790991f47943">{"x":{"filter":"none","class":"cell-border stripe hover","extensions":["Buttons"],"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],["Who earns more money in your household?","Has this changed since the coronavirus (COVID-19) pandemic?\r<br/>\r<br/>(Ex. Did you make more money than your partner prior to the pandemic, but now you make less?)","What was your partner's employment status prior to the coronavirus (COVID-19) Pandemic? If you do not have a partner, please select not applicable.","What is your partner's current employment status? If you do not have a partner, please select not applicable.","Since the COVID-19 crisis, have you considered any of the following? Select all that apply.","Since the start of the COVID-19 crisis, what have been the biggest challenges for you as an employee? Select all that apply.","Who is responsible for most of the household labor?","Since the start of the COVID-19 crisis, have you experienced any of the following? Select all that apply.","Which of the following precautions does your workplace currently adhere to? Select all that apply.","During the COVID-19 pandemic, does your workplace adhere to the following practices? Select all that apply. ","Overall, do you feel protected and safe in your workplace?","Since the COVID-19 crisis, which of the following have you done?","From a financial perspective, can you currently afford to reduce your work hours?","From a financial perspective, can you currently afford to stop working?","Please describe any concerns or other thoughts you have about working and parenting during the pandemic."],["•  Myself\r<br/>•  My partner or spouse\r<br/>•  About equal with my partner or spouse\r<br/>•  Other","• Yes\r<br/>• No\r<br/>• Unsure\r<br/>• Other [Free Text]","• 1 - Working\r<br/>• 2 - Unemployed or laid off\r<br/>• 3 - Temporarily out of work or furloughed\r<br/>• 4 - Other\r<br/>• 5 - Not applicable","• 1 - Working\r<br/>• 2 - Unemployed or laid off\r<br/>• 3 - Temporarily out of work or furloughed\r<br/>• 4 - Other\r<br/>• 5 - Not applicable","• Reducing my work hours  \r<br/>• Switching to a less demanding job  \r<br/>• Taking a leave of absence  \r<br/>• Moving from a full-time role into a part-time roll  \r<br/>• Leaving the workforce altogether                                      • None of the above\r<br/>• Not applicable","• Anxiety over layoffs or furloughs  \r<br/>• Burnout  \r<br/>• Mental Health  \r<br/>• Childcare and/or homeschooling responsibilities  \r<br/>• Physical and mental health of loved ones                      • Financial insecurity  \r<br/>• None of the above                                                               • Not applicable","• My partner is responsible for all of the work   \r<br/>• My partner is responsible for most of the work  \r<br/>• I share responsibilities equally with my partner   \r<br/>• I am responsible for most of the work   \r<br/>• I am responsible for all of the work","• Discomfort sharing work-life challenges  \r<br/>• Worry about performance being judged due to caregiving responsibilities    \r<br/>• Discomfort sharing status as a parent   \r<br/>• None of the above","• Encourage sick employees to stay home (For COVID or any illness) \r<br/>• Conducting daily in-person health checks    \r<br/>• Conducting virtual health checks   \r<br/>• Employees encouraged to wear a cloth facemask and/or other appropriate PPE  \r<br/>• Employees encouraged to social distance                         • Not applicable","• Pre-screening employee’s temperature and symptoms prior to them starting work  \r<br/>• Requiring employees to self-monitor fever or symptoms regularly   \r<br/>• Require all employees to wear face masks    \r<br/>• Require all other people entering the infrastructure (e.g. clients, customers, patients) to wear face masks   facemask and/or other appropriate PPE  \r<br/>• Require social distancing and provide social distancing guidelines (e.g., markers on the floor)                                                                      • Disinfect and clean work spaces                                           • Not applicable","• Not protected at all  \r<br/>• Somewhat protected  \r<br/>• Very well protected   \r<br/>• Not applicable","• I reduced my work hours\r<br/>• I switched to a less demanding job\r<br/>• Took a leave of absenceI moved from a full-time role into a part time roll\r<br/>• I left the workforce altogether\r<br/>• None of the above\r<br/>• Not applicable","• Yes\r<br/>• No\r<br/>• Not applicable","• Yes\r<br/>• No\r<br/>• Not applicable","Open response"],["Developed by RAPID Team","Developed by RAPID Team","RAPID Team Modified from U.S. Census","RAPID Team Modified from U.S. Census","RAPID Team Modified","RAPID Team Modified","RAPID Team Modified","RAPID Team Modified","RAPID Team Modified","RAPID Team Modified","RAPID Team Modified","RAPID Team Modified","RAPID Team Developed","RAPID Team Developed","RAPID team developed"],["<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf'>https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf<\/a>","<a href='https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf'>https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf<\/a>","<a href='https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf'>https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf<\/a>","<a href='https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf'>https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf<\/a>","<a href='https://www.cdc.gov/coronavirus/2019-ncov/community/critical-workers/implementing-safety-practices.html\r<br/>CDC guideline on how to protect essential workers'>https://www.cdc.gov/coronavirus/2019-ncov/community/critical-workers/implementing-safety-practices.html\r<br/>CDC guideline on how to protect essential workers<\/a>","<a href='https://www.cdc.gov/coronavirus/2019-ncov/community/critical-workers/implementing-safety-practices.htmlCDC%20guideline%20on%20how%20to%20protect%20essential%20workers'>https://www.cdc.gov/coronavirus/2019-ncov/community/critical-workers/implementing-safety-practices.htmlCDC%20guideline%20on%20how%20to%20protect%20essential%20workers<\/a>","<a href='https://www.cdc.gov/coronavirus/2019-ncov/community/critical-infrastructure-sectors.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcommunity%2Fcritical-workers%2Fimplementing-safety-practices.html'>https://www.cdc.gov/coronavirus/2019-ncov/community/critical-infrastructure-sectors.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcommunity%2Fcritical-workers%2Fimplementing-safety-practices.html<\/a>","<a href='https://www.cdc.gov/coronavirus/2019-ncov/community/critical-infrastructure-sectors.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcommunity%2Fcritical-workers%2Fimplementing-safety-practices.html'>https://www.cdc.gov/coronavirus/2019-ncov/community/critical-infrastructure-sectors.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcommunity%2Fcritical-workers%2Fimplementing-safety-practices.html<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>"],["3 to 21, 23, 25, 27, 33, 37, 45, 47, 49, 53","3 to 21, 23, 25, 27, 33, 37, 45, 47, 49, 53","23 to 27, 33, 37, 45, 47, 49, 53","23 to 27, 33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","47, 49, 53","47, 49, 53","47, 49, 53","47, 49, 53"]],"container":"<table>\n  <style type=\"text/css\">th { font-family: 'Arial'; font-weight: bold; color: black; background-color: #f1d310;}<\/style>\n  <thead>\n    <tr>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\"> <\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Question<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Answers<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Source<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Source Link<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Occurrence<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["copy","csv","excel","pdf","print"],"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-98a70f63be915ee74091" style="width:100%;height:100%;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-98a70f63be915ee74091">{"x":{"filter":"none","class":"cell-border stripe hover","extensions":["Buttons"],"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],["Who earns more money in your household?","Has this changed since the coronavirus (COVID-19) pandemic?\r<br/>\r<br/>(Ex. Did you make more money than your partner prior to the pandemic, but now you make less?)","What was your partner's employment status prior to the coronavirus (COVID-19) Pandemic? If you do not have a partner, please select not applicable.","What is your partner's current employment status? If you do not have a partner, please select not applicable.","Since the COVID-19 crisis, have you considered any of the following? Select all that apply.","Since the start of the COVID-19 crisis, what have been the biggest challenges for you as an employee? Select all that apply.","Who is responsible for most of the household labor?","Since the start of the COVID-19 crisis, have you experienced any of the following? Select all that apply.","Which of the following precautions does your workplace currently adhere to? Select all that apply.","During the COVID-19 pandemic, does your workplace adhere to the following practices? Select all that apply. ","Overall, do you feel protected and safe in your workplace?","Since the COVID-19 crisis, which of the following have you done?","From a financial perspective, can you currently afford to reduce your work hours?","From a financial perspective, can you currently afford to stop working?","Please describe any concerns or other thoughts you have about working and parenting during the pandemic."],["•  Myself\r<br/>•  My partner or spouse\r<br/>•  About equal with my partner or spouse\r<br/>•  Other","• Yes\r<br/>• No\r<br/>• Unsure\r<br/>• Other [Free Text]","• 1 - Working\r<br/>• 2 - Unemployed or laid off\r<br/>• 3 - Temporarily out of work or furloughed\r<br/>• 4 - Other\r<br/>• 5 - Not applicable","• 1 - Working\r<br/>• 2 - Unemployed or laid off\r<br/>• 3 - Temporarily out of work or furloughed\r<br/>• 4 - Other\r<br/>• 5 - Not applicable","• Reducing my work hours  \r<br/>• Switching to a less demanding job  \r<br/>• Taking a leave of absence  \r<br/>• Moving from a full-time role into a part-time roll  \r<br/>• Leaving the workforce altogether                                      • None of the above\r<br/>• Not applicable","• Anxiety over layoffs or furloughs  \r<br/>• Burnout  \r<br/>• Mental Health  \r<br/>• Childcare and/or homeschooling responsibilities  \r<br/>• Physical and mental health of loved ones                      • Financial insecurity  \r<br/>• None of the above                                                               • Not applicable","• My partner is responsible for all of the work   \r<br/>• My partner is responsible for most of the work  \r<br/>• I share responsibilities equally with my partner   \r<br/>• I am responsible for most of the work   \r<br/>• I am responsible for all of the work","• Discomfort sharing work-life challenges  \r<br/>• Worry about performance being judged due to caregiving responsibilities    \r<br/>• Discomfort sharing status as a parent   \r<br/>• None of the above","• Encourage sick employees to stay home (For COVID or any illness) \r<br/>• Conducting daily in-person health checks    \r<br/>• Conducting virtual health checks   \r<br/>• Employees encouraged to wear a cloth facemask and/or other appropriate PPE  \r<br/>• Employees encouraged to social distance                         • Not applicable","• Pre-screening employee’s temperature and symptoms prior to them starting work  \r<br/>• Requiring employees to self-monitor fever or symptoms regularly   \r<br/>• Require all employees to wear face masks    \r<br/>• Require all other people entering the infrastructure (e.g. clients, customers, patients) to wear face masks   facemask and/or other appropriate PPE  \r<br/>• Require social distancing and provide social distancing guidelines (e.g., markers on the floor)                                                                      • Disinfect and clean work spaces                                           • Not applicable","• Not protected at all  \r<br/>• Somewhat protected  \r<br/>• Very well protected   \r<br/>• Not applicable","• I reduced my work hours\r<br/>• I switched to a less demanding job\r<br/>• Took a leave of absenceI moved from a full-time role into a part time roll\r<br/>• I left the workforce altogether\r<br/>• None of the above\r<br/>• Not applicable","• Yes\r<br/>• No\r<br/>• Not applicable","• Yes\r<br/>• No\r<br/>• Not applicable","Open response"],["Developed by RAPID Team","Developed by RAPID Team","RAPID Team Modified from U.S. Census","RAPID Team Modified from U.S. Census","RAPID Team Modified","RAPID Team Modified","RAPID Team Modified","RAPID Team Modified","RAPID Team Modified","RAPID Team Modified","RAPID Team Modified","RAPID Team Modified","RAPID Team Developed","RAPID Team Developed","RAPID team developed"],["<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf'>https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf<\/a>","<a href='https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf'>https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf<\/a>","<a href='https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf'>https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf<\/a>","<a href='https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf'>https://wiw-report.s3.amazonaws.com/Women_in_the_Workplace_2020.pdf<\/a>","<a href='https://www.cdc.gov/coronavirus/2019-ncov/community/critical-workers/implementing-safety-practices.html\r<br/>CDC guideline on how to protect essential workers'>https://www.cdc.gov/coronavirus/2019-ncov/community/critical-workers/implementing-safety-practices.html\r<br/>CDC guideline on how to protect essential workers<\/a>","<a href='https://www.cdc.gov/coronavirus/2019-ncov/community/critical-workers/implementing-safety-practices.htmlCDC%20guideline%20on%20how%20to%20protect%20essential%20workers'>https://www.cdc.gov/coronavirus/2019-ncov/community/critical-workers/implementing-safety-practices.htmlCDC%20guideline%20on%20how%20to%20protect%20essential%20workers<\/a>","<a href='https://www.cdc.gov/coronavirus/2019-ncov/community/critical-infrastructure-sectors.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcommunity%2Fcritical-workers%2Fimplementing-safety-practices.html'>https://www.cdc.gov/coronavirus/2019-ncov/community/critical-infrastructure-sectors.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcommunity%2Fcritical-workers%2Fimplementing-safety-practices.html<\/a>","<a href='https://www.cdc.gov/coronavirus/2019-ncov/community/critical-infrastructure-sectors.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcommunity%2Fcritical-workers%2Fimplementing-safety-practices.html'>https://www.cdc.gov/coronavirus/2019-ncov/community/critical-infrastructure-sectors.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcommunity%2Fcritical-workers%2Fimplementing-safety-practices.html<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>"],["3 to 21, 23, 25, 27, 33, 37, 45, 47, 49, 53","3 to 21, 23, 25, 27, 33, 37, 45, 47, 49, 53","23 to 27, 33, 37, 45, 47, 49, 53","23 to 27, 33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","33, 37, 45, 47, 49, 53","47, 49, 53","47, 49, 53","47, 49, 53","47, 49, 53"]],"container":"<table>\n  <style type=\"text/css\">th { font-family: 'Arial'; font-weight: bold; color: black; background-color: #f1d310;}<\/style>\n  <thead>\n    <tr>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\"> <\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Question<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Answers<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Source<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Source Link<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Occurrence<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["copy","csv","excel","pdf","print"],"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
 
 
 
@@ -512,7 +473,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

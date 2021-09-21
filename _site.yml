@@ -1,4 +1,7 @@
 name: "RAPID Question Bank"
+output:
+  html_document:
+    css: style.css
 navbar:
   title: "RAPID-EC Question Bank"
   left:
@@ -51,6 +54,8 @@ navbar:
           href: RemoteWork.html
         - text: "Race and Discrimination"
           href: RaceandDiscrimination.html
+        - text: "RISER"
+          href: RISER.html
         - text: "School Mobility"
           href: SchoolMobilityModule.html
         - text: "School Reopening Fall 2020"
