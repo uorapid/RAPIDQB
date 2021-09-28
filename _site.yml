@@ -45,7 +45,7 @@ navbar:
         - text: "Holiday Plans"
           href: HolidayPlansModule.html
         - text: "Other Hardships"
-          href: MaterialHardship.html
+          href: OtherHardships.html
         - text: "Pregnancy and Postpartum"
           href: PregnancyandPost.html
         - text: "Remote Learning"
@@ -93,7 +93,7 @@ navbar:
         - text: "Race and Discrimination"
           href: RaceandDiscriminationCC.html
         - text: "Other Hardships"
-          href: MaterialHardshipCC.html
+          href: OtherHardshipsCC.html
         - text: "Vaccines"
           href: VaccinesModuleCC.html
         - text: "Work Schedule"
