@@ -84,16 +84,22 @@ navbar:
         menu:
         - text: "Child Tax Credit"
           href: ChildTaxCreditCC.html
+        - text: "Childcare Subsidy"
+          href: ChildCareSubsidyCC.html
         - text: "Debt and Overdue Bills"
           href: DebtandOverdueBillsCC.html
         - text: "Economic Stability"
           href: EconomicStabilityCCModule.html
+        - text: "Family Conflict"
+          href: FamConfCC.html
         - text: "Food Insecurity"
           href: FoodInsecurityModuleCC.html
         - text: "Race and Discrimination"
           href: RaceandDiscriminationCC.html
         - text: "Other Hardships"
           href: OtherHardshipsCC.html
+        - text: "Stabilization Funds"
+          href: StabilizationFundsCC.html
         - text: "Vaccines"
           href: VaccinesModuleCC.html
         - text: "Work Schedule"
