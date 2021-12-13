@@ -64,12 +64,16 @@ navbar:
           href: SchoolReopeningSpring2021.html
         - text: "Social Support"
           href: SocialSupport.html
+        - text: "Special Needs"
+          href: SpecialNeeds.html
         - text: "Stimulus"
           href: StimulusModule.html
         - text: "Unemployment"
           href: UnemploymentModule.html 
         - text: "Vaccines"
           href: VaccinesModule.html 
+        - text: "WIC"
+          href: WICModule.html
         - text: "Workforce"
           href: WorkforceModule.html
       - text: "Childcare (CC) Survey"
