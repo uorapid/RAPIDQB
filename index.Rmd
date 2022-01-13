@@ -20,6 +20,9 @@ knitr::opts_chunk$set(
 
 <p style="font-size:14pt">If there are any questions or concerns, please do not hesitate to reach out to the RAPID-EC team.</p>
 
+<p style="font-size:14pt">Suggested citation (APA7): 
+Center for Translational Neuroscience, University of Oregon. (n.d.). Rapid-EC Survey. RAPID-EC Question Bank. Retrieved DATE, from https://r3questionbank.netlify.app/  </p>
+
 
 ```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
 
