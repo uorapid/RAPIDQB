@@ -48,6 +48,8 @@ navbar:
             href: HolidayPlansModule.html
         - text: "Modules M-Z"
           menu:
+          - text: "Omicron"
+            href: OmicronModule.html
           - text: "Other Hardships"
             href: OtherHardships.html
           - text: "Pregnancy and Postpartum"
@@ -80,6 +82,8 @@ navbar:
             href: WICModule.html
           - text: "Workforce"
             href: WorkforceModule.html
+          - text: "Working Parents"
+            href: WorkingParents.html
       - text: "Childcare (CC) Survey"
         menu:
         - text: "Survey Calendar and Module Key"
@@ -96,14 +100,22 @@ navbar:
             href: ChildTaxCreditCC.html
           - text: "Childcare Subsidy"
             href: ChildCareSubsidyCC.html
+          - text: "Childcare Closures & COVID Safety"
+            href: ChildCareClosuresCOVIDSafety.html 
+          - text: "Childcare For Own Child"
+            href: ChildCareForOwnChildCC.html
           - text: "Debt and Overdue Bills"
             href: DebtandOverdueBillsCC.html
           - text: "Economic Stability"
             href: EconomicStabilityCCModule.html
+          - text: "Employment"
+            href: EmploymentCC.html  
           - text: "Family Conflict"
             href: FamConfCC.html
           - text: "Food Insecurity"
             href: FoodInsecurityModuleCC.html
+          - text: "Healthcare"
+            href: HealthcareModuleCC.html
         - text: "Modules M-Z"
           menu:
           - text: "Other Hardships"
@@ -116,8 +128,12 @@ navbar:
             href: SocialSupportCC.html
           - text: "Stabilization Funds"
             href: StabilizationFundsCC.html
+          - text: "Unemployment"
+            href: UnemploymentCCModule.html
           - text: "Vaccines"
             href: VaccinesModuleCC.html
+          - text: "Vaccines (Children)"
+            href: Vaccines(Children)CC.html
           - text: "Work Schedule"
             href: WorkScheduleModuleCC.html
         
