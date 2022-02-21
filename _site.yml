@@ -48,8 +48,6 @@ navbar:
             href: HolidayPlansModule.html
         - text: "Modules M-Z"
           menu:
-          - text: "Omicron"
-            href: OmicronModule.html
           - text: "Other Hardships"
             href: OtherHardships.html
           - text: "Pregnancy and Postpartum"
@@ -118,6 +116,8 @@ navbar:
             href: HealthcareModuleCC.html
         - text: "Modules M-Z"
           menu:
+          - text: "Omicron"
+            href: OmicronModule.html
           - text: "Other Hardships"
             href: OtherHardshipsCC.html
           - text: "Race and Discrimination"
