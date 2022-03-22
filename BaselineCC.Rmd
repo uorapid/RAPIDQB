@@ -1,6 +1,6 @@
 ---
 title: "Childcare Baseline Survey"
-date: "Last Updated: 2/8/22"
+date: "Last Updated: 3/21/22"
 output: 
  html_document:
     css: "custom2.css"
@@ -20,7 +20,7 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 ```
 
 ```{r read data, echo=FALSE}
-data.raw <- read_excel("Data/BaselineCC.xlsx")
+data.raw <- read_excel("Data/BaselineCCUpdated.xlsx")
 data.raw$Answers <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Answers)
 data.raw$Question <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Question)
 data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.raw$'Source Link',"</a>")

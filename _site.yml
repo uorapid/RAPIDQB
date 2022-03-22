@@ -22,6 +22,8 @@ navbar:
         menu:
         - text: "Modules A-L"
           menu:
+          - text: "ABACUS"
+            href: ABACUS.html
           - text: "Child Social Interactions Module"
             href: ChildSocialInteractions.html
           - text: "Child Tax Credit Module"
@@ -102,6 +104,8 @@ navbar:
             href: ChildCareClosuresCOVIDSafety.html 
           - text: "Childcare For Own Child"
             href: ChildCareForOwnChildCC.html
+          - text: "COVID"
+            href: COVIDCC.html
           - text: "Debt and Overdue Bills"
             href: DebtandOverdueBillsCC.html
           - text: "Economic Stability"
@@ -110,14 +114,20 @@ navbar:
             href: EmploymentCC.html  
           - text: "Family Conflict"
             href: FamConfCC.html
+          - text: "Food Aid"
+            href: FoodAidCC.html
           - text: "Food Insecurity"
             href: FoodInsecurityModuleCC.html
           - text: "Healthcare"
             href: HealthcareModuleCC.html
+          - text: "Inflation"
+            href: InflationCC.html
         - text: "Modules M-Z"
           menu:
           - text: "Omicron"
-            href: OmicronModule.html
+            href: OmicronModuleCC.html
+          - text: "Open-Ended"
+            href: OpenEndedModuleCC.html
           - text: "Other Hardships"
             href: OtherHardshipsCC.html
           - text: "Race and Discrimination"
@@ -128,6 +138,8 @@ navbar:
             href: SocialSupportCC.html
           - text: "Stabilization Funds"
             href: StabilizationFundsCC.html
+          - text: "Stand-Alone Questions"
+            href: StandAloneQuestionsCC.html
           - text: "Unemployment"
             href: UnemploymentCCModule.html
           - text: "Vaccines"
