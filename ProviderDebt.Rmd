@@ -1,5 +1,5 @@
 ---
-title: "Vaccines (Children) Module"
+title: "Provider Debt"
 date: "5/31/22"
 output: 
  html_document:
@@ -19,13 +19,10 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 ```
 
 ```{r read data, echo=FALSE}
-data.raw <- read_excel("Data/Vaccine(Children)CC.xlsx")
+data.raw <- read_excel("Data/ProviderDebt.xlsx")
 data.raw$Answers <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Answers)
 data.raw$Question <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Question)
-data.raw$Source <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Source)
-data.raw$'Source Link' <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$'Source Link')
 data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.raw$'Source Link',"</a>")
-
 ```
 
 Occurrence indicates what weeks the questions in this module were asked. 

@@ -130,6 +130,8 @@ navbar:
             href: OpenEndedModuleCC.html
           - text: "Other Hardships"
             href: OtherHardshipsCC.html
+          - text: "Provider Debt"
+            href: ProviderDebt.html
           - text: "Race and Discrimination"
             href: RaceandDiscriminationCC.html
           - text: "RISER"
