@@ -13,7 +13,8 @@
 
 <title>RAPID-EC Question Bank</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -58,6 +59,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="custom2.css" type="text/css" />
 
 
@@ -82,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -234,7 +239,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -244,14 +249,14 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Menu
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Household (EC) Survey</a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Household (EC) Survey</a>
       <ul class="dropdown-menu" role="menu">
         <li>
           <a href="SurveyCalendarModuleKey.html">Survey Calendar and Module Key</a>
@@ -268,10 +273,10 @@ $(document).ready(function () {
       </ul>
     </li>
     <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Household (EC) Modules</a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Household (EC) Modules</a>
       <ul class="dropdown-menu" role="menu">
         <li class="dropdown-submenu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Modules A-L</a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modules A-L</a>
           <ul class="dropdown-menu" role="menu">
             <li>
               <a href="ABACUS.html">ABACUS</a>
@@ -315,7 +320,7 @@ $(document).ready(function () {
           </ul>
         </li>
         <li class="dropdown-submenu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Modules M-Z</a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modules M-Z</a>
           <ul class="dropdown-menu" role="menu">
             <li>
               <a href="OtherHardships.html">Other Hardships</a>
@@ -373,7 +378,7 @@ $(document).ready(function () {
       </ul>
     </li>
     <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Childcare (CC) Survey</a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Childcare (CC) Survey</a>
       <ul class="dropdown-menu" role="menu">
         <li>
           <a href="SurveyCalendarModuleKeyCC.html">Survey Calendar and Module Key</a>
@@ -387,10 +392,10 @@ $(document).ready(function () {
       </ul>
     </li>
     <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Childcare (CC) Modules</a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Childcare (CC) Modules</a>
       <ul class="dropdown-menu" role="menu">
         <li class="dropdown-submenu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Modules A-L</a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modules A-L</a>
           <ul class="dropdown-menu" role="menu">
             <li>
               <a href="ChildTaxCreditCC.html">Child Tax Credit</a>
@@ -434,7 +439,7 @@ $(document).ready(function () {
           </ul>
         </li>
         <li class="dropdown-submenu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Modules M-Z</a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modules M-Z</a>
           <ul class="dropdown-menu" role="menu">
             <li>
               <a href="OmicronModuleCC.html">Omicron</a>
@@ -444,6 +449,9 @@ $(document).ready(function () {
             </li>
             <li>
               <a href="OtherHardshipsCC.html">Other Hardships</a>
+            </li>
+            <li>
+              <a href="ProviderDebt.html">Provider Debt</a>
             </li>
             <li>
               <a href="RaceandDiscriminationCC.html">Race and Discrimination</a>
@@ -507,20 +515,29 @@ $(document).ready(function () {
 
 
 <div class="figure">
-<img src="Data/QBPIC.png" alt="RAPID-EC Project" />
+<img
+src="/Users/shreyam4/Dropbox%20(University%20of%20Oregon)/RAPID-EC/Data%20Management%20R3/EE_R3%20Question%20Bank/Data/QBPIC.png"
+alt="" />
 <p class="caption">RAPID-EC Project</p>
 </div>
 <p style="font-size:14pt">
-This site hosts a list of questions asked as a part of the RAPID-EC project. All efforts were taken to ensure the accuracy of the question sources.
+This site hosts a list of questions asked as a part of the RAPID-EC
+project. All efforts were taken to ensure the accuracy of the question
+sources.
 </p>
 <p style="font-size:14pt">
-Use the menu above to navigate between our household (EC) survey questions and our childcare provider (CC) survey questions.
+Use the menu above to navigate between our household (EC) survey
+questions and our childcare provider (CC) survey questions.
 </p>
 <p style="font-size:14pt">
-If there are any questions or concerns, please do not hesitate to reach out to the RAPID-EC team.
+If there are any questions or concerns, please do not hesitate to reach
+out to the RAPID-EC team.
 </p>
 <p style="font-size:14pt">
-Suggested citation (APA7): Center for Translational Neuroscience, University of Oregon. (n.d.). Rapid-EC Survey. RAPID-EC Question Bank. Retrieved DATE, from <a href="https://r3questionbank.netlify.app/" class="uri">https://r3questionbank.netlify.app/</a>
+Suggested citation (APA7): Center for Translational Neuroscience,
+Stanford University. (n.d.). Rapid-EC Survey. RAPID-EC Question Bank.
+Retrieved DATE, from <a href="https://r3questionbank.netlify.app/"
+class="uri">https://r3questionbank.netlify.app/</a>
 </p>
 
 
