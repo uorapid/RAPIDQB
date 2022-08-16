@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Follow Up Survey Core</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.22/datatables.js"></script>
+<link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="site_libs/jszip-1.11.3/jszip.min.js"></script>
+<script src="site_libs/pdfmake-1.11.3/pdfmake.js"></script>
+<script src="site_libs/pdfmake-1.11.3/vfs_fonts.js"></script>
+<link href="site_libs/dt-ext-buttons-1.11.3/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="site_libs/dt-ext-buttons-1.11.3/js/dataTables.buttons.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.html5.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.colVis.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.print.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="custom2.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">RAPID-EC Question Bank</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Menu
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Household (EC) Survey</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="SurveyCalendarModuleKey.html">Survey Calendar and Module Key</a>
+        </li>
+        <li>
+          <a href="Historical.html">All Questions</a>
+        </li>
+        <li>
+          <a href="Baseline.html">Baseline</a>
+        </li>
+        <li>
+          <a href="FollowUp.html">Follow-Up Core</a>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Household (EC) Modules</a>
+      <ul class="dropdown-menu" role="menu">
+        <li class="dropdown-submenu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modules A-L</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="ABACUS.html">ABACUS</a>
+            </li>
+            <li>
+              <a href="ChildSocialInteractions.html">Child Social Interactions</a>
+            </li>
+            <li>
+              <a href="ChildTaxCredit.html">Child Tax Credit</a>
+            </li>
+            <li>
+              <a href="ClimateChange.html">Climate Change</a>
+            </li>
+            <li>
+              <a href="CommunityViolence.html">Community Violence</a>
+            </li>
+            <li>
+              <a href="DebtandOverdueBills.html">Debt and Overdue Bills</a>
+            </li>
+            <li>
+              <a href="DiapersModule.html">Diapers</a>
+            </li>
+            <li>
+              <a href="EconomicStability.html">Economic Stability</a>
+            </li>
+            <li>
+              <a href="EmploymentModule.html">Employment</a>
+            </li>
+            <li>
+              <a href="HealthcareModule.html">Healthcare</a>
+            </li>
+            <li>
+              <a href="FamConf.html">Family Conflict</a>
+            </li>
+            <li>
+              <a href="FoodInsecurityModule.html">Food Insecurity</a>
+            </li>
+            <li>
+              <a href="FamilyRoutinesModule.html">Family Routines</a>
+            </li>
+            <li>
+              <a href="GrandparentsModule.html">Grandparents</a>
+            </li>
+            <li>
+              <a href="HolidayPlansModule.html">Holiday Plans</a>
+            </li>
+            <li>
+              <a href="KindergartenAndSchoolEnrollment.html">Kindergarten/School Enrollment</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modules M-Z</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="Multigenerational.html">Multigenerational</a>
+            </li>
+            <li>
+              <a href="OtherHardships.html">Other Hardships</a>
+            </li>
+            <li>
+              <a href="ParentWorkSchedule.html">Parent Work Schedule</a>
+            </li>
+            <li>
+              <a href="PregnancyandPost.html">Pregnancy and Postpartum</a>
+            </li>
+            <li>
+              <a href="QUIC.html">QUIC</a>
+            </li>
+            <li>
+              <a href="RaceandDiscrimination.html">Race and Discrimination</a>
+            </li>
+            <li>
+              <a href="RemoteLearning.html">Remote Learning</a>
+            </li>
+            <li>
+              <a href="RemoteWork.html">Remote Work</a>
+            </li>
+            <li>
+              <a href="RISER.html">RISER</a>
+            </li>
+            <li>
+              <a href="SchoolMobilityModule.html">School Mobility</a>
+            </li>
+            <li>
+              <a href="SchoolReopeningModule.html">School Reopening Fall 2020</a>
+            </li>
+            <li>
+              <a href="SchoolReopeningSpring2021.html">School Reopening Spring 2021</a>
+            </li>
+            <li>
+              <a href="SocialSupport.html">Social Support</a>
+            </li>
+            <li>
+              <a href="SpecialNeeds.html">Special Needs</a>
+            </li>
+            <li>
+              <a href="StimulusModule.html">Stimulus</a>
+            </li>
+            <li>
+              <a href="UnemploymentModule.html">Unemployment</a>
+            </li>
+            <li>
+              <a href="VaccinesModule.html">Vaccines</a>
+            </li>
+            <li>
+              <a href="Violence.html">Violence</a>
+            </li>
+            <li>
+              <a href="WICModule.html">WIC</a>
+            </li>
+            <li>
+              <a href="WorkforceModule.html">Workforce</a>
+            </li>
+            <li>
+              <a href="WorkingParents.html">Working Parents</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Childcare (CC) Survey</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="SurveyCalendarModuleKeyCC.html">Survey Calendar and Module Key</a>
+        </li>
+        <li>
+          <a href="BaselineCC.html">Baseline</a>
+        </li>
+        <li>
+          <a href="FollowUpCC.html">Follow-Up Core</a>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Childcare (CC) Modules</a>
+      <ul class="dropdown-menu" role="menu">
+        <li class="dropdown-submenu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modules A-L</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="ChildTaxCreditCC.html">Child Tax Credit</a>
+            </li>
+            <li>
+              <a href="ChildCareSubsidyCC.html">Childcare Subsidy</a>
+            </li>
+            <li>
+              <a href="ChildCareClosuresCOVIDSafety.html">Childcare Closures &amp; COVID Safety</a>
+            </li>
+            <li>
+              <a href="ChildCareForOwnChildCC.html">Childcare For Own Child</a>
+            </li>
+            <li>
+              <a href="COVIDCC.html">COVID</a>
+            </li>
+            <li>
+              <a href="DebtandOverdueBillsCC.html">Debt and Overdue Bills</a>
+            </li>
+            <li>
+              <a href="EconomicStabilityCCModule.html">Economic Stability</a>
+            </li>
+            <li>
+              <a href="EmploymentCC.html">Employment</a>
+            </li>
+            <li>
+              <a href="FamConfCC.html">Family Conflict</a>
+            </li>
+            <li>
+              <a href="FoodAidCC.html">Food Aid</a>
+            </li>
+            <li>
+              <a href="FoodInsecurityModuleCC.html">Food Insecurity</a>
+            </li>
+            <li>
+              <a href="HealthcareModuleCC.html">Healthcare</a>
+            </li>
+            <li>
+              <a href="InflationCC.html">Inflation</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modules M-Z</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="MultigenerationalCC.html">Multigenerational</a>
+            </li>
+            <li>
+              <a href="OmicronModuleCC.html">Omicron</a>
+            </li>
+            <li>
+              <a href="OpenEndedModuleCC.html">Open-Ended</a>
+            </li>
+            <li>
+              <a href="OtherHardshipsCC.html">Other Hardships</a>
+            </li>
+            <li>
+              <a href="ProviderDebt.html">Provider Debt</a>
+            </li>
+            <li>
+              <a href="RaceandDiscriminationCC.html">Race and Discrimination</a>
+            </li>
+            <li>
+              <a href="RISERCC.html">RISER</a>
+            </li>
+            <li>
+              <a href="SocialSupportCC.html">Social Support</a>
+            </li>
+            <li>
+              <a href="StabilizationFundsCC.html">Stabilization Funds</a>
+            </li>
+            <li>
+              <a href="StandAloneQuestionsCC.html">Stand-Alone Questions</a>
+            </li>
+            <li>
+              <a href="UnemploymentCCModule.html">Unemployment</a>
+            </li>
+            <li>
+              <a href="VaccinesModuleCC.html">Vaccines</a>
+            </li>
+            <li>
+              <a href="Vaccines(Children)CC.html">Vaccines (Children)</a>
+            </li>
+            <li>
+              <a href="WorkScheduleModuleCC.html">Work Schedule</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/uorapid/RAPIDQB.git">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.uorapidresponse.com/">
+    <span class="fa fa-flask"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Follow Up Survey Core</h1>
+<h4 class="date">Last Updated: 5/31/22</h4>
+
+</div>
+
+
+<div id="htmlwidget-4bb39848760fa651cbad" style="width:100%;height:100%;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4bb39848760fa651cbad">{"x":{"filter":"none","vertical":false,"class":"cell-border stripe hover","extensions":["Buttons"],"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65"],["DEMO (Childcare)","DEMO (Childcare)","DEMO (Childcare)","DEMO (Childcare)","DEMO (Childcare)","DEMO (Childcare)","DEMO (Childcare)","DEMO (Childcare)","DEMO (Childcare)","DEMO (Childcare)","DEMO (Childcare)","DEMO (Childcare)","DEMO (Childcare)","DEMO (Childcare)","CHILDCARE EXPERIENCES","CHILDCARE EXPERIENCES","CHILDCARE EXPERIENCES","CHILDCARE EXPERIENCES","CHILDCARE EXPERIENCES","CHILDCARE EXPERIENCES","CHILDCARE EXPERIENCES","CHILDCARE EXPERIENCES","CHILDCARE EXPERIENCES","INCOME AND EMPLOYMENT (non-childcare)","INCOME AND EMPLOYMENT (non-childcare)","INCOME AND EMPLOYMENT (non-childcare)","INCOME AND EMPLOYMENT (non-childcare)","INCOME AND EMPLOYMENT (non-childcare)","INCOME AND EMPLOYMENT (non-childcare)","INCOME AND EMPLOYMENT (childcare)","INCOME AND EMPLOYMENT (childcare)","INCOME AND EMPLOYMENT (childcare)","INCOME AND EMPLOYMENT (childcare)","INCOME AND EMPLOYMENT (childcare)","EHQ (non-childcare)","EHQ (non-childcare)","FSTR (non-childcare)","FSTR (non-childcare)","FSTR (non-childcare)","FSTR (non-childcare)","HEALTH (non-childcare)","HEALTH (non-childcare)","HEALTH (non-childcare)","COVID (non-childcare)","COVID (non-childcare)","COVID (non-childcare)","MENTAL HEALTH/WELLBEING (non-childcare)","MENTAL HEALTH/WELLBEING (non-childcare)","MENTAL HEALTH/WELLBEING (non-childcare)","MENTAL HEALTH/WELLBEING (non-childcare)","MENTAL HEALTH/WELLBEING (non-childcare)","MENTAL HEALTH/WELLBEING (non-childcare)","MENTAL HEALTH/WELLBEING (non-childcare)","MENTAL HEALTH/WELLBEING (non-childcare)","MENTAL HEALTH/WELLBEING (non-childcare)","MENTAL HEALTH/WELLBEING (non-childcare)","MENTAL HEALTH/WELLBEING (non-childcare)","MENTAL HEALTH/WELLBEING (non-childcare)","OPEN ENDED (non-childcare)","OPEN ENDED (childcare)","OPEN ENDED (childcare)","OPEN ENDED (childcare)","OPEN ENDED (Childcare)","OPEN ENDED (childcare)","Survey Experience"],["You have received this survey because you currently care for one or more children. What best describes your role as a childcare provider? Select all that apply.","[Display this question if \"You have received this survey because you currently care for one or more children. What best describes your role as a childcare provider? Select all that apply.\" =  I am a director/administrator of a licensed school/center-based childcare program]          Do you spend time in the classroom(s) providing direct care to children in the program?","[Display this question if \" Do you spend time in the classroom(s) providing direct care to children in the program?\" = Yes] In an average week, how many hours do you spend in the classroom(s) providing direct care to children in the program?","If you provide childcare for a family member, friend, or neighbor, what is your relationship with the parents/guardians of the children in your care? Select all that apply. ","As a babysitter, nanny, or in your role providing childcare to a family member, friend, or neighbor, where do you mostly provide childcare?","Overall, how many hours per week do you provide care to children who are not your own?","In a typical week, how many children do you provide care for in each age range? 0-3 years old","In a typical week, how many children do you provide care for in each age range? 4-5 years old","In a typical week, how many children do you provide care for in each age range? 6-8 years old","In a typical week, how many children do you provide care for in each age range? 9-11 years old","In a typical week, how many children do you provide care for in each age range? 12-18 years old","What is the age of the youngest child you care for between the ages of 0-5?","Do you care for another child / additional children between the ages of 0-5? ","What is the age of the oldest child you care for between the ages of 0-5? ","In the past week, how often do you talk with a parent about something happening in the child’s family (for example child-parent relationships, stresses like parent’s finances and employment; family tensions)","In the past week, how do you feel about the following statement: \r<br/>\r<br/> “There were major sources of stress in the children’s lives that I couldn’t do anything about\"\r<br/>","How often do you engage in the following activities as a childcare provider?                                                                                                           I create activities that build on the child/ren's interests","How often do you engage in the following activities as a childcare provider?                                                                                                           I read to the child/ren","How often do you engage in the following activities as a childcare provider?                                                                                                           I sing to the child/ren","How often do you engage in the following activities as a childcare provider?                                                                                                           I tell stories to the child/ren","How often do you engage in the following activities as a childcare provider?                                                                                                           I provide supportive teaching of positive behavior","How often do you engage in the following activities as a childcare provider?                                                                                                           I prevent challenging behaviors","How often do you engage in the following activities as a childcare provider?                                                                                                           I engage in a back-and-forth exchange with the child/ren's verbal and nonverbal communication","To the best of your knowledge, what was your gross (before taxes) household income from all sources, including from providing childcare, currently? \r<br/>\r<br/>\r<br/>You may respond with your household income weekly, monthly, or yearly, whatever is easiest for you. Please do not include any dollar signs or commas in your response. You only need to fill out one of these. \r<br/>","How many people were being supported by your total household income currently?","Which of the following best describes your current employment status?","What is your partner's current employment status? If you do not have a partner, please select not applicable. ","Are you receiving any sort of public or employment benefits?\r<br/>\r<br/>(Ex. Federal cash assistance programs such as the Temporary Assistance for Needy Families (TANF), Social Security Income (SSI), OR, Federal-in kind benefit programs such as Medicaid, Food Stamps and Housing.)","[If receiving benefits]\r<br/>What types of benefits are you receiving?","Currently, is your childcare provider employment/business your primary source of income?","Approximately how much of your current household income comes from your work with children under age 5?","How many non-childcare jobs are you currently employed at?","Do you have paid sick days as a childcare provider?","How likely is it that you would lose your job providing childcare or your childcare business if you were required to take at least 2 weeks of sick leave?","Which of the following best described what has happened to your household income during the coronavirus (COVID-19) pandemic?","Which of the following best describes your household financially at this time:","In the past month, how hard has it been for you to pay for the very basics like food, housing, medical care, and heating? Would you say…","Which of these needs for your household have been hard to pay in the past month? Select all that apply","In the past month, which of the following utilities for your household have you had difficulty paying for? Select all that apply.","What methods are you using or do you plan to use to cover your household expenses? Select all that apply","Are you covered by any kind of health insurance or some other kind of health care plan?","What type of health insurance or health care coverage do you have?","At any time in the last month, did you DELAY getting medical care (including physical or mental health visits)?","Have you been suspected or diagnosed with coronavirus (COVID-19)?","Do you personally know anyone in the U.S. who...                               Has been officially diagnosed as having COVID-19 by a health care provider","Do you personally know anyone in the U.S. who...                              Has been hospitalized or died as a result of having COVID-19","In the past week, how often have you been bothered by the following problems?\r<br/>\r<br/>Feeling nervous, anxious, or on edge","In the past week, how often have you been bothered by the following problems?\r<br/>\r<br/>Not being able to stop or control worrying","In the past week, how often have you been bothered by the following problems?\r<br/>\r<br/>Little interest or pleasure in doing things","In the past week, how often have you been bothered by the following problems?\r<br/>\r<br/>Feeling down, depressed, or hopeless","Stress means a situation in which a person feels tense, restless, nervous or anxious or is unable to sleep at night because his/her mind is troubled all the time. Have you felt this kind of stress in the past week?","Since the coronavirus (COVID-19) pandemic began, please describe how often…I feel lonely","We’d like to know how people taking care of children feel about life. In the last 30 days, how often did you feel…So sad that nothing could cheer you up?","We’d like to know how people taking care of children feel about life. In the last 30 days, how often did you feel… Nervous?","We’d like to know how people taking care of children feel about life. In the last 30 days, how often did you feel… Restless or fidgety?","We’d like to know how people taking care of children feel about life. In the last 30 days, how often did you feel… Hopeless?","We’d like to know how people taking care of children feel about life. In the last 30 days, how often did you feel… That everything was an effort?","We’d like to know how people taking care of children feel about life. In the last 30 days, how often did you feel… Worthless?","What are the biggest challenges and concerns for you and your family right now?","What are the biggest challenges and concerns for you as a childcare provider right now?","What/who is helping you as a childcare provider the most right now?","What would you like your elected officials or other policymakers (for example, U.S. Congress, state and local leaders) to know about how you are doing or what you need as a childcare provider during this time?","What do you want federal and/or state officials that oversee funding for child care providers to know?","Is it okay to share your comments in our research communications? We will not use your name or any other identifiable information!","How would you rate your overall experience taking this survey?"],["• I am a teacher in a licensed school/center-based childcare program  \r<br/>• I am a director/administrator of a licensed school/center-based childcare program\r<br/>• I operate a licensed or registered home-based childcare program in my home\r<br/>• I operate a licensed or registered home-based childcare program in my client's home(s)  \r<br/>• I operate an unlicensed/license-exempt or unregistered home-based childcare program in my home                                                                                         • I operate an unlicensed/license-exempt or unregistered home-based childcare program in my home\r<br/>• I operate an unlicensed/license-exempt or unregistered home-based childcare program in my client's home(s)                                                                       •I care for child(ren) age 0-5 of a family member, friend, or neighbor                                                                                     • I care for child(ren) age 0-5 as a babysitter\r<br/>• I care for child(ren) age 0-5 as a nanny\r<br/>• Other (please specify)  [text entry]","• Yes\r<br/>• No","[Single Select from <5 hours per week to More than 60 hours per week]","•Family  \r<br/>•Friend  \r<br/>•Neighbor\r<br/>•Other, please specify: (text entry)","• In my home    \r<br/>• In the child's home    \r<br/>• Other (please specify) [text entry]","•<5  \r<br/>•5-10  \r<br/>•10-20  \r<br/>•20-30  \r<br/>•30-40  \r<br/>•40+  \r<br/>","Single select from 0-20","Single select from 0-20","Single select from 0-20","Single select from 0-20","Single select from 0-20","Single Select between 0 months to Less than 6 years (71 months)","•Yes  \r<br/>•No","Single Select between 0 months to Less than 6 years (71 months)","• Never\r<br/>• Rarely\r<br/>• Sometimes\r<br/>• Usually \r<br/>• Always \r<br/>• Not applicable","• Strongly agree  \r<br/>• Somewhat agree \r<br/>• Not sure \r<br/>• Somewhat disagree \r<br/>• Strongly disagree \r<br/>• Not applicable","• Never\r<br/>• Rarely\r<br/>• Often\r<br/>• All the time \r<br/> \r<br/>","• Never\r<br/>• Rarely\r<br/>• Often\r<br/>• All the time \r<br/> \r<br/>","• Never\r<br/>• Rarely\r<br/>• Often\r<br/>• All the time \r<br/> \r<br/>","• Never\r<br/>• Rarely\r<br/>• Often\r<br/>• All the time \r<br/> \r<br/>","• Never\r<br/>• Rarely\r<br/>• Often\r<br/>• All the time \r<br/> \r<br/>","• Never\r<br/>• Rarely\r<br/>• Often\r<br/>• All the time \r<br/> \r<br/>","• Never\r<br/>• Rarely\r<br/>• Often\r<br/>• All the time \r<br/> \r<br/>","• Weekly [Free Text]\r<br/>• Or Monthly [Free Text]\r<br/>• Or Yearly [Free Text]","Single select from 0-20","• Employed/self-employed as a childcare provider  \r<br/>• Employed/self-employed, NOT as a childcare provider\r<br/>• Unemployed or laid off  \r<br/>• Temporarily out of work or furloughed  \r<br/>• Stay-at-home parent (not seeking employment)\r<br/>• Providing unpaid childcare  \r<br/>• Other (please specify) [text entry]","• Working\r<br/>• Unemployed or laid off\r<br/>• Temporarily out of work or furloughed\r<br/>• Stay-at-home parent (not seeking employment)  \r<br/>• Other (please specify) [text entry]\r<br/>•Not applicable","• Yes\r<br/>• No\r<br/>• Didn't Qualify\r<br/>• Intend to Apply"," • Health or Medical Services (ex. Vaccine programs, counseling, STD testing etc.)\r<br/>• Childcare Subsidy\r<br/>• Housing\r<br/>• Income (not including federal stimulus checks)\r<br/>• Disability (not military)\r<br/>• Military Benefits (ex. Disability, pension, veterans medical care)\r<br/>• Food\r<br/>• Transportation\r<br/>• Training\r<br/>• Clothing\r<br/>• Other, please desceribe [Free Text]","• Yes\r<br/>• No\r<br/>","• All\r<br/>• Almost all\r<br/>• More than half\r<br/>• About half\r<br/>• Less than half\r<br/>• Very little\r<br/>• None\r<br/>• Not applicable","Single Select from 0-10","• Yes\r<br/>• No\r<br/>• Unsure","• Very likely\r<br/>• Likely\r<br/>• Neutral/Unsure\r<br/>• Unlikely\r<br/>• Very unlikely\r<br/>• Not applicable","• Has increased very much\r<br/>• Has increased somewhat\r<br/>• Has stayed the same\r<br/>• Has decreased somewhat\r<br/>• Has decreased very much\r<br/>","• No problems\r<br/>• Minor problems\r<br/>• Major problems\r<br/>• Extreme problems\r<br/>","• Very hard\r<br/>• Hard\r<br/>• Somewhat hard\r<br/>• Not very hard\r<br/>","• Food\r<br/>• Housing\r<br/>• Utilities (electric, water, trash,etc.)\r<br/>• Healthcare  \r<br/>• Social/Emotional  \r<br/>• Childcare  \r<br/>• Other (please specify) [text entry]\r<br/>• None of the above","• Water\r<br/>• Sewer\r<br/>• Electricity \r<br/>• Gas\r<br/>•Trash  \r<br/>• Phone or Cell-Phone\r<br/>• Internet\r<br/>• Other, please specify [text entry]\r<br/>","• By putting it on my credit card and paying it off in full at the next statement  \r<br/>• By putting in on my credit card and paying it off over time  \r<br/>• With the money currently in my checking/savings account or with cash   \r<br/>• Using a bank loan or line of credit  \r<br/>• By borrowing from a friend or family member  \r<br/>• Using a payday loan, deposit advance, or overdraft  \r<br/>• By selling something  \r<br/>• By using my stimulus payment   \r<br/>•By asking my landlord or mortgage provider for an extension   \r<br/>• I wouldn’t be able to pay for the expense right now  \r<br/>• Other","• Yes\r<br/>• No\r<br/>• I don't know","•  Insurance through a current or former employer or union (by you or another family member)\r<br/>•  Insurance purchased from an insurance company (by you or another family member)\r<br/>•  Medicare, for people 65 and older, or people with certain disabilities\r<br/>•  Medicaid, Medical Assistance, or any kind of government-assistance plan for those with low incomes or a disability\r<br/>•  TRICARE or other military healthcare\r<br/>•  VA (enrolled for VA healthcare)\r<br/>•  Indian Health Service\r<br/>•  Any other type of health insurance or health coverage plan (Please Describe) [Free Text]\r<br/>•  I don't know","• Yes\r<br/>• No\r<br/>• Unsure","• Yes, suspected\r<br/>• Yes, diagnosed with a positive test result\r<br/>• Yes, diagnosed by a healthcare professional or public health official without a test\r<br/>• No","• Yes\r<br/>• No","• Yes\r<br/>• No","• Not at all\r<br/>• Several days\r<br/>• More than half of the days\r<br/>• Nearly every day","• Not at all\r<br/>• Several days\r<br/>• More than half of the days\r<br/>• Nearly every day","• Not at all\r<br/>• Several days\r<br/>• More than half of the days\r<br/>• Nearly every day","• Not at all\r<br/>• Several days\r<br/>• More than half of the days\r<br/>• Nearly every day","• 1 - Not at all \r<br/>• 2 - Only a little\r<br/>• 3 - To some extent\r<br/>• 4 - Rather much\r<br/>• 5 - Very much","• Never\r<br/>• Rarely\r<br/>• Sometimes\r<br/>• Usually \r<br/>• Always","• none of the time\r<br/>• a little of the time\r<br/>• some of the time\r<br/>• most of the time\r<br/>• all of the time\r<br/>• don't know\r<br/>","• none of the time\r<br/>• a little of the time\r<br/>• some of the time\r<br/>• most of the time\r<br/>• all of the time\r<br/>• don't know\r<br/>","• none of the time\r<br/>• a little of the time\r<br/>• some of the time\r<br/>• most of the time\r<br/>• all of the time\r<br/>• don't know\r<br/>","• none of the time\r<br/>• a little of the time\r<br/>• some of the time\r<br/>• most of the time\r<br/>• all of the time\r<br/>• don't know\r<br/>","• none of the time\r<br/>• a little of the time\r<br/>• some of the time\r<br/>• most of the time\r<br/>• all of the time\r<br/>• don't know\r<br/>","• none of the time\r<br/>• a little of the time\r<br/>• some of the time\r<br/>• most of the time\r<br/>• all of the time\r<br/>• don't know\r<br/>","Free response","Free response","Free response","Free response","[text entry]","Free response","•Very bad  \r<br/>•Bad \r<br/>•Somewhat good\r<br/>•Very good"],["RAPID Modified from Child Care Aware of America","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","RAPID Team Modified from National Survey of Early Care and Education (NSECE) 2012 (Page 109 of NSECE User Guide)","RAPID Team Modified from National Survey of Early Care and Education (NSECE) 2012 (Page 109 of NSECE User Guide)","Developed by ther RAPID Team based on the Packard Foundation's Essential Practices for Home-Based Caregivers and Proviers","Developed by ther RAPID Team based on the Packard Foundation's Essential Practices for Home-Based Caregivers and Proviers","Developed by ther RAPID Team based on the Packard Foundation's Essential Practices for Home-Based Caregivers and Proviers","Developed by ther RAPID Team based on the Packard Foundation's Essential Practices for Home-Based Caregivers and Proviers","Developed by ther RAPID Team based on the Packard Foundation's Essential Practices for Home-Based Caregivers and Proviers","Developed by ther RAPID Team based on the Packard Foundation's Essential Practices for Home-Based Caregivers and Proviers","Developed by ther RAPID Team based on the Packard Foundation's Essential Practices for Home-Based Caregivers and Proviers","RAPID Team Modified from U.S. Census","RAPID Team Modified from U.S. Census","Developed by RAPID Team","RAPID Team Modified from U.S. Census ","Developed by RAPID Team","RAPID Team Modified from Economic Harship Questionnaire","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","RAPID Team Modified from National Compensation Survey","Developed by RAPID Team","RAPID Team Modified from Economic Harship Questionnaire","RAPID Team Modified from IOM Financial Strain","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","ALP survey conducted May 1-6, 2020 \r\n","RAPID Team Modified from NHIS","RAPID Team Modified from NHIS","RAPID Team Modified","Developed by RAPID Team","RAPID Team Modified","RAPID Team Modified","RAPID Team  Modified\r\nGAD-2","RAPID Team  Modified\r\nGAD-2","RAPID Team Modified\r\nPHQ-2","RAPID Team Modified\r\nPHQ-2","RAPID Team Modified from single item Stress measure","NIH Toolbox Item Bank v2.0","RAPID Team Modified from National Survey of Early Care and Education (NSECE) 2012 (Page 111 of NSECE User Guide)","RAPID Team Modified from National Survey of Early Care and Education (NSECE) 2012 (Page 111 of NSECE User Guide)","RAPID Team Modified from National Survey of Early Care and Education (NSECE) 2012 (Page 111 of NSECE User Guide)","RAPID Team Modified from National Survey of Early Care and Education (NSECE) 2012 (Page 111 of NSECE User Guide)","RAPID Team Modified from National Survey of Early Care and Education (NSECE) 2012 (Page 111 of NSECE User Guide)","RAPID Team Modified from National Survey of Early Care and Education (NSECE) 2012 (Page 111 of NSECE User Guide)","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team","Developed by RAPID Team",null,"Developed by RAPID Team",null],["<a href='https://www.childcareaware.org/families/types-child-care/'>https://www.childcareaware.org/families/types-child-care/<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='https://www.census.gov/acs/www/about/why-we-ask-each-question/income/#:~:text=We%20ask%20questions%20about%20the,assistance%20for%20populations%20in%20need.'>https://www.census.gov/acs/www/about/why-we-ask-each-question/income/#:~:text=We%20ask%20questions%20about%20the,assistance%20for%20populations%20in%20need.<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='https://www.jstor.org/stable/1131068?seq=12#metadata_info_tab_contents '>https://www.jstor.org/stable/1131068?seq=12#metadata_info_tab_contents <\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='https://www.rand.org/pubs/research_reports/RRA308-3.html'>https://www.rand.org/pubs/research_reports/RRA308-3.html<\/a>","<a href='https://www.cdc.gov/nchs/nhis/health_insurance/hi_content.htm'>https://www.cdc.gov/nchs/nhis/health_insurance/hi_content.htm<\/a>","<a href='https://www.cdc.gov/nchs/nhis/health_insurance/hi_content.htm'>https://www.cdc.gov/nchs/nhis/health_insurance/hi_content.htm<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='https://www.pewresearch.org/fact-tank/2020/05/26/few-u-s-adults-say-theyve-been-diagnosed-with-coronavirus-but-more-than-a-quarter-know-someone-who-has/'>https://www.pewresearch.org/fact-tank/2020/05/26/few-u-s-adults-say-theyve-been-diagnosed-with-coronavirus-but-more-than-a-quarter-know-someone-who-has/<\/a>","<a href='https://www.pewresearch.org/fact-tank/2020/05/26/few-u-s-adults-say-theyve-been-diagnosed-with-coronavirus-but-more-than-a-quarter-know-someone-who-has/'>https://www.pewresearch.org/fact-tank/2020/05/26/few-u-s-adults-say-theyve-been-diagnosed-with-coronavirus-but-more-than-a-quarter-know-someone-who-has/<\/a>","<a href='https://www.hiv.uw.edu/page/mental-health-screening/gad-2'>https://www.hiv.uw.edu/page/mental-health-screening/gad-2<\/a>","<a href='https://www.hiv.uw.edu/page/mental-health-screening/gad-2'>https://www.hiv.uw.edu/page/mental-health-screening/gad-2<\/a>","<a href='https://www.hiv.uw.edu/page/mental-health-screening/phq-2'>https://www.hiv.uw.edu/page/mental-health-screening/phq-2<\/a>","<a href='https://www.hiv.uw.edu/page/mental-health-screening/phq-2'>https://www.hiv.uw.edu/page/mental-health-screening/phq-2<\/a>","<a href='https://www.jstor.org/stable/pdf/40967322.pdf?casa_token=8BWrXEu4O5QAAAAA:v8l4I7NHebQhvvF9b3K6MeP2aY_Xf8VjkTWWTVui01iBUeyvscZB_ZVwMHB64Ioj05dyOmqzjTgI3OgJ7Hmz7uoXrbpAV6hT_9r6-a45miUEoP5vQSA'>https://www.jstor.org/stable/pdf/40967322.pdf?casa_token=8BWrXEu4O5QAAAAA:v8l4I7NHebQhvvF9b3K6MeP2aY_Xf8VjkTWWTVui01iBUeyvscZB_ZVwMHB64Ioj05dyOmqzjTgI3OgJ7Hmz7uoXrbpAV6hT_9r6-a45miUEoP5vQSA<\/a>","<a href='https://www.healthmeasures.net/index.php?option=com_instruments&view=measure&id=660'>https://www.healthmeasures.net/index.php?option=com_instruments&view=measure&id=660<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>"]],"container":"<table>\n  <style type=\"text/css\">th { font-family: 'Arial'; font-weight: bold; color: black; background-color: #f1d310;}<\/style>\n  <thead>\n    <tr>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\"> <\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Domain<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Question<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Answers<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Source<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Source Link<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["copy","csv","excel","pdf","print"],"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -24,10 +24,14 @@ navbar:
           menu:
           - text: "ABACUS"
             href: ABACUS.html
-          - text: "Child Social Interactions Module"
+          - text: "Child Social Interactions"
             href: ChildSocialInteractions.html
-          - text: "Child Tax Credit Module"
+          - text: "Child Tax Credit"
             href: ChildTaxCredit.html
+          - text: "Climate Change"
+            href: ClimateChange.html
+          - text: "Community Violence"
+            href: CommunityViolence.html  
           - text: "Debt and Overdue Bills"
             href: DebtandOverdueBills.html
           - text: "Diapers"
@@ -48,12 +52,20 @@ navbar:
             href: GrandparentsModule.html
           - text: "Holiday Plans"
             href: HolidayPlansModule.html
+          - text: "Kindergarten/School Enrollment"
+            href: KindergartenAndSchoolEnrollment.html  
         - text: "Modules M-Z"
           menu:
+          - text: "Multigenerational"
+            href: Multigenerational.html  
           - text: "Other Hardships"
             href: OtherHardships.html
+          - text: "Parent Work Schedule"
+            href: ParentWorkSchedule.html
           - text: "Pregnancy and Postpartum"
             href: PregnancyandPost.html
+          - text: "QUIC"
+            href: QUIC.html
           - text: "Race and Discrimination"
             href: RaceandDiscrimination.html
           - text: "Remote Learning"
@@ -78,6 +90,8 @@ navbar:
             href: UnemploymentModule.html
           - text: "Vaccines"
             href: VaccinesModule.html
+          - text: "Violence"
+            href: Violence.html
           - text: "WIC"
             href: WICModule.html
           - text: "Workforce"
@@ -124,6 +138,8 @@ navbar:
             href: InflationCC.html
         - text: "Modules M-Z"
           menu:
+          - text: "Multigenerational"
+            href: MultigenerationalCC.html  
           - text: "Omicron"
             href: OmicronModuleCC.html
           - text: "Open-Ended"
