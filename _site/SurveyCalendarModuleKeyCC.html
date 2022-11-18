@@ -13,7 +13,7 @@
 
 <title>Childcare Survey Calendar and Module Key</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -34,10 +34,10 @@
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="site_libs/datatables-binding-0.22/datatables.js"></script>
-<link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="site_libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="site_libs/datatables-binding-0.26/datatables.js"></script>
+<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
 <link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
 <script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
@@ -152,11 +152,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -185,8 +189,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -194,16 +198,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -559,8 +556,8 @@ Baseline Survey = Survey that participants take when first participating
 Follow-Up Survey = Participants are invited to a follow-up survey that
 contains some core items from baseline and additional module items
 </p>
-<div id="htmlwidget-c53b42f39bbedc20b7e7" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c53b42f39bbedc20b7e7">{"x":{"filter":"none","vertical":false,"data":[["Survey 15","Survey 14","Survey 13","Survey 12","Survey 11","Survey 10","Survey 9","Survey 8","Survey 7","Survey 6","Survey 5","Survey 4","Survey 3","Survey 2","Survey 1"],["July 20 - July 23","July 12 - July 19","July 6 - July 9","June 28 - July 2","June 22 - June 25","June 14 - June 17","June 8 - June 11","June 2 - June 7","May 14 - June 1","May 2 - May 14","April 19 - April 29","April 5 - April 16","March 22 - April 2","March 8 - March 18","February 22 - February 28"],[null,"x",null,"x",null,"x",null,"x","x","x","x","x","x","x","x"],["x",null,"x",null,"x",null,"x",null,null,null,null,null,null,null,null],["Child Tax Credit\r<br/>RISER\r<br/>Vaccine",null,"Child Tax Credit\r<br/>Food Insecurity\r<br/>Other Hardships\r<br/>Work Schedule",null,"Economic Stability\r<br/>Debt and Unpaid Bills\r<br/>Child Tax Credit",null,"Food Insecurity\r<br/>Other Hardships",null,null,null,null,null,null,null,null]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Survey<\/th>\n      <th>Date Range<\/th>\n      <th>Baseline<\/th>\n      <th>Follow-Up<\/th>\n      <th>Modules Implemented<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"autoWidth":true,"columnDefs":[],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9498753a51c9540fdb1c" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9498753a51c9540fdb1c">{"x":{"filter":"none","vertical":false,"data":[["Survey 15","Survey 14","Survey 13","Survey 12","Survey 11","Survey 10","Survey 9","Survey 8","Survey 7","Survey 6","Survey 5","Survey 4","Survey 3","Survey 2","Survey 1"],["July 20 - July 23","July 12 - July 19","July 6 - July 9","June 28 - July 2","June 22 - June 25","June 14 - June 17","June 8 - June 11","June 2 - June 7","May 14 - June 1","May 2 - May 14","April 19 - April 29","April 5 - April 16","March 22 - April 2","March 8 - March 18","February 22 - February 28"],[null,"x",null,"x",null,"x",null,"x","x","x","x","x","x","x","x"],["x",null,"x",null,"x",null,"x",null,null,null,null,null,null,null,null],["Child Tax Credit\r<br/>RISER\r<br/>Vaccine",null,"Child Tax Credit\r<br/>Food Insecurity\r<br/>Other Hardships\r<br/>Work Schedule",null,"Economic Stability\r<br/>Debt and Unpaid Bills\r<br/>Child Tax Credit",null,"Food Insecurity\r<br/>Other Hardships",null,null,null,null,null,null,null,null]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Survey<\/th>\n      <th>Date Range<\/th>\n      <th>Baseline<\/th>\n      <th>Follow-Up<\/th>\n      <th>Modules Implemented<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"autoWidth":true,"columnDefs":[],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="module-key" class="section level3">
 <h3>Module Key</h3>
@@ -572,8 +569,8 @@ Below is a key that provides a brief summary of each module as well as a
 link to the questions for that module on the site. You can also use the
 navigation bar to switch between modules.
 </p>
-<div id="htmlwidget-5f2275178e71d4d18a0e" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5f2275178e71d4d18a0e">{"x":{"filter":"none","vertical":false,"data":[["Child Tax Credit","Debt and Overdue Bills","Economic stability","Food Insecurity","Other Hardships","RISER","Vaccines","Work Schedule"],["Use of child tax credit","Sources of debt","Feelings regarding housing, employment, work schedule, and childcare","USDA questions, includes frequency of hunger, insufficient food for family","Difficulty paying for basic needs: food, housing, utlities, childcare, healthcare, emotional/social support. Concerns about and experiences with eviction and foreclosure.","Explores experiences of racism and discrimination; 2 sets of same questions, one on pre-pandemic experiences, one since the pandemic","Missed vaccine at well-check visit and why; asks if they will get a COVID-19 vaccine if offered","What does the work week look like for childcare providers?"],["<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>"],["05/02/2021-05/13/2021 05/14/2021-05/28/2021 06/02/2021-06/07/2021","05/02/2021-05/13/2021","05/02/2021-05/13/2021","04/19/2021-04/29/2021 05/14/2021-05/28/2021","05/14/2021-05/28/2021","06/02/2021-06/07/2021","06/02/2021-06/07/2021","05/14/2021-05/28/2021"]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Module<\/th>\n      <th>About<\/th>\n      <th>Go to Module<\/th>\n      <th>Dates Used<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"autoWidth":true,"columnDefs":[],"order":[],"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-33798d29da55aa3e0caf" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-33798d29da55aa3e0caf">{"x":{"filter":"none","vertical":false,"data":[["Child Tax Credit","Debt and Overdue Bills","Economic stability","Food Insecurity","Other Hardships","RISER","Vaccines","Work Schedule"],["Use of child tax credit","Sources of debt","Feelings regarding housing, employment, work schedule, and childcare","USDA questions, includes frequency of hunger, insufficient food for family","Difficulty paying for basic needs: food, housing, utlities, childcare, healthcare, emotional/social support. Concerns about and experiences with eviction and foreclosure.","Explores experiences of racism and discrimination; 2 sets of same questions, one on pre-pandemic experiences, one since the pandemic","Missed vaccine at well-check visit and why; asks if they will get a COVID-19 vaccine if offered","What does the work week look like for childcare providers?"],["<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>"],["05/02/2021-05/13/2021 05/14/2021-05/28/2021 06/02/2021-06/07/2021","05/02/2021-05/13/2021","05/02/2021-05/13/2021","04/19/2021-04/29/2021 05/14/2021-05/28/2021","05/14/2021-05/28/2021","06/02/2021-06/07/2021","06/02/2021-06/07/2021","05/14/2021-05/28/2021"]],"container":"<table class=\"cell-border stripe hover\">\n  <thead>\n    <tr>\n      <th>Module<\/th>\n      <th>About<\/th>\n      <th>Go to Module<\/th>\n      <th>Dates Used<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"autoWidth":true,"columnDefs":[],"order":[],"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="section" class="section level2 unnumbered">
