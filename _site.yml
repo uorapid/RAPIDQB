@@ -24,6 +24,10 @@ navbar:
           menu:
           - text: "ABACUS"
             href: ABACUS.html
+          - text: "Caregiving Roles"
+            href: CaregivingYouth.html
+          - text: "Childcare Subsidy"
+            href: ChildcareSubsidy.html
           - text: "Child Social Interactions"
             href: ChildSocialInteractions.html
           - text: "Child Tax Credit"
@@ -52,6 +56,8 @@ navbar:
             href: GrandparentsModule.html
           - text: "Holiday Plans"
             href: HolidayPlansModule.html
+          - text: "Inflation"
+            href: Inflation.html
           - text: "Kindergarten/School Enrollment"
             href: KindergartenAndSchoolEnrollment.html  
         - text: "Modules M-Z"
@@ -118,6 +124,8 @@ navbar:
             href: ChildCareClosuresCOVIDSafety.html 
           - text: "Childcare For Own Child"
             href: ChildCareForOwnChildCC.html
+          - text: "Child Social Interactions"
+            href: ChildSocialInteractionsCC.html
           - text: "COVID"
             href: COVIDCC.html
           - text: "Debt and Overdue Bills"
@@ -128,6 +136,8 @@ navbar:
             href: EmploymentCC.html  
           - text: "Family Conflict"
             href: FamConfCC.html
+          - text: "Family Routines"
+            href: FamilyRoutinesCC.html
           - text: "Food Aid"
             href: FoodAidCC.html
           - text: "Food Insecurity"
