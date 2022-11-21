@@ -1,6 +1,6 @@
 ---
 title: "Childcare Survey Calendar and Module Key"
-date: "Last Updated: 2/8/2022"
+date: "Last Updated: 11/21/2022"
 output: 
   html_document:
     css: "custom2.css"
@@ -38,8 +38,8 @@ data.raw2$'Go to Module' <- paste0("<a href='",data.raw2$'Go to Module',"'>", da
 
 ### Survey Calendar
 
-<p style="font-size:14pt">Baseline Survey = Survey that participants take when first participating</p>
-<p style="font-size:14pt">Follow-Up Survey = Participants are invited to a follow-up survey that contains some core items from baseline and additional module items</p>
+<p style="font-size:14pt">Initial Recruitment Survey = Survey that participants take when first participating</p>
+<p style="font-size:14pt">Ongoing Survey = Participants are invited to a follow-up survey that contains some core items from the Initial Recruitment Survey and additional module items</p>
 ```{r display data, echo=FALSE}
 
 DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F,  options = list(

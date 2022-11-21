@@ -3,29 +3,27 @@ output:
   html_document:
     css: style.css
 navbar:
-  title: "RAPID-EC Question Bank"
+  title: "RAPID Survey Project Question Bank"
   left:
     - text: "Menu"
       href: index.html
       menu:
-      - text: "Household (EC) Survey"
+      - text: "Household Survey"
         menu:
         - text: "Survey Calendar and Module Key"
           href: SurveyCalendarModuleKey.html
         - text: "All Questions"
           href: Historical.html
-        - text: "Baseline"
+        - text: "Initial Recruitment Survey"
           href: Baseline.html
-        - text: "Follow-Up Core"
+        - text: "Ongoing Suvrey - Core"
           href: FollowUp.html
-      - text: "Household (EC) Modules"
+      - text: "Household Modules"
         menu:
         - text: "Modules A-L"
           menu:
           - text: "ABACUS"
             href: ABACUS.html
-          - text: "Caregiving Roles"
-            href: CaregivingYouth.html
           - text: "Childcare Subsidy"
             href: ChildcareSubsidy.html
           - text: "Child Social Interactions"
@@ -104,15 +102,15 @@ navbar:
             href: WorkforceModule.html
           - text: "Working Parents"
             href: WorkingParents.html
-      - text: "Childcare (CC) Survey"
+      - text: "Childcare Survey"
         menu:
         - text: "Survey Calendar and Module Key"
           href: SurveyCalendarModuleKeyCC.html
-        - text: "Baseline"
+        - text: "Initial Recruitment Survey"
           href: BaselineCC.html
-        - text: "Follow-Up Core"
+        - text: "Ongoing Survey - Core"
           href: FollowUpCC.html
-      - text: "Childcare (CC) Modules"
+      - text: "Childcare Modules"
         menu:
         - text: "Modules A-L"
           menu:

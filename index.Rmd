@@ -1,5 +1,5 @@
 ---
-title: "RAPID-EC Question Bank"
+title: "RAPID Survey Project Question Bank"
 output: 
   html_document:
     css: "custom2.css"
@@ -12,16 +12,16 @@ knitr::opts_chunk$set(
   message = FALSE)
 ```
 
-![RAPID-EC Project](~/Dropbox (University of Oregon)/RAPID-EC/Data Management R3/EE_R3 Question Bank/Data/QBPIC.png)
+![RAPID Survey Project](G:/Shared drives/Projects/RAPID/EE_R3 Question Bank/_Site/Data/QBPIC.png)
 
-<p style="font-size:14pt">This site hosts a list of questions asked as a part of the RAPID-EC project. All efforts were taken to ensure the accuracy of the question sources.</p>
+<p style="font-size:14pt">This site hosts a list of questions asked as a part of the RAPID Survey project. All efforts were taken to ensure the accuracy of the question sources.</p>
 
-<p style="font-size:14pt">Use the menu above to navigate between our household (EC) survey questions and our childcare provider (CC) survey questions.</p>
+<p style="font-size:14pt">Use the menu above to navigate between our household survey questions and our childcare provider survey questions.</p>
 
-<p style="font-size:14pt">If there are any questions or concerns, please do not hesitate to reach out to the RAPID-EC team.</p>
+<p style="font-size:14pt">If there are any questions or concerns, please do not hesitate to reach out to the RAPID Survey Project team.</p>
 
 <p style="font-size:14pt">Suggested citation (APA7): 
-Center for Translational Neuroscience, Stanford University. (n.d.). Rapid-EC Survey. RAPID-EC Question Bank. Retrieved DATE, from https://r3questionbank.netlify.app/  </p>
+Stanford Center on Early Childhood, Stanford University. (n.d.). RAPID Survey Project. RAPID Question Bank. Retrieved DATE from https://r3questionbank.netlify.app/  </p>
 
 
 ```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
