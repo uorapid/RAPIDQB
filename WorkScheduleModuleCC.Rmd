@@ -1,6 +1,6 @@
 ---
-title: "Work Schedule Module CC"
-date: "8/16/22"
+title: "Work Schedule Module"
+date: "Last updated: 8/16/22"
 output: 
  html_document:
     css: "custom2.css"

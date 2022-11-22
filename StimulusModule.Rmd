@@ -1,6 +1,6 @@
 ---
 title: "Stimulus Module"
-date: "8/16/22"
+date: "Last module: 8/16/22"
 output: 
  html_document:
     css: "custom2.css"
