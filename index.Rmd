@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
   message = FALSE)
 ```
 
-![RAPID Survey Project](G:/Shared drives/Projects/RAPID/EE_R3 Question Bank/_Site/Data/QBPIC.png)
+![RAPID Survey Project](QBPIC.png)
 
 <p style="font-size:14pt">This site hosts a list of questions asked as a part of the RAPID Survey project. All efforts were taken to ensure the accuracy of the question sources.</p>
 
