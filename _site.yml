@@ -138,7 +138,7 @@ navbar:
             href: DebtandOverdueBillsCC.html
           - text: "Disability"
             href: Disability(Childcare).html
-          - text: "Disability"
+          - text: "Disability Module"
             href: Disability(self).html
           - text: "Economic Stability"
             href: EconomicStabilityCCModule.html
@@ -180,7 +180,7 @@ navbar:
             href: StabilizationFundsCC.html
           - text: "Staffing and Retention"
             href: StaffingRetentionCC.html
-          - text: "Staffing and Retention"
+          - text: "Staffing and Retention Module"
             href: StaffingandRetentionCC.html
           - text: "Stand-Alone Questions"
             href: StandAloneQuestionsCC.html
