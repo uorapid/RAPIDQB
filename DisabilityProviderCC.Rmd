@@ -1,11 +1,10 @@
 ---
-title: "Staffing and Retention Module"
-date: "Last Updated: 12/20/2022"
+title: "Disability"
+date: "Last updated: 12/20/2022"
 output: 
  html_document:
     css: "custom2.css"
 ---
-
 ```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(readxl)
@@ -16,20 +15,17 @@ library(stringr)
 library(dplyr)
 library(htmltools)
 library(DT)
-options(knitr.table.format = "html", knitr.kable.NA = '') 
+options(knitr.table.format = "html", knitr.kable.NA = '')
 ```
 
 ```{r read data, echo=FALSE}
-data.raw <- read_excel("Data/StaffingRetentionCC.xlsx")
+data.raw <- read_excel("Data/DisabilityProviderCC.xlsx")
 data.raw$Answers <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Answers)
 data.raw$Question <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Question)
-data.raw$Source <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Source)
-data.raw$'Source Link' <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$'Source Link')
 data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.raw$'Source Link',"</a>")
-
 ```
 
-Occurrence indicates what weeks the questions in this module were asked.
+Occurrence indicates what weeks the questions in this module were asked. 
 
 ```{r display data, echo=FALSE}
 
@@ -53,4 +49,5 @@ my.table = DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames
 ), escape = FALSE)
 
 my.table
+
 ```

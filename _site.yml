@@ -137,9 +137,9 @@ navbar:
           - text: "Debt and Overdue Bills"
             href: DebtandOverdueBillsCC.html
           - text: "Disability"
-            href: Disability(Childcare).html
+            href: DisabilityCC.html
           - text: "Disability Module"
-            href: Disability(self).html
+            href: DisabilityProviderCC.html
           - text: "Economic Stability"
             href: EconomicStabilityCCModule.html
           - text: "Employment"
