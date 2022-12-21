@@ -46,10 +46,12 @@ navbar:
             href: HealthcareModule.html
           - text: "Family Conflict"
             href: FamConf.html
-          - text: "Food Insecurity"
-            href: FoodInsecurityModule.html
           - text: "Family Routines"
             href: FamilyRoutinesModule.html
+          - text: "Food Aid"
+            href: FoodAid.html
+          - text: "Food Insecurity"
+            href: FoodInsecurityModule.html
           - text: "Grandparents"
             href: GrandparentsModule.html
           - text: "Holiday Plans"
@@ -84,12 +86,16 @@ navbar:
             href: SchoolReopeningModule.html
           - text: "School Reopening Spring 2021"
             href: SchoolReopeningSpring2021.html
+          - text: "School Reopening Spring 2022"
+            href: SchoolReopeningSpring2022.html
           - text: "Social Support"
             href: SocialSupport.html
           - text: "Special Needs"
             href: SpecialNeeds.html
           - text: "Stimulus"
             href: StimulusModule.html
+          - text: "Trusted Messenger"
+            href: TrustedMessenger.html
           - text: "Unemployment"
             href: UnemploymentModule.html
           - text: "Vaccines"
@@ -114,8 +120,10 @@ navbar:
         menu:
         - text: "Modules A-L"
           menu:
-          - text: "Child Tax Credit"
-            href: ChildTaxCreditCC.html
+          - text: "Burnout"
+            href: BurnoutCC.html
+          - text: "Child Care Experiences"
+            href: ChildCareExperiencesCC.html
           - text: "Childcare Subsidy"
             href: ChildCareSubsidyCC.html
           - text: "Childcare Closures & COVID Safety"
@@ -128,6 +136,10 @@ navbar:
             href: COVIDCC.html
           - text: "Debt and Overdue Bills"
             href: DebtandOverdueBillsCC.html
+          - text: "Disability"
+            href: Disability(Childcare).html
+          - text: "Disability"
+            href: Disability(self).html
           - text: "Economic Stability"
             href: EconomicStabilityCCModule.html
           - text: "Employment"
@@ -146,6 +158,8 @@ navbar:
             href: InflationCC.html
         - text: "Modules M-Z"
           menu:
+          - text: "Mission Driven Finance"
+            href: MissionDrivenFinanceCC.html  
           - text: "Multigenerational"
             href: MultigenerationalCC.html  
           - text: "Omicron"
@@ -164,6 +178,10 @@ navbar:
             href: SocialSupportCC.html
           - text: "Stabilization Funds"
             href: StabilizationFundsCC.html
+          - text: "Staffing and Retention"
+            href: StaffingRetentionCC.html
+          - text: "Staffing and Retention"
+            href: StaffingandRetentionCC.html
           - text: "Stand-Alone Questions"
             href: StandAloneQuestionsCC.html
           - text: "Unemployment"
