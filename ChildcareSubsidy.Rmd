@@ -1,5 +1,5 @@
 ---
-title: "Childcare Subsidy"
+title: "Child Care Subsidy Module"
 date: "Last updated: 11/18/2022"
 output: 
  html_document:

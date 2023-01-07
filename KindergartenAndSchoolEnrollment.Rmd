@@ -1,5 +1,5 @@
 ---
-title: "Kindergarten and School Enrollment"
+title: "Kindergarten and School Enrollment Module"
 date: "Last updated: 11/18/2022"
 output: 
  html_document:

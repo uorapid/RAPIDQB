@@ -1,5 +1,5 @@
 ---
-title: "Childcare Closures & COVID Safety"
+title: "Child Care Closures & COVID Safety Module"
 date: "Last updated: 11/18/2022"
 output: 
  html_document:
