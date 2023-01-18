@@ -85,7 +85,7 @@ navbar:
           - text: "School Reopening Fall 2020"
             href: SchoolReopeningModule.html
           - text: "School Reopening Spring 2021"
-            href: SchoolReopeningSpring2021.html
+            href: SchoolReopeningFall2021.html
           - text: "School Reopening Spring 2022"
             href: SchoolReopeningSpring2022.html
           - text: "Social Determinants of Health"
@@ -193,7 +193,7 @@ navbar:
           - text: "Vaccines"
             href: VaccinesModuleCC.html
           - text: "Vaccines (Children)"
-            href: Vaccines(Children)CC.html
+            href: VaccineChildrenCC.html
           - text: "Work Schedule"
             href: WorkScheduleModuleCC.html
         

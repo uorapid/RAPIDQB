@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 ```
 The intent of this list is to include all questions that have been asked to date. The majority of questions are currently included, with efforts in early September to ensure this list is fully comprehensive.
 
-If you feel something is missing, or you have questions--please don't hesitate to reach to to the RAPID-EC team. 
+If you feel something is missing, or you have questions--please don't hesitate to reach to to the RAPID team. 
 
 ```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
