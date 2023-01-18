@@ -24,7 +24,7 @@ navbar:
           menu:
           - text: "ABACUS"
             href: ABACUS.html
-          - text: "Childcare Subsidy"
+          - text: "Child Care Subsidy"
             href: ChildcareSubsidy.html
           - text: "Child Social Interactions"
             href: ChildSocialInteractions.html
@@ -118,7 +118,7 @@ navbar:
           href: BaselineCC.html
         - text: "Ongoing Survey - Core"
           href: FollowUpCC.html
-      - text: "Childcare Modules"
+      - text: "Child Care Modules"
         menu:
         - text: "Modules A-L"
           menu:
@@ -126,11 +126,11 @@ navbar:
             href: BurnoutCC.html
           - text: "Child Care Experiences"
             href: ChildCareExperiencesCC.html
-          - text: "Childcare Subsidy"
+          - text: "Child Care Subsidy"
             href: ChildCareSubsidyCC.html
-          - text: "Childcare Closures & COVID Safety"
+          - text: "Child Care Closures & COVID Safety"
             href: ChildCareClosuresCOVIDSafety.html 
-          - text: "Childcare For Own Child"
+          - text: "Child Care For Own Child"
             href: ChildCareForOwnChildCC.html
           - text: "Child Social Interactions"
             href: ChildSocialInteractionsCC.html
