@@ -88,6 +88,8 @@ navbar:
             href: SchoolReopeningSpring2021.html
           - text: "School Reopening Spring 2022"
             href: SchoolReopeningSpring2022.html
+          - text: "Social Determinants of Health"
+            href: SocialDeterminantsofHealth.html            
           - text: "Social Support"
             href: SocialSupport.html
           - text: "Special Needs"
@@ -174,6 +176,8 @@ navbar:
             href: RaceandDiscriminationCC.html
           - text: "RISER"
             href: RISERCC.html
+          - text: "Social Determinants of Health"
+            href: SocialDeterminantsofHealthCC.html
           - text: "Social Support"
             href: SocialSupportCC.html
           - text: "Stabilization Funds"
