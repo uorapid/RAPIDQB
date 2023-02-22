@@ -1,10 +1,11 @@
 ---
-title: "Child Tax Credit Module"
-date: "Last updated: 2/22/2023"
+title: "SNAP/EBT Module"
+date: "Last Updated: 2/22/2023"
 output: 
  html_document:
     css: "custom2.css"
 ---
+
 ```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(readxl)
@@ -15,19 +16,20 @@ library(stringr)
 library(dplyr)
 library(htmltools)
 library(DT)
-options(knitr.table.format = "html", knitr.kable.NA = '')
+options(knitr.table.format = "html", knitr.kable.NA = '') 
 ```
 
 ```{r read data, echo=FALSE}
-data.raw <- read_excel("Data/ChildTaxCreditCC.xlsx")
+data.raw <- read_excel("Data/SNAPEBTCC.xlsx")
 data.raw$Answers <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Answers)
 data.raw$Question <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Question)
+data.raw$Source <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Source)
+data.raw$'Source Link' <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$'Source Link')
 data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.raw$'Source Link',"</a>")
+
 ```
 
-Instructions: As you may know, President Biden's administration recently passed the American Rescue Plan Act, which included a Child Tax Credit that gives families $300/month per child age 0-5 and $250/month per child 6-17 from July-December 2021. To get the Child Tax Credit, households needed to file taxes by May 17, 2021 or to visit an IRS portal to provide updated information beginning July 1, 2021.
-
-Occurrence indicates what weeks the questions in this module were asked. 
+Occurrence indicates what weeks the questions in this module were asked.
 
 ```{r display data, echo=FALSE}
 
@@ -51,5 +53,4 @@ my.table = DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames
 ), escape = FALSE)
 
 my.table
-
 ```

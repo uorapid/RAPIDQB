@@ -73,13 +73,11 @@ navbar:
           - text: "QUIC"
             href: QUIC.html
           - text: "Race and Discrimination"
-            href: RaceandDiscrimination.html
+            href: RISER.html
           - text: "Remote Learning"
             href: RemoteLearning.html
           - text: "Remote Work"
             href: RemoteWork.html
-          - text: "RISER"
-            href: RISER.html
           - text: "School Mobility"
             href: SchoolMobilityModule.html
           - text: "School Reopening Fall 2020"
@@ -88,6 +86,8 @@ navbar:
             href: SchoolReopeningFall2021.html
           - text: "School Reopening Spring 2022"
             href: SchoolReopeningSpring2022.html
+          - text: "SNAP/EBT"
+            href: SNAPEBT.html
           - text: "Social Determinants of Health"
             href: SocialDeterminantsofHealth.html            
           - text: "Social Support"
@@ -173,9 +173,9 @@ navbar:
           - text: "Provider Debt"
             href: ProviderDebt.html
           - text: "Race and Discrimination"
-            href: RaceandDiscriminationCC.html
-          - text: "RISER"
             href: RISERCC.html
+          - text: "SNAP/EBT"
+            href: SNAPEBTCC.html
           - text: "Social Determinants of Health"
             href: SocialDeterminantsofHealthCC.html
           - text: "Social Support"
