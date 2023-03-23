@@ -68,6 +68,8 @@ navbar:
             href: OtherHardships.html
           - text: "Parent Work Schedule"
             href: ParentWorkSchedule.html
+          - text: "Pediatricians"
+            href: Pediatricians.html
           - text: "Pregnancy and Postpartum"
             href: PregnancyandPost.html
           - text: "QUIC"

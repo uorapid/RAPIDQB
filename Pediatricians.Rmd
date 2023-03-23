@@ -1,5 +1,5 @@
 ---
-title: "Provider Debt Module"
+title: "Pediatricians"
 date: "Last updated: 3/23/2023"
 output: 
  html_document:
@@ -19,7 +19,7 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 ```
 
 ```{r read data, echo=FALSE}
-data.raw <- read_excel("Data/ProviderDebt.xlsx")
+data.raw <- read_excel("Data/Pediatricians.xlsx")
 data.raw$Answers <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Answers)
 data.raw$Question <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Question)
 data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.raw$'Source Link',"</a>")
