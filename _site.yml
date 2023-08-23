@@ -46,6 +46,8 @@ navbar:
             href: HealthcareModule.html
           - text: "Family Conflict"
             href: FamConf.html
+          - text: "Family Planning"
+            href: FamilyPlanning.html
           - text: "Family Routines"
             href: FamilyRoutinesModule.html
           - text: "Food Aid"

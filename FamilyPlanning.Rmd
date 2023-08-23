@@ -1,10 +1,11 @@
 ---
-title: "Other Hardships Module"
-date: "Last updated: 8/23/2023"
+title: "Family Planning Module"
+date: "Last Updated: 8/23/2023"
 output: 
  html_document:
     css: "custom2.css"
 ---
+
 ```{r packages, echo=FALSE, warning=FALSE, include=FALSE, cache=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(readxl)
@@ -17,19 +18,19 @@ library(htmltools)
 library(DT)
 options(knitr.table.format = "html", knitr.kable.NA = '')
 ```
-
-```{r read data, echo=FALSE}
-data.raw <- read_excel("Data/OtherHardshipsCC.xlsx")
-data.raw$Answers <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Answers)
-data.raw$Question <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Question)
-data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.raw$'Source Link',"</a>")
-
-```
+Instructions: The following set of questions will ask about how people in your household are getting along. Some of the questions ask about families’ conflict, which is normal and common. None of the questions in this survey meet the threshold for reporting maltreatment. Our goal is to understand how coronavirus (COVID-19) pandemic is impacting family functioning, across all of the families who take this survey.
 
 Occurrence indicates what weeks the questions in this module were asked. 
 
-```{r display data, echo=FALSE}
+```{r read data, echo=FALSE}
+data.raw <- read_excel("Data/FamilyPlanning.xlsx")
+data.raw$Answers <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Answers)
+data.raw$Question <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Question)
+data.raw$Source <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Source)
+data.raw$'Source Link' <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$'Source Link')
+```
 
+```{r display data, echo=FALSE}
 header.style <- "th { font-family: 'Arial'; font-weight: bold; color: black; background-color: #f1d310;}"
 header.names <- c(" ", colnames(data.raw))
 # The container parameter allows us to design the header of the table
@@ -50,5 +51,4 @@ my.table = DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames
 ), escape = FALSE)
 
 my.table
-
 ```
