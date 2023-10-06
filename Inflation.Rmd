@@ -1,6 +1,6 @@
 ---
 title: "Inflation Module"
-date: "Last updated: 8/23/2023"
+date: "Last updated: 10/06/2023"
 output: 
  html_document:
     css: "custom2.css"

@@ -33,7 +33,9 @@ navbar:
           - text: "Climate Change"
             href: ClimateChange.html
           - text: "Community Violence"
-            href: CommunityViolence.html  
+            href: CommunityViolence.html
+          - text: "Cost of Care"
+            href: CostofCare.html
           - text: "Debt and Overdue Bills"
             href: DebtandOverdueBills.html
           - text: "Diapers"
@@ -149,7 +151,9 @@ navbar:
           - text: "Economic Stability"
             href: EconomicStabilityCCModule.html
           - text: "Employment"
-            href: EmploymentCC.html  
+            href: EmploymentCC.html
+          - text: "Enrollment"
+            href: EnrollmentCC.html
           - text: "Family Conflict"
             href: FamConfCC.html
           - text: "Family Routines"
