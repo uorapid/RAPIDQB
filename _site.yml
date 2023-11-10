@@ -102,6 +102,8 @@ navbar:
             href: SpecialNeeds.html
           - text: "Stimulus"
             href: StimulusModule.html
+          - text: "Student Loans"
+            href: StudentLoans.html
           - text: "Trusted Messenger"
             href: TrustedMessenger.html
           - text: "Unemployment"
@@ -112,6 +114,8 @@ navbar:
             href: Violence.html
           - text: "WIC"
             href: WICModule.html
+          - text: "Work Arrangements"
+            href: WorkArrangements.html
           - text: "Workforce"
             href: WorkforceModule.html
           - text: "Working Parents"
@@ -196,6 +200,8 @@ navbar:
             href: StaffingandRetentionCC.html
           - text: "Stand-Alone Questions"
             href: StandAloneQuestionsCC.html
+          - text: "Student Loans"
+            href: StudentLoansCC.html
           - text: "Unemployment"
             href: UnemploymentCCModule.html
           - text: "Vaccines"

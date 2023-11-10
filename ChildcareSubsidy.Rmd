@@ -23,9 +23,7 @@ data.raw$Question <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Qu
 data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.raw$'Source Link',"</a>")
 ```
 
-Instructions: In this set of questions we would like to know what assistance families are receiving to pay for childcare.
-
-Occurrence indicates what weeks the questions in this module were asked. 
+Instructions: In this set of questions we would like to know what assistance families are receiving to pay for child care.
 
 ```{r display data, echo=FALSE}
 

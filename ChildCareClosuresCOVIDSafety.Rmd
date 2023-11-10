@@ -25,8 +25,6 @@ data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.r
 
 Instructions: In this set of questions we would like to know what the school reopening plans for all your school-aged children.
 
-Occurrence indicates what weeks the questions in this module were asked. 
-
 ```{r display data, echo=FALSE}
 
 DT::datatable(data.raw, class = 'cell-border stripe hover',  rownames = F, filter = 'top', editable = TRUE, extensions = 'Buttons',  options = list(

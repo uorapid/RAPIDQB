@@ -28,9 +28,7 @@ data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.r
 
 ```
 
-The following questions were developed in collaboration with Grandparents United. https://www.gu.org 
-
-Occurrence indicates what weeks the questions in this module were asked. 
+The following questions were developed in collaboration with Grandparents United. https://www.gu.org
 
 ```{r display data, echo=FALSE}
 

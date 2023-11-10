@@ -1,6 +1,6 @@
 ---
 title: "Cost of Care Module"
-date: "Last updated: 10/06/2023"
+date: "Last updated: 11/10/2023"
 output: 
  html_document:
     css: "custom2.css"
@@ -24,7 +24,6 @@ data.raw$Answers <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Ans
 data.raw$Question <- gsub(pattern = "\n", replacement = "<br/>", x = data.raw$Question)
 data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.raw$'Source Link',"</a>")
 ```
-Occurrence indicates what weeks the questions in this module were asked. 
 
 ```{r display data, echo=FALSE}
 
