@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Vaccines Module</title>
+
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.31/datatables.js"></script>
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="site_libs/jszip-1.13.6/jszip.min.js"></script>
+<script src="site_libs/pdfmake-1.13.6/pdfmake.js"></script>
+<script src="site_libs/pdfmake-1.13.6/vfs_fonts.js"></script>
+<link href="site_libs/dt-ext-buttons-1.13.6/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="site_libs/dt-ext-buttons-1.13.6/js/dataTables.buttons.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.13.6/js/buttons.html5.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.13.6/js/buttons.colVis.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.13.6/js/buttons.print.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="custom2.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">RAPID Survey Project Question Bank</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Menu
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Household Survey</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="SurveyCalendarModuleKey.html">Survey Calendar and Module Key</a>
+        </li>
+        <li>
+          <a href="Historical.html">All Questions</a>
+        </li>
+        <li>
+          <a href="Baseline.html">Initial Recruitment Survey</a>
+        </li>
+        <li>
+          <a href="FollowUp.html">Ongoing Suvrey - Core</a>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Household Modules</a>
+      <ul class="dropdown-menu" role="menu">
+        <li class="dropdown-submenu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modules A-L</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="ABACUS.html">ABACUS</a>
+            </li>
+            <li>
+              <a href="ChildcareSubsidy.html">Child Care Subsidy</a>
+            </li>
+            <li>
+              <a href="ChildSocialInteractions.html">Child Social Interactions</a>
+            </li>
+            <li>
+              <a href="ChildTaxCredit.html">Child Tax Credit</a>
+            </li>
+            <li>
+              <a href="ClimateChange.html">Climate Change</a>
+            </li>
+            <li>
+              <a href="CommunityViolence.html">Community Violence</a>
+            </li>
+            <li>
+              <a href="CostofCare.html">Cost of Care</a>
+            </li>
+            <li>
+              <a href="DebtandOverdueBills.html">Debt and Overdue Bills</a>
+            </li>
+            <li>
+              <a href="DiapersModule.html">Diapers</a>
+            </li>
+            <li>
+              <a href="EconomicStability.html">Economic Stability</a>
+            </li>
+            <li>
+              <a href="Employment.html">Employment</a>
+            </li>
+            <li>
+              <a href="FamConf.html">Family Conflict</a>
+            </li>
+            <li>
+              <a href="FamilyPlanning.html">Family Planning</a>
+            </li>
+            <li>
+              <a href="FamilyRoutines.html">Family Routines</a>
+            </li>
+            <li>
+              <a href="FoodAid.html">Food Aid</a>
+            </li>
+            <li>
+              <a href="FoodInsecurity.html">Food Insecurity</a>
+            </li>
+            <li>
+              <a href="Grandparents.html">Grandparents</a>
+            </li>
+            <li>
+              <a href="Healthcare.html">Healthcare</a>
+            </li>
+            <li>
+              <a href="HolidayPlans.html">Holiday Plans</a>
+            </li>
+            <li>
+              <a href="Inflation.html">Inflation</a>
+            </li>
+            <li>
+              <a href="KindergartenAndSchoolEnrollment.html">Kindergarten/School Enrollment</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modules M-Z</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="Multigenerational.html">Multigenerational</a>
+            </li>
+            <li>
+              <a href="Omicron.html">Omicron</a>
+            </li>
+            <li>
+              <a href="OpenEnded.html">Open Ended</a>
+            </li>
+            <li>
+              <a href="OtherHardships.html">Other Hardships</a>
+            </li>
+            <li>
+              <a href="ParentWorkSchedule.html">Parent Work Schedule</a>
+            </li>
+            <li>
+              <a href="Pediatricians.html">Pediatricians</a>
+            </li>
+            <li>
+              <a href="PregnancyandPost.html">Pregnancy and Postpartum</a>
+            </li>
+            <li>
+              <a href="QUIC.html">QUIC</a>
+            </li>
+            <li>
+              <a href="RISER.html">Race and Discrimination</a>
+            </li>
+            <li>
+              <a href="RemoteLearning.html">Remote Learning</a>
+            </li>
+            <li>
+              <a href="RemoteWork.html">Remote Work</a>
+            </li>
+            <li>
+              <a href="SchoolMobility.html">School Mobility</a>
+            </li>
+            <li>
+              <a href="SchoolReopening.html">School Reopening Fall 2020</a>
+            </li>
+            <li>
+              <a href="SchoolReopeningFall2021.html">School Reopening Spring 2021</a>
+            </li>
+            <li>
+              <a href="SchoolReopeningSpring2022.html">School Reopening Spring 2022</a>
+            </li>
+            <li>
+              <a href="SNAPEBT.html">SNAP/EBT</a>
+            </li>
+            <li>
+              <a href="SocialDeterminantsofHealth.html">Social Determinants of Health</a>
+            </li>
+            <li>
+              <a href="SocialSupport.html">Social Support</a>
+            </li>
+            <li>
+              <a href="SpecialNeeds.html">Special Needs</a>
+            </li>
+            <li>
+              <a href="Stimulus.html">Stimulus</a>
+            </li>
+            <li>
+              <a href="StudentLoans.html">Student Loans</a>
+            </li>
+            <li>
+              <a href="TrustedMessenger.html">Trusted Messenger</a>
+            </li>
+            <li>
+              <a href="Unemployment.html">Unemployment</a>
+            </li>
+            <li>
+              <a href="Vaccines.html">Vaccines</a>
+            </li>
+            <li>
+              <a href="Violence.html">Violence</a>
+            </li>
+            <li>
+              <a href="WIC.html">WIC</a>
+            </li>
+            <li>
+              <a href="WorkArrangements.html">Work Arrangements</a>
+            </li>
+            <li>
+              <a href="Workforce.html">Workforce</a>
+            </li>
+            <li>
+              <a href="WorkingParents.html">Working Parents</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Childcare Survey</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="SurveyCalendarModuleKeyCC.html">Survey Calendar and Module Key</a>
+        </li>
+        <li>
+          <a href="BaselineCC.html">Initial Recruitment Survey</a>
+        </li>
+        <li>
+          <a href="FollowUpCC.html">Ongoing Survey - Core</a>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Child Care Modules</a>
+      <ul class="dropdown-menu" role="menu">
+        <li class="dropdown-submenu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modules A-L</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="BurnoutCC.html">Burnout</a>
+            </li>
+            <li>
+              <a href="ChildCareExperiencesCC.html">Child Care Experiences</a>
+            </li>
+            <li>
+              <a href="ChildCareSubsidyCC.html">Child Care Subsidy</a>
+            </li>
+            <li>
+              <a href="ChildCareClosuresCOVIDSafety.html">Child Care Closures &amp; COVID Safety</a>
+            </li>
+            <li>
+              <a href="ChildCareForOwnChildCC.html">Child Care For Own Child</a>
+            </li>
+            <li>
+              <a href="ChildSocialInteractionsCC.html">Child Social Interactions</a>
+            </li>
+            <li>
+              <a href="COVIDCC.html">COVID</a>
+            </li>
+            <li>
+              <a href="DebtandOverdueBillsCC.html">Debt and Overdue Bills</a>
+            </li>
+            <li>
+              <a href="DisabilityCC.html">Disability</a>
+            </li>
+            <li>
+              <a href="DisabilityProviderCC.html">Disability Module</a>
+            </li>
+            <li>
+              <a href="EconomicStabilityCC.html">Economic Stability</a>
+            </li>
+            <li>
+              <a href="EmploymentCC.html">Employment</a>
+            </li>
+            <li>
+              <a href="EnrollmentCC.html">Enrollment</a>
+            </li>
+            <li>
+              <a href="FamConfCC.html">Family Conflict</a>
+            </li>
+            <li>
+              <a href="FamilyRoutinesCC.html">Family Routines</a>
+            </li>
+            <li>
+              <a href="FoodAidCC.html">Food Aid</a>
+            </li>
+            <li>
+              <a href="FoodInsecurityCC.html">Food Insecurity</a>
+            </li>
+            <li>
+              <a href="HealthcareCC.html">Healthcare</a>
+            </li>
+            <li>
+              <a href="InflationCC.html">Inflation</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modules M-Z</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="MissionDrivenFinanceCC.html">Mission Driven Finance</a>
+            </li>
+            <li>
+              <a href="MultigenerationalCC.html">Multigenerational</a>
+            </li>
+            <li>
+              <a href="OmicronCC.html">Omicron</a>
+            </li>
+            <li>
+              <a href="OpenEndedCC.html">Open Ended</a>
+            </li>
+            <li>
+              <a href="OtherHardshipsCC.html">Other Hardships</a>
+            </li>
+            <li>
+              <a href="ProviderDebt.html">Provider Debt</a>
+            </li>
+            <li>
+              <a href="RISERCC.html">Race and Discrimination</a>
+            </li>
+            <li>
+              <a href="SNAPEBTCC.html">SNAP/EBT</a>
+            </li>
+            <li>
+              <a href="SocialDeterminantsofHealthCC.html">Social Determinants of Health</a>
+            </li>
+            <li>
+              <a href="SocialSupportCC.html">Social Support</a>
+            </li>
+            <li>
+              <a href="StabilizationFundsCC.html">Stabilization Funds</a>
+            </li>
+            <li>
+              <a href="StaffingRetentionCC.html">Staffing and Retention</a>
+            </li>
+            <li>
+              <a href="StaffingandRetentionCC.html">Staffing and Retention Module</a>
+            </li>
+            <li>
+              <a href="StandAloneQuestionsCC.html">Stand-Alone Questions</a>
+            </li>
+            <li>
+              <a href="Stimulus.html">Stimulus</a>
+            </li>
+            <li>
+              <a href="StudentLoansCC.html">Student Loans</a>
+            </li>
+            <li>
+              <a href="Unemployment.html">Unemployment</a>
+            </li>
+            <li>
+              <a href="VaccinesCC.html">Vaccines</a>
+            </li>
+            <li>
+              <a href="VaccineChildrenCC.html">Vaccines (Children)</a>
+            </li>
+            <li>
+              <a href="WorkScheduleCC.html">Work Schedule</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/uorapid/RAPIDQB.git">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.uorapidresponse.com/">
+    <span class="fa fa-flask"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Vaccines Module</h1>
+<h4 class="date">Last updated: 3/23/2023</h4>
+
+</div>
+
+
+<div id="htmlwidget-498951c0ade506b41e34" style="width:100%;height:100%;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-498951c0ade506b41e34">{"x":{"filter":"none","vertical":false,"class":"cell-border stripe hover","extensions":["Buttons"],"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37"],["Has your child(ren) missed a scheduled vaccine this year?","Have you ever delayed having your child get a shot for reasons other than illness or allergy? Select all that apply","Have you ever decided not to have your child get a shot for reasons other than illness or allergy? Select all that apply.","Did you receive an influenza (Flu) vaccine for the 2019 flu season?","Did your child(ren) aged 0-5 receive an influenza (Flu) vaccine for the 2019 flu season?","How likely are you to get a flu vaccination this season (2020-2021)—that is, this Fall or Winter?","How do you feel about the COVID-19 vaccine in terms of its safety and effectiveness, and what are your plans in terms of whether or not to get it?","How likely are you to get the first generation COVID-19 vaccine as soon as it's available?","How likely are you to get your child(ren) aged 0-5  a flu vaccination this season (2020-2021)—that is, this Fall or Winter?","How likely are you to get your child under 12 years of age the COVID-19 vaccine as soon as it's available?","Do you have a child aged 12 or older?","Has your child age 12 or older received the COVID-19 vaccine?","Why has your child age 12 or older not yet received the COVID-19 vaccine?","Have you received the COVID-19 vaccine?","Have you received a booster of the COVID-19 vaccine?","Have you received a booster of the COVID-19 vaccine?","Do you have a child(ren) aged 5 or older?","Has your child(ren) age 5 or older received the COVID-19 vaccine?","Why has your child(ren) age 5 or older not yet received the COVID-19 vaccine?","How likely are you to get the COVID-19 vaccine for your child(ren) age 5 or older?","Please select the best answer about when you would have your child(ren) age 5 or older receive the COVID-19 vaccine.","Has your child(ren) aged 5 or older received a booster of the COVID-19 vaccine?","Now that the FDA has approved the COVID-19 vaccine for children under the age of 5, do you plan to vaccinate your child/ren under age 5?","Now that the FDA has approved the COVID-19 vaccine for children under the age of 5, do you plan to vaccinate your child(ren) under age 5?","Why are you not planning to vaccinate your child/ren under age 5?","Do you have any concerns about access to vaccines for your child under age 5?","Once it becomes available, how likely are you to get the COVID-19 vaccine for your child(ren) under the age of 5?","How do you feel about the COVID-19 vaccine in terms of its safety and effectiveness for children under the age of 5?","<br/><br/>[Display this question if Have you received the COVID-19 vaccine = No]<br/><br/>Why have you not yet received the COVID-19 vaccine?","[Display this question if Have you received the COVID-19 vaccine = No]<br/><br/>Have your feelings about getting the COVID-19 vaccine changed since it became available?","[Display this question if Have your feelings about getting the COVID-19 vaccine changed since it became available? = I’m less likely to get it than I was at first ]<br/><br/>If you have become less likely to get the vaccine than you originally were, what are your reasons? Select all that apply.","[Display this question if Have your feelings about getting the COVID-19 vaccine changed since it became available? = I’m more likely to get it than I was at first ]<br/><br/>If you have become more likely to get the vaccine than you were at first, what are your reasons? Select all that apply.","How likely are you to get a booster of the COVID-19 vaccine as soon as it’s available?","Do you have any concerns about receiving the COVID-19 vaccine? Please explain. ","How likely are you to get the COVID-19 vaccine for your child between the ages of 5-12 years?","Please select the best answer about when you would have your child(ren) under 12 years of age receive the COVID-19 vaccine","Where would you prefer to have your child(ren) under 12 years of age receive the COVID-19 vaccine?"],["• Yes<br/>• No","•Yes, prior to the COVID-19 pandemic (prior to 2020)<br/>•Yes,since the COVID-19 pandemic (2020 and later)<br/>•No<br/>•I don't know","•Yes, prior to the COVID-19 pandemic (prior to 2020)<br/>•Yes,since the COVID-19 pandemic (2020 and later)<br/>•No<br/>•I don't know","•Yes                                                                                  •No                                                                          •Unsure","•Yes <br/>•No<br/>•Unsure","• Already received<br/>• Will definitely get one<br/>• Will probably get one<br/>•Will probably not get one<br/>• Will definitely not get one","Open ended response","• Already received                    • Very likely<br/>• Somewhat likely                                                                     • Not very likely                                                                    • Not at all likely","• Already received<br/>• Will definitely get one<br/>• Will probably get one<br/>•Will probably not get one<br/>• Will definitely not get one","• Already received           <br/>• Very likely<br/>• Somewhat likely                                                               <br/>• Not very likely                                                                     <br/>• Not at all likely","• Yes <br/>• No","• Yes <br/>• No","• I have not been able to get an appointment for my child<br/>• I can't get to a vaccination site due to where I live, time off from work, etc. <br/>• I am planning to \"wait and see\" if the vaccine is safe and effective before my child is vaccinated<br/>• I do not believe the vaccine is safe/effective<br/>• Other, Please specify","• Yes <br/>• No                                            <br/>• Do not wish to disclose","• Yes, one booster                   • Yes, two boosters                        • No                                                                    • Do not wish to disclose","• Yes <br/>• No","• Yes <br/>• No","• Yes <br/>• No                                            <br/>• Do not wish to disclose","• I have not been able to get an appointment for my child <br/>• I can't get to a vaccination site due to where I live, time off from work, etc. <br/>• I am planning to \"wait and see\" if the vaccine is safe and effective before my child is vaccinated<br/>• I do not believe the vaccine is safe/effective  <br/>• Not Listed (please specify)","• Very likely<br/>• Somewhat likely <br/>• Not very likely <br/>• Not at all likely<br/>","• In a few weeks, I am planning to \"wait and see\" if the vaccine is safe and effective before my child is vaccinated<br/>• In a few months, I am planning to \"wait and see\" if the vaccine is safe and effective before my child is vaccinated<br/>• If my child begins to attend a center, program, or school <br/>• Not Listed (please specify) ________________________________________________<br/>• I am unlikely to ever have my child receive the COVID-19 vaccine<br/>","• Yes, one booster                   • Yes, two boosters                        • No                                                                    • Do not wish to disclose","• My child already got the first dose <br/>• Yes <br/>• No <br/>• Do not wish to disclose","• My child already received the vaccine  <br/>• Yes <br/>• No <br/>• Do not wish to disclose","• I have not been able to get an appointment for my child <br/>• I don't know how to get an appointment to get my child vaccinated <br/>• I can’t get to a vaccination site due to where I live, time off from work, etc. <br/>• I am planning to “wait and see” if the vaccine is safe and effective before my child is vaccinated  <br/>• I do not believe the vaccine is safe/effective <br/>• Not Listed (please specify)","Open ended response","• Very likely<br/>• Somewhat likely<br/>• Not very likely<br/>• Not at all likely<br/>","Open ended response","• I am not eligible yet, based on my age, type of job, etc.<br/>• I am eligible but I haven't gotten vaccinated because I have not been able to get an appointment<br/>• I am eligible but I haven’t gotten vaccinated because I don’t know how to get an appointment to get vaccinated                                                              • I am eligible but I haven’t gotten vaccinated because I can’t get to a vaccination site due to where I live, time off from work, etc                                                                    • I am eligible but I haven’t gotten vaccinated because I am planning to “wait and see” the vaccine is safe and effective<br/>• I am eligible but I haven’t gotten vaccinated because I do not believe the vaccine is safe/effective                                                                    • Other, please specify","• I’m more likely to get it than I was at first           <br/>• No change in my overall feelings<br/>• I’m less likely to get it than I was at first","• I have heard from friends/relatives that it is unsafe<br/>• I have heard from TV or the internet that it is unsafe<br/>• I no longer think I need it<br/>• Other, please specify","• I learned more about the effectiveness of it from TV or the news<br/>• I learned more about the safety of it from TV or the news<br/>• My friends/family convinced me it was safe and/or effective<br/>• I want be able to do things that only vaccinated people can do<br/>• Other, please specify","• Very likely<br/>• Somewhat likely<br/>• Not very likely<br/>• Not at all likely","Open ended response","• Already received  <br/>• Very likely  <br/>• Somewhat likely <br/>• Not very likely <br/>• Not at all likely","• Already received <br/>• Very likely <br/>• Somewhat likely<br/>• Not very likely <br/>• Not at all likely","• Our pediatrician's office<br/>• My child's school <br/>• A drop-in site in my community (e.g., at a church, park, or other public space)  <br/>• A local pharmacy <br/>• Other, please specify:"],["Developed by RAPID Team","RAPID Team modified","RAPID Team modified","RAPID Team modified","RAPID Team modified","RAPID Team modified","RAPID Team Developed","RAPID Team modified","RAPID Team modified","RAPID Team modified",null,null,null,"RAPID Team Developed",null,null,null,null,null,null,null,null,null,null,null,null,null,null,"RAPID Team Developed","RAPID Team Developed","RAPID Team Developed","RAPID Team Developed",null,"RAPID Team Developed",null,null,null],["<a href='NA'>NA<\/a>","<a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMCMarch 17 - March 2057941/'>https://www.ncbi.nlm.nih.gov/pmc/articles/PMCMarch 17 - March 2057941/<\/a>","<a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMCMarch 17 - March 2057941/'>https://www.ncbi.nlm.nih.gov/pmc/articles/PMCMarch 17 - March 2057941/<\/a>","<a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5923753/'>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5923753/<\/a>","<a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5923753/'>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5923753/<\/a>","<a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5923753/'>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5923753/<\/a>","<a href='NA'>NA<\/a>","<a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5923753/'>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5923753/<\/a>","<a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5923753/'>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5923753/<\/a>","<a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMCMarch 17 - March 2057941/<br/><br/>https://www.ipsos.com/en-us/news-polls/axios-ipsos-coronavirus-index'>https://www.ncbi.nlm.nih.gov/pmc/articles/PMCMarch 17 - March 2057941/<br/><br/>https://www.ipsos.com/en-us/news-polls/axios-ipsos-coronavirus-index<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>","<a href='NA'>NA<\/a>"],["11/17/2020-11/19/2020 12/01/2020-12/03/2020   02/03/2021-02/06/2021 02/17/2021-02/19/2021 03/17/2021-03/20/2021 04/14/2021-04/16/2021 05/12/2021-05/14/2021  06/09/2021-06/11/2021 07/07/2021-07/09/2021","11/17/2020-11/19/2020 12/01/2020-12/03/2020   02/03/2021-02/06/2021 02/17/2021-02/19/2021 03/17/2021-03/20/2021 04/14/2021-04/16/2021 05/12/2021-05/14/2021  06/09/2021-06/11/2021 07/07/2021-07/09/2021","11/17/2020-11/19/2020 12/01/2020-12/03/2020   02/03/2021-02/06/2021 02/17/2021-02/19/2021 03/17/2021-03/20/2021 04/14/2021-04/16/2021 05/12/2021-05/14/2021  06/09/2021-06/11/2021 07/07/2021-07/09/2021","11/17/2020-11/19/2020 12/01/2020-12/03/2020   02/03/2021-02/06/2021 02/17/2021-02/19/2021","11/17/2020-11/19/2020 12/01/2020-12/03/2020   02/03 /2021-02/06/2021 02/17/2021-02/19/2021","11/17/2020-11/19/2020 12/01/2020-12/03/2020   02/03/2021-02/06/2021 02/17/2021-02/19/2021","03/17/2021-03/20/2021 04/14/2021-04/16/2021 05/12/2021-05/14/2021  06/09/2021-06/11/2021 07/07/2021-07/09/2021 09/15/2021-09/17/2021","11/17/2020-11/19/2020 12/01/2020-12/03/2020   02/03/2021-02/06/2021 02/17/2021-02/19/2021","11/17/2020-11/19/2020 12/01/2020-12/03/2020   02/03/2021-02/06/2021 02/17/2021-02/19/2021","11/17/2020-11/19/2020 12/01/2020-12/03/2020   02/03/2021-02/06/2021 02/17/2021-02/19/2021 03/17/2021-03/20/2021 04/14/2021-04/16/2021 05/12/2021-05/14/2021  06/09/2021-06/11/2021 07/07/2021-07/09/2021 09/15/2021-09/17/2021 12/08/2021-12/14/2021","09/15/2021-09/17/2021 12/08/2021-12/14/2021","09/15/2021-09/17/2021 12/08/2021-12/14/2021","09/15/2021-09/17/2021 12/08/2021-12/14/2021","03/17/2021-03/20/2021 04/14/2021-04/16/2021 05/12/2021-05/14/2021  06/09/2021-06/11/2021 07/07/2021-07/09/2021 09/15/2021-09/17/2021 12/08/2021-12/14/2021 03/07/2022-03/16/2022 06/02/2022-06/09/2022 07/08/2022-07/15/2022","06/02/2022-06/09/2022 07/08/2022-07/15/2022","03/07/2022-03/16/2022","03/07/2022-03/16/2022 06/02/2022-06/09/2022 07/08/2022-07/15/2022","03/07/2022-03/16/2022 06/02/2022-06/09/2022 07/08/2022-07/15/2022","03/07/2022-03/16/2022 06/02/2022-06/09/2022 07/08/2022-07/15/2022","03/07/2022-03/16/2022 06/02/2022-06/09/2022 07/08/2022-07/15/2022","03/07/2022-03/16/2022 06/02/2022-06/09/2022 07/08/2022-07/15/2022","06/02/2022-06/09/2022 07/08/2022-07/15/2022","07/08/2022-07/15/2022","08/02/2022-08/11/2022","07/08/2022-07/15/2022 08/02/2022-08/11/2022","07/08/2022-07/15/2022 08/02/2022-08/11/2022","03/07/2022-03/16/2022 06/02/2022-06/09/2022","03/07/2022-03/16/2022 06/02/2022-06/09/2022","03/17/2021-03/20/2021 04/14/2021-04/16/2021 05/12/2021-05/14/2021  06/09/2021-06/11/2021 07/07/2021-07/09/2021 09/15/2021-09/17/2021 12/08/2021-12/14/2021","03/17/2021-03/20/2021 04/14/2021-04/16/2021 05/12/2021-05/14/2021  06/09/2021-06/11/2021 07/07/2021-07/09/2021 09/15/2021-09/17/2021 12/08/2021-12/14/2021","03/17/2021-03/20/2021 04/14/2021-04/16/2021 05/12/2021-05/14/2021  06/09/2021-06/11/2021 07/07/2021-07/09/2021 09/15/2021-09/17/2021 12/08/2021-12/14/2021","03/17/2021-03/20/2021 04/14/2021-04/16/2021 05/12/2021-05/14/2021  06/09/2021-06/11/2021 07/07/2021-07/09/2021 09/15/2021-09/17/2021 12/08/2021-12/14/2021","09/15/2021-09/17/2021 12/08/2021-12/14/2021","12/01/2020-12/03/2020   02/03/2021-02/06/2021 02/17/2021-02/19/2021","12/08/2021-12/14/2021","12/08/2021-12/14/2021","12/08/2021-12/14/2021"]],"container":"<table>\n  <style type=\"text/css\">th { font-family: 'Arial'; font-weight: bold; color: black; background-color: #f1d310;}<\/style>\n  <thead>\n    <tr>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\"> <\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Question<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Answers<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Source<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Source Link<\/th>\n      <th style=\"text-align: center; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white\">Dates Used<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["copy","csv","excel","pdf","print"],"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Question","targets":1},{"name":"Answers","targets":2},{"name":"Source","targets":3},{"name":"Source Link","targets":4},{"name":"Dates Used","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -43,23 +43,23 @@ navbar:
           - text: "Economic Stability"
             href: EconomicStability.html
           - text: "Employment"
-            href: EmploymentModule.html
-          - text: "Healthcare"
-            href: HealthcareModule.html
+            href: Employment.html
           - text: "Family Conflict"
             href: FamConf.html
           - text: "Family Planning"
             href: FamilyPlanning.html
           - text: "Family Routines"
-            href: FamilyRoutinesModule.html
+            href: FamilyRoutines.html
           - text: "Food Aid"
             href: FoodAid.html
           - text: "Food Insecurity"
-            href: FoodInsecurityModule.html
+            href: FoodInsecurity.html
           - text: "Grandparents"
-            href: GrandparentsModule.html
+            href: Grandparents.html
+          - text: "Healthcare"
+            href: Healthcare.html
           - text: "Holiday Plans"
-            href: HolidayPlansModule.html
+            href: HolidayPlans.html
           - text: "Inflation"
             href: Inflation.html
           - text: "Kindergarten/School Enrollment"
@@ -67,7 +67,11 @@ navbar:
         - text: "Modules M-Z"
           menu:
           - text: "Multigenerational"
-            href: Multigenerational.html  
+            href: Multigenerational.html
+          - text: "Omicron"
+            href: Omicron.html
+          - text: "Open Ended"
+            href: OpenEnded.html
           - text: "Other Hardships"
             href: OtherHardships.html
           - text: "Parent Work Schedule"
@@ -85,9 +89,9 @@ navbar:
           - text: "Remote Work"
             href: RemoteWork.html
           - text: "School Mobility"
-            href: SchoolMobilityModule.html
+            href: SchoolMobility.html
           - text: "School Reopening Fall 2020"
-            href: SchoolReopeningModule.html
+            href: SchoolReopening.html
           - text: "School Reopening Spring 2021"
             href: SchoolReopeningFall2021.html
           - text: "School Reopening Spring 2022"
@@ -101,23 +105,23 @@ navbar:
           - text: "Special Needs"
             href: SpecialNeeds.html
           - text: "Stimulus"
-            href: StimulusModule.html
+            href: Stimulus.html
           - text: "Student Loans"
             href: StudentLoans.html
           - text: "Trusted Messenger"
             href: TrustedMessenger.html
           - text: "Unemployment"
-            href: UnemploymentModule.html
+            href: Unemployment.html
           - text: "Vaccines"
-            href: VaccinesModule.html
+            href: Vaccines.html
           - text: "Violence"
             href: Violence.html
           - text: "WIC"
-            href: WICModule.html
+            href: WIC.html
           - text: "Work Arrangements"
             href: WorkArrangements.html
           - text: "Workforce"
-            href: WorkforceModule.html
+            href: Workforce.html
           - text: "Working Parents"
             href: WorkingParents.html
       - text: "Childcare Survey"
@@ -153,7 +157,7 @@ navbar:
           - text: "Disability Module"
             href: DisabilityProviderCC.html
           - text: "Economic Stability"
-            href: EconomicStabilityCCModule.html
+            href: EconomicStabilityCC.html
           - text: "Employment"
             href: EmploymentCC.html
           - text: "Enrollment"
@@ -165,9 +169,9 @@ navbar:
           - text: "Food Aid"
             href: FoodAidCC.html
           - text: "Food Insecurity"
-            href: FoodInsecurityModuleCC.html
+            href: FoodInsecurityCC.html
           - text: "Healthcare"
-            href: HealthcareModuleCC.html
+            href: HealthcareCC.html
           - text: "Inflation"
             href: InflationCC.html
         - text: "Modules M-Z"
@@ -177,9 +181,9 @@ navbar:
           - text: "Multigenerational"
             href: MultigenerationalCC.html  
           - text: "Omicron"
-            href: OmicronModuleCC.html
-          - text: "Open-Ended"
-            href: OpenEndedModuleCC.html
+            href: OmicronCC.html
+          - text: "Open Ended"
+            href: OpenEndedCC.html
           - text: "Other Hardships"
             href: OtherHardshipsCC.html
           - text: "Provider Debt"
@@ -200,16 +204,18 @@ navbar:
             href: StaffingandRetentionCC.html
           - text: "Stand-Alone Questions"
             href: StandAloneQuestionsCC.html
+          - text: "Stimulus"
+            href: Stimulus.html
           - text: "Student Loans"
             href: StudentLoansCC.html
           - text: "Unemployment"
-            href: UnemploymentCCModule.html
+            href: Unemployment.html
           - text: "Vaccines"
-            href: VaccinesModuleCC.html
+            href: VaccinesCC.html
           - text: "Vaccines (Children)"
             href: VaccineChildrenCC.html
           - text: "Work Schedule"
-            href: WorkScheduleModuleCC.html
+            href: WorkScheduleCC.html
         
   right:
     - icon: fa-github

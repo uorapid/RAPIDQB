@@ -26,8 +26,6 @@ data.raw$'Source Link' <- paste0("<a href='",data.raw$'Source Link',"'>", data.r
 
 ```
 
-Occurrence indicates what weeks the questions in this module were asked. 
-
 ```{r display data, echo=FALSE}
 
 header.style <- "th { font-family: 'Arial'; font-weight: bold; color: black; background-color: #f1d310;}"
